@@ -18,8 +18,8 @@ const valueProps = [
 
 export default function ValueProps() {
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-cream">
-      <div className="container">
+    <section className="section-pad bg-cream">
+      <div className="mx-auto max-w-7xl container-pad">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-darkPurple mb-4">
             ¿Por qué elegirnos?

@@ -1,8 +1,8 @@
 export default function CTASection() {
   return (
-    <section className="py-16 sm:py-20 md:py-24 -mx-4 sm:-mx-8 md:-mx-16">
-      <div className="bg-darkPurple text-cream py-16 px-4">
-        <div className="container text-center space-y-8">
+    <section className="section-pad">
+      <div className="bg-darkPurple text-cream py-16 px-4 rounded-2xl mx-auto max-w-7xl">
+        <div className="container-pad text-center space-y-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Descubre el sabor de la calidad Tres Raíces
           </h2>

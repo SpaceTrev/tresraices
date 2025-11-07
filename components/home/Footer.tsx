@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-federalBlue text-cream py-12 -mx-4 sm:-mx-8 md:-mx-16">
-      <div className="container">
+    <footer className="bg-federalBlue text-cream border-t border-black/10">
+      <div className="mx-auto max-w-7xl container-pad py-8 sm:py-10">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
@@ -26,12 +26,12 @@ export default function Footer() {
             <h3 className="font-bold text-lg">Regiones</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/menu/guadalajara" className="hover:text-mintGreen transition-colors">
+                <a href="/menu/guadalajara" className="hover:text-mintGreen transition-colors tap-target inline-flex items-center">
                   Guadalajara, Jalisco
                 </a>
               </li>
               <li>
-                <a href="/menu/colima" className="hover:text-mintGreen transition-colors">
+                <a href="/menu/colima" className="hover:text-mintGreen transition-colors tap-target inline-flex items-center">
                   Colima, Colima
                 </a>
               </li>
@@ -47,7 +47,7 @@ export default function Footer() {
                   href="https://wa.me/523315126548"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-mintGreen transition-colors font-medium"
+                  className="hover:text-mintGreen transition-colors font-medium tap-target inline-flex items-center"
                 >
                   📱 33 1512 6548
                 </a>

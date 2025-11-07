@@ -27,8 +27,8 @@ const categories = [
 
 export default function CategoryShowcase() {
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-white">
-      <div className="container">
+    <section className="section-pad bg-white">
+      <div className="mx-auto max-w-7xl container-pad">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-darkPurple mb-4">
             Categorías Destacadas
@@ -38,7 +38,7 @@ export default function CategoryShowcase() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {categories.map((category) => (
             <a
               key={category.slug}

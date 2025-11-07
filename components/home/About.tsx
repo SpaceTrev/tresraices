@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <section className="py-16 sm:py-20 md:py-24">
-      <div className="container">
+    <section className="section-pad">
+      <div className="mx-auto max-w-7xl container-pad">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6">
@@ -41,11 +41,13 @@ export default function About() {
           {/* Image */}
           <div className="relative">
             <div className="card overflow-hidden shadow-xl">
-              <img 
-                src="/img/about-section.jpg" 
-                alt="Cortes de carne premium"
-                className="w-full h-[400px] object-cover"
-              />
+              <div className="w-full h-[400px] bg-gradient-to-br from-uclaBlue via-lightBlue to-mintGreen flex items-center justify-center">
+                <div className="text-center text-white p-8">
+                  <div className="text-6xl mb-4">🥩</div>
+                  <div className="text-2xl font-bold">Cortes Premium</div>
+                  <div className="text-sm opacity-90 mt-2">Calidad excepcional</div>
+                </div>
+              </div>
             </div>
             {/* Decorative accent */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-mintGreen/30 rounded-full blur-3xl -z-10"></div>
