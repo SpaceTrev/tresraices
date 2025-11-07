@@ -11,8 +11,15 @@ const prettyRegion: Record<Region,string> = {
 
 export const dynamic = "force-static";
 
-export default function MenuPage({ params }: { params: { region: Region }}) {
-  const region = params.region;
+export async function generateStaticParams() {
+  return [
+    { region: 'guadalajara' },
+    { region: 'colima' }
+  ];
+}
+
+export default async function MenuPage({ params }: { params: Promise<{ region: Region }> }) {
+  const { region } = await params;
   if (!['guadalajara','colima'].includes(region)) return notFound();
 
   const dataPath = path.join(process.cwd(), "data", region === "guadalajara" ? "menu_guadalajara_list2.json" : "menu_colima_list2.json");
