@@ -1,9 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { initializeApp } from 'firebase/app';
-import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { useEffect, useState, useRef } from 'react';
+import { initializeApp, getApps, type FirebaseApp } from 'firebase/app';
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, type Auth } from 'firebase/auth';
+import { getStorage, ref, uploadBytesResumable, getDownloadURL, type FirebaseStorage } from 'firebase/storage';
+
+export const dynamic = 'force-dynamic';
 
 const adminKey = process.env.NEXT_PUBLIC_ADMIN_KEY;
 
@@ -23,26 +25,41 @@ export default function AdminPage() {
   const [file, setFile] = useState<File | null>(null);
   const [progress, setProgress] = useState<number>(0);
   const [message, setMessage] = useState<string>('');
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const storage = getStorage(app);
+  const [initialized, setInitialized] = useState(false);
+  
+  const authRef = useRef<Auth | null>(null);
+  const storageRef = useRef<FirebaseStorage | null>(null);
 
   useEffect(() => {
-    return onAuthStateChanged(auth, (u) => setUser(u));
+    // Initialize Firebase only on client-side
+    if (typeof window === 'undefined') return;
+    
+    const app = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
+    authRef.current = getAuth(app);
+    storageRef.current = getStorage(app);
+    
+    setInitialized(true);
+    
+    return onAuthStateChanged(authRef.current, (u) => setUser(u));
   }, []);
 
   const login = async () => {
-    await signInWithEmailAndPassword(auth, email, password);
+    if (!authRef.current) return;
+    await signInWithEmailAndPassword(authRef.current, email, password);
   };
 
-  const logout = async () => await signOut(auth);
+  const logout = async () => {
+    if (!authRef.current) return;
+    await signOut(authRef.current);
+  };
 
   const upload = async () => {
     if (!user) { setMessage('Inicia sesión.'); return; }
     if (!file) { setMessage('Carga un PDF primero.'); return; }
+    if (!storageRef.current) return;
+    
     const stamp = new Date().toISOString().replace(/[:.]/g,'-');
-    const r = ref(storage, `menus/${stamp}.pdf`);
+    const r = ref(storageRef.current, `menus/${stamp}.pdf`);
     const task = uploadBytesResumable(r, file);
     task.on('state_changed', (snap) => {
       setProgress(Math.round((snap.bytesTransferred / snap.totalBytes) * 100));
@@ -62,6 +79,10 @@ export default function AdminPage() {
       }
     });
   };
+
+  if (!initialized) {
+    return <div className="max-w-xl card p-6">Cargando...</div>;
+  }
 
   return (
     <div className="max-w-xl card p-6 space-y-4">
