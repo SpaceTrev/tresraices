@@ -1,10 +1,18 @@
 import fs from "node:fs";
 import path from "node:path";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import type { GroupedMenu } from "@/lib/menu/flatten";
+import { flattenMenu, extractCategories } from "@/lib/menu/flatten";
+import MenuLayout from "@/components/menu/MenuLayout";
+import FilterPanel from "@/components/menu/FilterPanel";
+import MenuGrid from "@/components/menu/MenuGrid";
+import RegionToggle from "@/components/menu/RegionToggle";
+import Breadcrumbs from "@/components/menu/Breadcrumbs";
 
 type Region = "guadalajara" | "colima";
 
-const prettyRegion: Record<Region,string> = {
+const prettyRegion: Record<Region, string> = {
   guadalajara: "Guadalajara",
   colima: "Colima"
 };
@@ -12,41 +20,78 @@ const prettyRegion: Record<Region,string> = {
 export const dynamic = "force-static";
 
 export async function generateStaticParams() {
-  return [
-    { region: 'guadalajara' },
-    { region: 'colima' }
-  ];
+  return [{ region: "guadalajara" }, { region: "colima" }];
 }
 
-export default async function MenuPage({ params }: { params: Promise<{ region: Region }> }) {
+export default async function MenuPage({
+  params
+}: {
+  params: Promise<{ region: Region }>;
+}) {
   const { region } = await params;
-  if (!['guadalajara','colima'].includes(region)) return notFound();
+  if (!["guadalajara", "colima"].includes(region)) return notFound();
 
-  const dataPath = path.join(process.cwd(), "data", region === "guadalajara" ? "menu_guadalajara_list2.json" : "menu_colima_list2.json");
+  // Load menu data
+  const dataPath = path.join(
+    process.cwd(),
+    "data",
+    `menu_${region}_list2.json`
+  );
   const raw = fs.readFileSync(dataPath, "utf-8");
-  const groups = JSON.parse(raw) as Record<string, { item: string; price: number; base_price: number }[]>;
+  const grouped = JSON.parse(raw) as GroupedMenu;
+
+  // Transform data
+  const items = flattenMenu(grouped);
+  const categories = extractCategories(grouped);
+  const pretty = prettyRegion[region];
 
   return (
-    <section className="space-y-6">
-      <header className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold">Menú {prettyRegion[region]}</h1>
-        <a className="btn btn-primary" href="https://wa.me/523315126548" target="_blank">Ordenar por WhatsApp</a>
-      </header>
-      <div className="grid md:grid-cols-2 gap-6">
-        {Object.entries(groups).map(([category, items]) => (
-          <div key={category} className="card p-5">
-            <h2 className="text-xl font-semibold mb-3">{category}</h2>
-            <ul className="divide-y">
-              {items.map((it) => (
-                <li key={it.item} className="py-2 flex items-center justify-between gap-4">
-                  <span>{it.item}</span>
-                  <span className="font-medium tabular-nums">${(it.price ?? 0).toFixed(2)}</span>
-                </li>
-              ))}
-            </ul>
+    <div className="container py-8 space-y-8">
+      {/* Breadcrumbs */}
+      <Breadcrumbs region={region} prettyRegion={pretty} />
+
+      {/* Header */}
+      <header className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h1 className="text-4xl font-bold mb-2">Menú {pretty}</h1>
+            <p className="text-slate-600">
+              Carnes premium y productos especiales para tu mesa.
+            </p>
           </div>
-        ))}
-      </div>
-    </section>
+          <RegionToggle currentRegion={region} />
+        </div>
+      </header>
+
+      {/* Main layout */}
+      <MenuLayout
+        filterPanel={
+          <Suspense
+            fallback={
+              <div className="card p-5">
+                <p className="text-sm text-slate-500">Cargando filtros...</p>
+              </div>
+            }
+          >
+            <FilterPanel categories={categories} region={region} />
+          </Suspense>
+        }
+      >
+        <Suspense
+          fallback={
+            <div className="card p-12 text-center">
+              <p className="text-slate-500">Cargando productos...</p>
+            </div>
+          }
+        >
+          <MenuGrid
+            items={items}
+            categories={categories}
+            region={region}
+            prettyRegion={pretty}
+          />
+        </Suspense>
+      </MenuLayout>
+    </div>
   );
 }

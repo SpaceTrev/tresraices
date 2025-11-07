@@ -50,9 +50,29 @@ Palette:
 - Vercel or Netlify. No DB required; the menus ship as static JSON.
 - When ready, you can store versions under Firebase Storage and read via `/api/menu` routed to Firestore/Storage.
 
-## TODO (when you’re ready)
-- Persist parsed JSON to Firestore (collection: `menus`, doc: `{latest}` with fields `gdl`, `col`).
-- Track versions per upload in `menus_history`.
-- Add "last updated" time to UI.
-- Add unit labeling (kilo/pieza) via a small override map.
+## Phase 2: Firestore Persistence (Implemented)
+
+The admin flow now persists parsed menus to Firestore:
+
+1. Admin uploads PDF → Firebase Storage → calls `/api/parse-menu`
+2. API parses PDF, computes base/gdl/col pricing, writes to:
+   - `menus/latest` (current active menu)
+   - `menus_history/{timestamp}` (historical record)
+3. `/api/menu?region={guadalajara|colima}` reads from Firestore first, falls back to local JSON if unavailable
+
+### Required Environment Variables
+
+Add to Netlify/Vercel:
+
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_ADMIN_KEY` | Auth key for admin API routes |
+| `NEXT_PUBLIC_FIREBASE_*` | Firebase web config (apiKey, authDomain, etc.) |
+| `FIREBASE_SERVICE_ACCOUNT_JSON` | Full Firebase service account JSON from Firebase Console → Project Settings → Service Accounts → Generate New Private Key |
+
+**Security Note**: Never commit `FIREBASE_SERVICE_ACCOUNT_JSON` to git. Only set via hosting platform environment variables.
+
+## TODO (when you're ready)
+- Add "last updated" time to UI (read from `menus/latest.updatedAt`)
+- Add unit labeling (kilo/pieza) via a small override map
 ```
