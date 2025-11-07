@@ -10,6 +10,8 @@ import type { MenuItem } from "@/lib/menu/flatten";
 import type { SortOption } from "@/lib/menu/filters";
 import { applyFilters } from "@/lib/menu/filters";
 import ProductCard from "./ProductCard";
+import SectionedList from "./SectionedList";
+import SectionToggle from "./SectionToggle";
 
 interface MenuGridProps {
   items: MenuItem[];
@@ -22,43 +24,49 @@ export default function MenuGrid({ items, categories, region, prettyRegion }: Me
   const searchParams = useSearchParams();
   
   // Read filter state from URL
-  const search = searchParams.get("q") || "";
-  const selectedCategories = searchParams.get("cat")?.split(",").filter(Boolean) || [];
-  const sortBy = (searchParams.get("sort") as SortOption) || "relevance";
+  const q = searchParams.get("q") || "";
+  const cats = searchParams.get("cat")?.split(",").filter(Boolean) || [];
+  const sort = (searchParams.get("sort") as SortOption) || "relevance";
+  const view = searchParams.get("view") || "grid";
   
   // Apply filters and sorting
   const filteredItems = useMemo(() => {
-    return applyFilters(items, {
-      search,
-      categories: selectedCategories,
-      sortBy
-    });
-  }, [items, search, selectedCategories, sortBy]);
+    return applyFilters(items, { q, cats, sort });
+  }, [items, q, cats, sort]);
+  
+  // Determine if we should show sections
+  const showSections = view === "sections" || cats.length > 1;
   
   return (
     <div className="space-y-6">
-      {/* Results summary */}
-      <div className="flex items-center justify-between">
+      {/* Results summary & view toggle */}
+      <div className="flex items-center justify-between flex-wrap gap-4">
         <p className="text-sm text-slate-600">
           {filteredItems.length} {filteredItems.length === 1 ? "producto" : "productos"}
         </p>
+        <SectionToggle region={region} />
       </div>
       
-      {/* Product grid */}
+      {/* Product display */}
       {filteredItems.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
-            <ProductCard
-              key={`${item.category}-${item.name}`}
-              name={item.name}
-              price={item.price}
-              basePrice={item.base_price}
-              category={item.category}
-              region={region}
-              prettyRegion={prettyRegion}
-            />
-          ))}
-        </div>
+        showSections ? (
+          <SectionedList items={filteredItems} region={region} prettyRegion={prettyRegion} />
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredItems.map((item) => (
+              <ProductCard
+                key={item.id}
+                id={item.id}
+                name={item.name}
+                price={item.price}
+                basePrice={item.base_price}
+                category={item.category}
+                region={region}
+                prettyRegion={prettyRegion}
+              />
+            ))}
+          </div>
+        )
       ) : (
         <div className="card p-12 text-center">
           <p className="text-lg text-slate-600 mb-4">

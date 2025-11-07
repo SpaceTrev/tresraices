@@ -9,6 +9,7 @@ import FilterPanel from "@/components/menu/FilterPanel";
 import MenuGrid from "@/components/menu/MenuGrid";
 import RegionToggle from "@/components/menu/RegionToggle";
 import Breadcrumbs from "@/components/menu/Breadcrumbs";
+import CartWrapper from "./CartWrapper";
 
 type Region = "guadalajara" | "colima";
 
@@ -92,6 +93,9 @@ export default async function MenuPage({
           />
         </Suspense>
       </MenuLayout>
+      
+      {/* Cart UI */}
+      <CartWrapper region={region} />
     </div>
   );
 }

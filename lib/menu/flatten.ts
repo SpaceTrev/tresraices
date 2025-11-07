@@ -2,7 +2,10 @@
  * Data transformation utilities for menu items
  */
 
+import { slugify } from "./format";
+
 export interface MenuItem {
+  id: string;
   name: string;
   category: string;
   price: number;
@@ -25,7 +28,9 @@ export function flattenMenu(grouped: GroupedMenu): MenuItem[] {
   
   for (const [category, products] of Object.entries(grouped)) {
     for (const product of products) {
+      const id = `${slugify(category)}:${slugify(product.item)}`;
       items.push({
+        id,
         name: product.item,
         category,
         price: product.price,

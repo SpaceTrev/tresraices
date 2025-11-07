@@ -4,7 +4,7 @@
 
 import type { MenuItem } from "./flatten";
 
-export type SortOption = "relevance" | "priceAsc" | "priceDesc" | "nameAsc" | "nameDesc";
+export type SortOption = "relevance" | "priceAsc" | "priceDesc" | "az" | "za";
 
 /**
  * Apply search filter (case-insensitive substring match on item name)
@@ -34,9 +34,9 @@ export function sortItems(items: MenuItem[], sortBy: SortOption): MenuItem[] {
       return sorted.sort((a, b) => a.price - b.price);
     case "priceDesc":
       return sorted.sort((a, b) => b.price - a.price);
-    case "nameAsc":
+    case "az":
       return sorted.sort((a, b) => a.name.localeCompare(b.name, "es"));
-    case "nameDesc":
+    case "za":
       return sorted.sort((a, b) => b.name.localeCompare(a.name, "es"));
     case "relevance":
     default:
@@ -51,23 +51,23 @@ export function sortItems(items: MenuItem[], sortBy: SortOption): MenuItem[] {
 export function applyFilters(
   items: MenuItem[],
   options: {
-    search?: string;
-    categories?: string[];
-    sortBy?: SortOption;
+    q?: string;
+    cats?: string[];
+    sort?: SortOption;
   }
 ): MenuItem[] {
   let filtered = items;
   
-  if (options.search) {
-    filtered = filterBySearch(filtered, options.search);
+  if (options.q) {
+    filtered = filterBySearch(filtered, options.q);
   }
   
-  if (options.categories && options.categories.length > 0) {
-    filtered = filterByCategories(filtered, options.categories);
+  if (options.cats && options.cats.length > 0) {
+    filtered = filterByCategories(filtered, options.cats);
   }
   
-  if (options.sortBy) {
-    filtered = sortItems(filtered, options.sortBy);
+  if (options.sort) {
+    filtered = sortItems(filtered, options.sort);
   }
   
   return filtered;

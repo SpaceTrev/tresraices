@@ -10,3 +10,24 @@ body { @apply bg-cream text-slate-900; }
 .btn-primary { @apply bg-federalBlue text-white hover:bg-darkPurple; }
 .badge { @apply text-xs rounded-full px-2 py-1 bg-mintGreen; }
 .filter-chip { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-cream border border-slate-300; }
+.chip { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium; }
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.3s ease-out;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
