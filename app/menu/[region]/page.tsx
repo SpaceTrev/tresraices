@@ -5,8 +5,8 @@ import { notFound } from "next/navigation";
 type Region = "guadalajara" | "colima";
 
 const prettyRegion: Record<Region,string> = {
-  guadalajara: "Guadalajara (+15%)",
-  colima: "Colima (+20%)"
+  guadalajara: "Guadalajara",
+  colima: "Colima"
 };
 
 export const dynamic = "force-static";
