@@ -1,0 +1,10 @@
+[build]
+  command   = "corepack enable && pnpm i --frozen-lockfile=false && pnpm build"
+  publish   = ".next" # plugin will handle Next.js output
+
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "9"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
