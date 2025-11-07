@@ -1,0 +1,1027 @@
+{
+  "Avestruz": [
+    {
+      "item": "arrachera",
+      "base_price": 298.0,
+      "price": 357.6
+    },
+    {
+      "item": "hamburguesa grande",
+      "base_price": 272.64,
+      "price": 327.17
+    },
+    {
+      "item": "molida",
+      "base_price": 298.0,
+      "price": 357.6
+    }
+  ],
+  "Búfalo": [
+    {
+      "item": "arrachera marinada",
+      "base_price": 235.2,
+      "price": 282.24
+    },
+    {
+      "item": "costilla",
+      "base_price": 158.0,
+      "price": 189.6
+    },
+    {
+      "item": "cow boy",
+      "base_price": 270.0,
+      "price": 324.0
+    },
+    {
+      "item": "diezmillo",
+      "base_price": 280.0,
+      "price": 336.0
+    },
+    {
+      "item": "hamburguesa",
+      "base_price": 135.0,
+      "price": 162.0
+    },
+    {
+      "item": "t-bone",
+      "base_price": 240.0,
+      "price": 288.0
+    },
+    {
+      "item": "top sirloin",
+      "base_price": 275.0,
+      "price": 330.0
+    }
+  ],
+  "Cabrito": [
+    {
+      "item": "Canal",
+      "base_price": 1440.0,
+      "price": 1728.0
+    }
+  ],
+  "Cerdo": [
+    {
+      "item": "adobado",
+      "base_price": 133.0,
+      "price": 159.6
+    },
+    {
+      "item": "cabeza de lomo",
+      "base_price": 134.4,
+      "price": 161.28
+    },
+    {
+      "item": "chamorro sin piel",
+      "base_price": 87.3,
+      "price": 104.76
+    },
+    {
+      "item": "chuleta americana (entrecot)",
+      "base_price": 118.0,
+      "price": 141.6
+    },
+    {
+      "item": "costilla baby back",
+      "base_price": 144.0,
+      "price": 172.8
+    },
+    {
+      "item": "costilla huacal",
+      "base_price": 135.0,
+      "price": 162.0
+    },
+    {
+      "item": "lechón 10.100-11.0",
+      "base_price": 163.2,
+      "price": 195.84
+    },
+    {
+      "item": "lechón 11.100-12.0",
+      "base_price": 166.6,
+      "price": 199.92
+    },
+    {
+      "item": "lechón 12.100-13.0",
+      "base_price": 145.0,
+      "price": 174.0
+    },
+    {
+      "item": "lechón 13.100-14.0",
+      "base_price": 1600.0,
+      "price": 1920.0
+    },
+    {
+      "item": "lechón 3-6.0",
+      "base_price": 1500.0,
+      "price": 1800.0
+    },
+    {
+      "item": "lechón 6.100-7.0",
+      "base_price": 142.0,
+      "price": 170.4
+    },
+    {
+      "item": "lechón 7.100-8.0",
+      "base_price": 65.28,
+      "price": 78.34
+    },
+    {
+      "item": "lechón 8.100-9.0",
+      "base_price": 108.0,
+      "price": 129.6
+    },
+    {
+      "item": "lechón 9.100-10.0",
+      "base_price": 115.2,
+      "price": 138.24
+    },
+    {
+      "item": "lomo",
+      "base_price": 1700.0,
+      "price": 2040.0
+    },
+    {
+      "item": "manteca",
+      "base_price": 1800.0,
+      "price": 2160.0
+    },
+    {
+      "item": "molida",
+      "base_price": 1900.0,
+      "price": 2280.0
+    },
+    {
+      "item": "pierna adobada",
+      "base_price": 2100.0,
+      "price": 2520.0
+    },
+    {
+      "item": "pierna pulpa",
+      "base_price": 2000.0,
+      "price": 2400.0
+    },
+    {
+      "item": "salchicha paletita",
+      "base_price": 2200.0,
+      "price": 2640.0
+    },
+    {
+      "item": "tocinilla crudo con piel (pork belly)",
+      "base_price": 2300.0,
+      "price": 2760.0
+    },
+    {
+      "item": "tocino ahumado",
+      "base_price": 105.6,
+      "price": 126.72
+    }
+  ],
+  "Ciervo rojo": [
+    {
+      "item": "arrachera",
+      "base_price": 448.2,
+      "price": 537.84
+    },
+    {
+      "item": "chamorro",
+      "base_price": 386.0,
+      "price": 463.2
+    },
+    {
+      "item": "costilla marinada",
+      "base_price": 386.0,
+      "price": 463.2
+    },
+    {
+      "item": "espaldilla pulpa",
+      "base_price": 429.0,
+      "price": 514.8
+    },
+    {
+      "item": "filete",
+      "base_price": 685.0,
+      "price": 822.0
+    },
+    {
+      "item": "hamburguesa",
+      "base_price": 385.71,
+      "price": 462.85
+    },
+    {
+      "item": "lomo",
+      "base_price": 588.0,
+      "price": 705.6
+    },
+    {
+      "item": "pescuezo",
+      "base_price": 384.62,
+      "price": 461.54
+    },
+    {
+      "item": "pierna pulpa",
+      "base_price": 501.12,
+      "price": 601.34
+    },
+    {
+      "item": "rack francês",
+      "base_price": 593.0,
+      "price": 711.6
+    }
+  ],
+  "Codorniz": [
+    {
+      "item": "adobada",
+      "base_price": 28.0,
+      "price": 33.6
+    },
+    {
+      "item": "birria",
+      "base_price": 103.0,
+      "price": 123.6
+    },
+    {
+      "item": "cartera huevito",
+      "base_price": 38.4,
+      "price": 46.08
+    },
+    {
+      "item": "marinada",
+      "base_price": 28.0,
+      "price": 33.6
+    },
+    {
+      "item": "natural 045",
+      "base_price": 25.92,
+      "price": 31.1
+    }
+  ],
+  "Conejo": [
+    {
+      "item": "adobado pierna y muslo",
+      "base_price": 183.0,
+      "price": 219.6
+    },
+    {
+      "item": "canal",
+      "base_price": 178.0,
+      "price": 213.6
+    },
+    {
+      "item": "lomo",
+      "base_price": 195.0,
+      "price": 234.0
+    },
+    {
+      "item": "lomo marinado",
+      "base_price": 185.0,
+      "price": 222.0
+    },
+    {
+      "item": "marinado pierna y muslo",
+      "base_price": 183.0,
+      "price": 219.6
+    },
+    {
+      "item": "pierna y muslo natural",
+      "base_price": 188.0,
+      "price": 225.6
+    },
+    {
+      "item": "pulpa",
+      "base_price": 193.0,
+      "price": 231.6
+    }
+  ],
+  "Cordero": [
+    {
+      "item": "arrachera al romero",
+      "base_price": 287.04,
+      "price": 344.45
+    },
+    {
+      "item": "arrachera campirana",
+      "base_price": 287.04,
+      "price": 344.45
+    },
+    {
+      "item": "arrachera especial",
+      "base_price": 287.04,
+      "price": 344.45
+    },
+    {
+      "item": "arrachera hierbas finas",
+      "base_price": 287.04,
+      "price": 344.45
+    },
+    {
+      "item": "barbacoa",
+      "base_price": 469.44,
+      "price": 563.33
+    },
+    {
+      "item": "birria",
+      "base_price": 230.4,
+      "price": 276.48
+    },
+    {
+      "item": "cabeza",
+      "base_price": 175.6,
+      "price": 210.72
+    },
+    {
+      "item": "canal",
+      "base_price": 175.6,
+      "price": 210.72
+    },
+    {
+      "item": "chistorra merguez",
+      "base_price": 264.96,
+      "price": 317.95
+    },
+    {
+      "item": "chistorra mixta",
+      "base_price": 255.36,
+      "price": 306.43
+    },
+    {
+      "item": "chistorra árabe",
+      "base_price": 175.6,
+      "price": 210.72
+    },
+    {
+      "item": "chuleta especial",
+      "base_price": 251.52,
+      "price": 301.82
+    },
+    {
+      "item": "chuleta estandar",
+      "base_price": 469.6,
+      "price": 563.52
+    },
+    {
+      "item": "chuleta marinada",
+      "base_price": 181.44,
+      "price": 217.73
+    },
+    {
+      "item": "confit pulpa",
+      "base_price": 195.84,
+      "price": 235.01
+    },
+    {
+      "item": "costilla",
+      "base_price": 195.84,
+      "price": 235.01
+    },
+    {
+      "item": "costilla baby back",
+      "base_price": 195.84,
+      "price": 235.01
+    },
+    {
+      "item": "costilla campirana",
+      "base_price": 288.96,
+      "price": 346.75
+    },
+    {
+      "item": "costilla hierbas fina",
+      "base_price": 195.84,
+      "price": 235.01
+    },
+    {
+      "item": "costilla marinada",
+      "base_price": 195.84,
+      "price": 235.01
+    },
+    {
+      "item": "costilla romero",
+      "base_price": 316.8,
+      "price": 380.16
+    },
+    {
+      "item": "cubo",
+      "base_price": 225.6,
+      "price": 270.72
+    },
+    {
+      "item": "escalopas",
+      "base_price": 212.16,
+      "price": 254.59
+    },
+    {
+      "item": "espaldilla",
+      "base_price": 256.32,
+      "price": 307.58
+    },
+    {
+      "item": "espaldilla deshuesada",
+      "base_price": 246.72,
+      "price": 296.06
+    },
+    {
+      "item": "espaldilla pulpa",
+      "base_price": 421.44,
+      "price": 505.73
+    },
+    {
+      "item": "espaldilla pulpa molida",
+      "base_price": 164.6,
+      "price": 197.52
+    },
+    {
+      "item": "filete",
+      "base_price": 154.6,
+      "price": 185.52
+    },
+    {
+      "item": "hamburguesa arabe",
+      "base_price": 149.6,
+      "price": 179.52
+    },
+    {
+      "item": "hamburguesa merguez",
+      "base_price": 54.6,
+      "price": 65.52
+    },
+    {
+      "item": "hamburguesa mixta",
+      "base_price": 201.6,
+      "price": 241.92
+    },
+    {
+      "item": "hueso",
+      "base_price": 225.6,
+      "price": 270.72
+    },
+    {
+      "item": "kit chuleta-costilla marinada",
+      "base_price": 386.88,
+      "price": 464.26
+    },
+    {
+      "item": "kit de panza",
+      "base_price": 272.6,
+      "price": 327.12
+    },
+    {
+      "item": "lechal",
+      "base_price": 216.96,
+      "price": 260.35
+    },
+    {
+      "item": "lomo",
+      "base_price": 203.52,
+      "price": 244.22
+    },
+    {
+      "item": "machito cocido",
+      "base_price": 216.96,
+      "price": 260.35
+    },
+    {
+      "item": "machito picado",
+      "base_price": 316.8,
+      "price": 380.16
+    },
+    {
+      "item": "machito picado adobado",
+      "base_price": 64.6,
+      "price": 77.52
+    },
+    {
+      "item": "macho crudo",
+      "base_price": 203.52,
+      "price": 244.22
+    },
+    {
+      "item": "maciza",
+      "base_price": 220.8,
+      "price": 264.96
+    },
+    {
+      "item": "menudo",
+      "base_price": 275.52,
+      "price": 330.62
+    },
+    {
+      "item": "molida",
+      "base_price": 163.2,
+      "price": 195.84
+    },
+    {
+      "item": "osobuco",
+      "base_price": 307.2,
+      "price": 368.64
+    },
+    {
+      "item": "pescuezo",
+      "base_price": 278.4,
+      "price": 334.08
+    },
+    {
+      "item": "picaña",
+      "base_price": 258.51,
+      "price": 310.21
+    },
+    {
+      "item": "pierna",
+      "base_price": 263.31,
+      "price": 315.97
+    },
+    {
+      "item": "pierna con cadera",
+      "base_price": 331.2,
+      "price": 397.44
+    },
+    {
+      "item": "pierna deshuesada con el hueso",
+      "base_price": 325.44,
+      "price": 390.53
+    },
+    {
+      "item": "pierna pulpa",
+      "base_price": 624.0,
+      "price": 748.8
+    },
+    {
+      "item": "rack americano",
+      "base_price": 139.6,
+      "price": 167.52
+    },
+    {
+      "item": "rack francés",
+      "base_price": 139.6,
+      "price": 167.52
+    },
+    {
+      "item": "salchicha alemana",
+      "base_price": 234.6,
+      "price": 281.52
+    },
+    {
+      "item": "salchicha berlín",
+      "base_price": 262.08,
+      "price": 314.5
+    },
+    {
+      "item": "silla",
+      "base_price": 292.8,
+      "price": 351.36
+    },
+    {
+      "item": "sirloin",
+      "base_price": 275.0,
+      "price": 330.0
+    },
+    {
+      "item": "t-bone",
+      "base_price": 234.0,
+      "price": 280.8
+    }
+  ],
+  "Jabalí": [
+    {
+      "item": "arrachera marinada",
+      "base_price": 234.0,
+      "price": 280.8
+    },
+    {
+      "item": "canal",
+      "base_price": 250.0,
+      "price": 300.0
+    },
+    {
+      "item": "costilla marinada",
+      "base_price": 520.0,
+      "price": 624.0
+    },
+    {
+      "item": "filete",
+      "base_price": 515.0,
+      "price": 618.0
+    },
+    {
+      "item": "hamburguesa",
+      "base_price": 470.0,
+      "price": 564.0
+    },
+    {
+      "item": "lomo",
+      "base_price": 254.0,
+      "price": 304.8
+    },
+    {
+      "item": "rack francés",
+      "base_price": 262.0,
+      "price": 314.4
+    }
+  ],
+  "Pato": [
+    {
+      "item": "confit molleja",
+      "base_price": 395.0,
+      "price": 474.0
+    },
+    {
+      "item": "confit pierna y muslo grande",
+      "base_price": 395.0,
+      "price": 474.0
+    },
+    {
+      "item": "confit pierna y muslo mediano",
+      "base_price": 468.0,
+      "price": 561.6
+    },
+    {
+      "item": "confit pulpa",
+      "base_price": 1093.0,
+      "price": 1311.6
+    },
+    {
+      "item": "foie gras a",
+      "base_price": 1240.0,
+      "price": 1488.0
+    },
+    {
+      "item": "foie terrina",
+      "base_price": 175.0,
+      "price": 210.0
+    },
+    {
+      "item": "grasa",
+      "base_price": 305.0,
+      "price": 366.0
+    },
+    {
+      "item": "hamburguesa",
+      "base_price": 59.0,
+      "price": 70.8
+    },
+    {
+      "item": "hueso",
+      "base_price": 782.0,
+      "price": 938.4
+    },
+    {
+      "item": "huevo",
+      "base_price": 479.0,
+      "price": 574.8
+    },
+    {
+      "item": "jamon iberico",
+      "base_price": 445.0,
+      "price": 534.0
+    },
+    {
+      "item": "magret ahumado",
+      "base_price": 445.0,
+      "price": 534.0
+    },
+    {
+      "item": "magret especial",
+      "base_price": 445.0,
+      "price": 534.0
+    },
+    {
+      "item": "magret extra premium",
+      "base_price": 518.0,
+      "price": 621.6
+    },
+    {
+      "item": "magret premium",
+      "base_price": 175.0,
+      "price": 210.0
+    },
+    {
+      "item": "magret serrano",
+      "base_price": 616.0,
+      "price": 739.2
+    },
+    {
+      "item": "pastrami",
+      "base_price": 315.0,
+      "price": 378.0
+    },
+    {
+      "item": "pekin con viscera",
+      "base_price": 341.0,
+      "price": 409.2
+    },
+    {
+      "item": "pierna y muslo alcienne",
+      "base_price": 315.0,
+      "price": 378.0
+    },
+    {
+      "item": "pierna y muslo marinado s/h",
+      "base_price": 6.24,
+      "price": 7.49
+    },
+    {
+      "item": "pierna y muslo natural grande",
+      "base_price": 315.0,
+      "price": 378.0
+    },
+    {
+      "item": "pierna y muslo natural mediano",
+      "base_price": 599.0,
+      "price": 718.8
+    },
+    {
+      "item": "selva negra",
+      "base_price": 137.0,
+      "price": 164.4
+    }
+  ],
+  "Pavo": [
+    {
+      "item": "entero",
+      "base_price": 242.0,
+      "price": 290.4
+    },
+    {
+      "item": "molido",
+      "base_price": 175.0,
+      "price": 210.0
+    },
+    {
+      "item": "pechuga",
+      "base_price": 148.8,
+      "price": 178.56
+    },
+    {
+      "item": "pierna natural",
+      "base_price": 129.0,
+      "price": 154.8
+    }
+  ],
+  "Pollo": [
+    {
+      "item": "alita natural",
+      "base_price": 114.0,
+      "price": 136.8
+    },
+    {
+      "item": "de leche",
+      "base_price": 130.0,
+      "price": 156.0
+    },
+    {
+      "item": "entero",
+      "base_price": 129.0,
+      "price": 154.8
+    },
+    {
+      "item": "pechuga brasileña",
+      "base_price": 72.96,
+      "price": 87.55
+    },
+    {
+      "item": "pierna y muslo",
+      "base_price": 122.88,
+      "price": 147.46
+    }
+  ],
+  "Queso": [
+    {
+      "item": "adobera",
+      "base_price": 259.6,
+      "price": 311.52
+    },
+    {
+      "item": "de cabra bouquet",
+      "base_price": 62.4,
+      "price": 74.88
+    },
+    {
+      "item": "de cabra con ceniza",
+      "base_price": 62.4,
+      "price": 74.88
+    },
+    {
+      "item": "de cabra finas hierbas",
+      "base_price": 62.4,
+      "price": 74.88
+    },
+    {
+      "item": "de cabra natural",
+      "base_price": 81.6,
+      "price": 97.92
+    },
+    {
+      "item": "oaxaca",
+      "base_price": 203.6,
+      "price": 244.32
+    },
+    {
+      "item": "panela",
+      "base_price": 254.6,
+      "price": 305.52
+    },
+    {
+      "item": "provoleta",
+      "base_price": 302.6,
+      "price": 363.12
+    }
+  ],
+  "Res": [
+    {
+      "item": "arrachera",
+      "base_price": 360.0,
+      "price": 432.0
+    },
+    {
+      "item": "arrachera 250 grs",
+      "base_price": 107.6,
+      "price": 129.12
+    },
+    {
+      "item": "arrachera suprema",
+      "base_price": 143.6,
+      "price": 172.32
+    },
+    {
+      "item": "brisket",
+      "base_price": 124.6,
+      "price": 149.52
+    },
+    {
+      "item": "cabreria",
+      "base_price": 114.6,
+      "price": 137.52
+    },
+    {
+      "item": "chinchulines",
+      "base_price": 114.6,
+      "price": 137.52
+    },
+    {
+      "item": "chistorra española",
+      "base_price": 222.72,
+      "price": 267.26
+    },
+    {
+      "item": "chorizo argentino",
+      "base_price": 312.6,
+      "price": 375.12
+    },
+    {
+      "item": "chorizo campestre",
+      "base_price": 456.96,
+      "price": 548.35
+    },
+    {
+      "item": "chorizo ranchero",
+      "base_price": 250.56,
+      "price": 300.67
+    },
+    {
+      "item": "costilla cargada short ryb",
+      "base_price": 413.76,
+      "price": 496.51
+    },
+    {
+      "item": "cowboy",
+      "base_price": 129.6,
+      "price": 155.52
+    },
+    {
+      "item": "cowboy prime",
+      "base_price": 114.6,
+      "price": 137.52
+    },
+    {
+      "item": "fajita de rib eye",
+      "base_price": 106.6,
+      "price": 127.92
+    },
+    {
+      "item": "filete",
+      "base_price": 328.6,
+      "price": 394.32
+    },
+    {
+      "item": "hamburguesa arrachera",
+      "base_price": 150.24,
+      "price": 180.29
+    },
+    {
+      "item": "hamburguesa española",
+      "base_price": 251.6,
+      "price": 301.92
+    },
+    {
+      "item": "hamburguesa texas",
+      "base_price": 282.12,
+      "price": 338.54
+    },
+    {
+      "item": "lengua",
+      "base_price": 274.56,
+      "price": 329.47
+    },
+    {
+      "item": "molida",
+      "base_price": 363.46,
+      "price": 436.15
+    },
+    {
+      "item": "molleja",
+      "base_price": 259.72,
+      "price": 311.66
+    },
+    {
+      "item": "new york",
+      "base_price": 337.54,
+      "price": 405.05
+    },
+    {
+      "item": "peinecillo",
+      "base_price": 328.32,
+      "price": 393.98
+    },
+    {
+      "item": "picaña",
+      "base_price": 492.44,
+      "price": 590.93
+    },
+    {
+      "item": "porterhouse",
+      "base_price": 482.44,
+      "price": 578.93
+    },
+    {
+      "item": "prime rib",
+      "base_price": 254.4,
+      "price": 305.28
+    },
+    {
+      "item": "rib eye",
+      "base_price": 253.72,
+      "price": 304.46
+    },
+    {
+      "item": "rib eye añejo",
+      "base_price": 119.6,
+      "price": 143.52
+    },
+    {
+      "item": "rib eye prime",
+      "base_price": 269.6,
+      "price": 323.52
+    },
+    {
+      "item": "sirloin",
+      "base_price": 151.68,
+      "price": 182.02
+    },
+    {
+      "item": "t bone",
+      "base_price": 268.8,
+      "price": 322.56
+    },
+    {
+      "item": "tuetano",
+      "base_price": 315.84,
+      "price": 379.01
+    },
+    {
+      "item": "vacio nacional",
+      "base_price": 45.0,
+      "price": 54.0
+    }
+  ],
+  "Ternera": [
+    {
+      "item": "costilla de pecho",
+      "base_price": 261.12,
+      "price": 313.34
+    },
+    {
+      "item": "escalopa",
+      "base_price": 271.0,
+      "price": 325.2
+    },
+    {
+      "item": "filete",
+      "base_price": 166.08,
+      "price": 199.3
+    },
+    {
+      "item": "hueso",
+      "base_price": 192.0,
+      "price": 230.4
+    },
+    {
+      "item": "lengua",
+      "base_price": 329.28,
+      "price": 395.14
+    },
+    {
+      "item": "lomo",
+      "base_price": 408.0,
+      "price": 489.6
+    }
+  ]
+}
