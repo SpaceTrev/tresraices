@@ -1,1027 +1,2058 @@
-{
-  "Avestruz": [
-    {
-      "item": "arrachera",
-      "base_price": 298.0,
-      "price": 342.7
-    },
-    {
-      "item": "hamburguesa grande",
-      "base_price": 272.64,
-      "price": 313.54
-    },
-    {
-      "item": "molida",
-      "base_price": 298.0,
-      "price": 342.7
+[
+  {
+    "id": "avestruz:arrachera",
+    "name": "arrachera",
+    "category": "Avestruz",
+    "unit": "kg",
+    "basePrice": 135,
+    "price": {
+      "guadalajara": 155.25,
+      "colima": 162
     }
-  ],
-  "Búfalo": [
-    {
-      "item": "arrachera marinada",
-      "base_price": 235.2,
-      "price": 270.48
-    },
-    {
-      "item": "costilla",
-      "base_price": 158.0,
-      "price": 181.7
-    },
-    {
-      "item": "cow boy",
-      "base_price": 270.0,
-      "price": 310.5
-    },
-    {
-      "item": "diezmillo",
-      "base_price": 280.0,
-      "price": 322.0
-    },
-    {
-      "item": "hamburguesa",
-      "base_price": 135.0,
-      "price": 155.25
-    },
-    {
-      "item": "t-bone",
-      "base_price": 240.0,
-      "price": 276.0
-    },
-    {
-      "item": "top sirloin",
-      "base_price": 275.0,
-      "price": 316.25
+  },
+  {
+    "id": "avestruz:hamburguesa-grande",
+    "name": "hamburguesa grande",
+    "category": "Avestruz",
+    "unit": "kg",
+    "basePrice": 144,
+    "price": {
+      "guadalajara": 165.6,
+      "colima": 172.8
     }
-  ],
-  "Cabrito": [
-    {
-      "item": "Canal",
-      "base_price": 1440.0,
-      "price": 1656.0
+  },
+  {
+    "id": "avestruz:molida",
+    "name": "molida",
+    "category": "Avestruz",
+    "unit": "kg",
+    "basePrice": 118,
+    "price": {
+      "guadalajara": 135.7,
+      "colima": 141.6
     }
-  ],
-  "Cerdo": [
-    {
-      "item": "adobado",
-      "base_price": 133.0,
-      "price": 152.95
-    },
-    {
-      "item": "cabeza de lomo",
-      "base_price": 134.4,
-      "price": 154.56
-    },
-    {
-      "item": "chamorro sin piel",
-      "base_price": 87.3,
-      "price": 100.4
-    },
-    {
-      "item": "chuleta americana (entrecot)",
-      "base_price": 118.0,
-      "price": 135.7
-    },
-    {
-      "item": "costilla baby back",
-      "base_price": 144.0,
-      "price": 165.6
-    },
-    {
-      "item": "costilla huacal",
-      "base_price": 135.0,
-      "price": 155.25
-    },
-    {
-      "item": "lechón 10.100-11.0",
-      "base_price": 163.2,
-      "price": 187.68
-    },
-    {
-      "item": "lechón 11.100-12.0",
-      "base_price": 166.6,
-      "price": 191.59
-    },
-    {
-      "item": "lechón 12.100-13.0",
-      "base_price": 145.0,
-      "price": 166.75
-    },
-    {
-      "item": "lechón 13.100-14.0",
-      "base_price": 1600.0,
-      "price": 1840.0
-    },
-    {
-      "item": "lechón 3-6.0",
-      "base_price": 1500.0,
-      "price": 1725.0
-    },
-    {
-      "item": "lechón 6.100-7.0",
-      "base_price": 142.0,
-      "price": 163.3
-    },
-    {
-      "item": "lechón 7.100-8.0",
-      "base_price": 65.28,
-      "price": 75.07
-    },
-    {
-      "item": "lechón 8.100-9.0",
-      "base_price": 108.0,
-      "price": 124.2
-    },
-    {
-      "item": "lechón 9.100-10.0",
-      "base_price": 115.2,
-      "price": 132.48
-    },
-    {
-      "item": "lomo",
-      "base_price": 1700.0,
-      "price": 1955.0
-    },
-    {
-      "item": "manteca",
-      "base_price": 1800.0,
-      "price": 2070.0
-    },
-    {
-      "item": "molida",
-      "base_price": 1900.0,
-      "price": 2185.0
-    },
-    {
-      "item": "pierna adobada",
-      "base_price": 2100.0,
-      "price": 2415.0
-    },
-    {
-      "item": "pierna pulpa",
-      "base_price": 2000.0,
-      "price": 2300.0
-    },
-    {
-      "item": "salchicha paletita",
-      "base_price": 2200.0,
-      "price": 2530.0
-    },
-    {
-      "item": "tocinilla crudo con piel (pork belly)",
-      "base_price": 2300.0,
-      "price": 2645.0
-    },
-    {
-      "item": "tocino ahumado",
-      "base_price": 105.6,
-      "price": 121.44
+  },
+  {
+    "id": "bufalo:arracheramarinada",
+    "name": "arracheramarinada",
+    "category": "Búfalo",
+    "unit": "kg",
+    "basePrice": 87.3,
+    "price": {
+      "guadalajara": 100.4,
+      "colima": 104.76
     }
-  ],
-  "Ciervo rojo": [
-    {
-      "item": "arrachera",
-      "base_price": 448.2,
-      "price": 515.43
-    },
-    {
-      "item": "chamorro",
-      "base_price": 386.0,
-      "price": 443.9
-    },
-    {
-      "item": "costilla marinada",
-      "base_price": 386.0,
-      "price": 443.9
-    },
-    {
-      "item": "espaldilla pulpa",
-      "base_price": 429.0,
-      "price": 493.35
-    },
-    {
-      "item": "filete",
-      "base_price": 685.0,
-      "price": 787.75
-    },
-    {
-      "item": "hamburguesa",
-      "base_price": 385.71,
-      "price": 443.57
-    },
-    {
-      "item": "lomo",
-      "base_price": 588.0,
-      "price": 676.2
-    },
-    {
-      "item": "pescuezo",
-      "base_price": 384.62,
-      "price": 442.31
-    },
-    {
-      "item": "pierna pulpa",
-      "base_price": 501.12,
-      "price": 576.29
-    },
-    {
-      "item": "rack francês",
-      "base_price": 593.0,
-      "price": 681.95
+  },
+  {
+    "id": "bufalo:costilla",
+    "name": "costilla",
+    "category": "Búfalo",
+    "unit": "kg",
+    "basePrice": 134.4,
+    "price": {
+      "guadalajara": 154.56,
+      "colima": 161.28
     }
-  ],
-  "Codorniz": [
-    {
-      "item": "adobada",
-      "base_price": 28.0,
-      "price": 32.2
-    },
-    {
-      "item": "birria",
-      "base_price": 103.0,
-      "price": 118.45
-    },
-    {
-      "item": "cartera huevito",
-      "base_price": 38.4,
-      "price": 44.16
-    },
-    {
-      "item": "marinada",
-      "base_price": 28.0,
-      "price": 32.2
-    },
-    {
-      "item": "natural 045",
-      "base_price": 25.92,
-      "price": 29.81
+  },
+  {
+    "id": "bufalo:cowboy",
+    "name": "cowboy",
+    "category": "Búfalo",
+    "unit": "kg",
+    "basePrice": 133,
+    "price": {
+      "guadalajara": 152.95,
+      "colima": 159.6
     }
-  ],
-  "Conejo": [
-    {
-      "item": "adobado pierna y muslo",
-      "base_price": 183.0,
-      "price": 210.45
-    },
-    {
-      "item": "canal",
-      "base_price": 178.0,
-      "price": 204.7
-    },
-    {
-      "item": "lomo",
-      "base_price": 195.0,
-      "price": 224.25
-    },
-    {
-      "item": "lomo marinado",
-      "base_price": 185.0,
-      "price": 212.75
-    },
-    {
-      "item": "marinado pierna y muslo",
-      "base_price": 183.0,
-      "price": 210.45
-    },
-    {
-      "item": "pierna y muslo natural",
-      "base_price": 188.0,
-      "price": 216.2
-    },
-    {
-      "item": "pulpa",
-      "base_price": 193.0,
-      "price": 221.95
+  },
+  {
+    "id": "bufalo:diezmillo",
+    "name": "diezmillo",
+    "category": "Búfalo",
+    "unit": "kg",
+    "basePrice": 275,
+    "price": {
+      "guadalajara": 316.25,
+      "colima": 330
     }
-  ],
-  "Cordero": [
-    {
-      "item": "arrachera al romero",
-      "base_price": 287.04,
-      "price": 330.1
-    },
-    {
-      "item": "arrachera campirana",
-      "base_price": 287.04,
-      "price": 330.1
-    },
-    {
-      "item": "arrachera especial",
-      "base_price": 287.04,
-      "price": 330.1
-    },
-    {
-      "item": "arrachera hierbas finas",
-      "base_price": 287.04,
-      "price": 330.1
-    },
-    {
-      "item": "barbacoa",
-      "base_price": 469.44,
-      "price": 539.86
-    },
-    {
-      "item": "birria",
-      "base_price": 230.4,
-      "price": 264.96
-    },
-    {
-      "item": "cabeza",
-      "base_price": 175.6,
-      "price": 201.94
-    },
-    {
-      "item": "canal",
-      "base_price": 175.6,
-      "price": 201.94
-    },
-    {
-      "item": "chistorra merguez",
-      "base_price": 264.96,
-      "price": 304.7
-    },
-    {
-      "item": "chistorra mixta",
-      "base_price": 255.36,
-      "price": 293.66
-    },
-    {
-      "item": "chistorra árabe",
-      "base_price": 175.6,
-      "price": 201.94
-    },
-    {
-      "item": "chuleta especial",
-      "base_price": 251.52,
-      "price": 289.25
-    },
-    {
-      "item": "chuleta estandar",
-      "base_price": 469.6,
-      "price": 540.04
-    },
-    {
-      "item": "chuleta marinada",
-      "base_price": 181.44,
-      "price": 208.66
-    },
-    {
-      "item": "confit pulpa",
-      "base_price": 195.84,
-      "price": 225.22
-    },
-    {
-      "item": "costilla",
-      "base_price": 195.84,
-      "price": 225.22
-    },
-    {
-      "item": "costilla baby back",
-      "base_price": 195.84,
-      "price": 225.22
-    },
-    {
-      "item": "costilla campirana",
-      "base_price": 288.96,
-      "price": 332.3
-    },
-    {
-      "item": "costilla hierbas fina",
-      "base_price": 195.84,
-      "price": 225.22
-    },
-    {
-      "item": "costilla marinada",
-      "base_price": 195.84,
-      "price": 225.22
-    },
-    {
-      "item": "costilla romero",
-      "base_price": 316.8,
-      "price": 364.32
-    },
-    {
-      "item": "cubo",
-      "base_price": 225.6,
-      "price": 259.44
-    },
-    {
-      "item": "escalopas",
-      "base_price": 212.16,
-      "price": 243.98
-    },
-    {
-      "item": "espaldilla",
-      "base_price": 256.32,
-      "price": 294.77
-    },
-    {
-      "item": "espaldilla deshuesada",
-      "base_price": 246.72,
-      "price": 283.73
-    },
-    {
-      "item": "espaldilla pulpa",
-      "base_price": 421.44,
-      "price": 484.66
-    },
-    {
-      "item": "espaldilla pulpa molida",
-      "base_price": 164.6,
-      "price": 189.29
-    },
-    {
-      "item": "filete",
-      "base_price": 154.6,
-      "price": 177.79
-    },
-    {
-      "item": "hamburguesa arabe",
-      "base_price": 149.6,
-      "price": 172.04
-    },
-    {
-      "item": "hamburguesa merguez",
-      "base_price": 54.6,
-      "price": 62.79
-    },
-    {
-      "item": "hamburguesa mixta",
-      "base_price": 201.6,
-      "price": 231.84
-    },
-    {
-      "item": "hueso",
-      "base_price": 225.6,
-      "price": 259.44
-    },
-    {
-      "item": "kit chuleta-costilla marinada",
-      "base_price": 386.88,
-      "price": 444.91
-    },
-    {
-      "item": "kit de panza",
-      "base_price": 272.6,
-      "price": 313.49
-    },
-    {
-      "item": "lechal",
-      "base_price": 216.96,
-      "price": 249.5
-    },
-    {
-      "item": "lomo",
-      "base_price": 203.52,
-      "price": 234.05
-    },
-    {
-      "item": "machito cocido",
-      "base_price": 216.96,
-      "price": 249.5
-    },
-    {
-      "item": "machito picado",
-      "base_price": 316.8,
-      "price": 364.32
-    },
-    {
-      "item": "machito picado adobado",
-      "base_price": 64.6,
-      "price": 74.29
-    },
-    {
-      "item": "macho crudo",
-      "base_price": 203.52,
-      "price": 234.05
-    },
-    {
-      "item": "maciza",
-      "base_price": 220.8,
-      "price": 253.92
-    },
-    {
-      "item": "menudo",
-      "base_price": 275.52,
-      "price": 316.85
-    },
-    {
-      "item": "molida",
-      "base_price": 163.2,
-      "price": 187.68
-    },
-    {
-      "item": "osobuco",
-      "base_price": 307.2,
-      "price": 353.28
-    },
-    {
-      "item": "pescuezo",
-      "base_price": 278.4,
-      "price": 320.16
-    },
-    {
-      "item": "picaña",
-      "base_price": 258.51,
-      "price": 297.29
-    },
-    {
-      "item": "pierna",
-      "base_price": 263.31,
-      "price": 302.81
-    },
-    {
-      "item": "pierna con cadera",
-      "base_price": 331.2,
-      "price": 380.88
-    },
-    {
-      "item": "pierna deshuesada con el hueso",
-      "base_price": 325.44,
-      "price": 374.26
-    },
-    {
-      "item": "pierna pulpa",
-      "base_price": 624.0,
-      "price": 717.6
-    },
-    {
-      "item": "rack americano",
-      "base_price": 139.6,
-      "price": 160.54
-    },
-    {
-      "item": "rack francés",
-      "base_price": 139.6,
-      "price": 160.54
-    },
-    {
-      "item": "salchicha alemana",
-      "base_price": 234.6,
-      "price": 269.79
-    },
-    {
-      "item": "salchicha berlín",
-      "base_price": 262.08,
-      "price": 301.39
-    },
-    {
-      "item": "silla",
-      "base_price": 292.8,
-      "price": 336.72
-    },
-    {
-      "item": "sirloin",
-      "base_price": 275.0,
-      "price": 316.25
-    },
-    {
-      "item": "t-bone",
-      "base_price": 234.0,
-      "price": 269.1
+  },
+  {
+    "id": "bufalo:hamburguesa",
+    "name": "hamburguesa",
+    "category": "Búfalo",
+    "unit": "kg",
+    "basePrice": 240,
+    "price": {
+      "guadalajara": 276,
+      "colima": 288
     }
-  ],
-  "Jabalí": [
-    {
-      "item": "arrachera marinada",
-      "base_price": 234.0,
-      "price": 269.1
-    },
-    {
-      "item": "canal",
-      "base_price": 250.0,
-      "price": 287.5
-    },
-    {
-      "item": "costilla marinada",
-      "base_price": 520.0,
-      "price": 598.0
-    },
-    {
-      "item": "filete",
-      "base_price": 515.0,
-      "price": 592.25
-    },
-    {
-      "item": "hamburguesa",
-      "base_price": 470.0,
-      "price": 540.5
-    },
-    {
-      "item": "lomo",
-      "base_price": 254.0,
-      "price": 292.1
-    },
-    {
-      "item": "rack francés",
-      "base_price": 262.0,
-      "price": 301.3
+  },
+  {
+    "id": "bufalo:t-bone",
+    "name": "t-bone",
+    "category": "Búfalo",
+    "unit": "kg",
+    "basePrice": 135,
+    "price": {
+      "guadalajara": 155.25,
+      "colima": 162
     }
-  ],
-  "Pato": [
-    {
-      "item": "confit molleja",
-      "base_price": 395.0,
-      "price": 454.25
-    },
-    {
-      "item": "confit pierna y muslo grande",
-      "base_price": 395.0,
-      "price": 454.25
-    },
-    {
-      "item": "confit pierna y muslo mediano",
-      "base_price": 468.0,
-      "price": 538.2
-    },
-    {
-      "item": "confit pulpa",
-      "base_price": 1093.0,
-      "price": 1256.95
-    },
-    {
-      "item": "foie gras a",
-      "base_price": 1240.0,
-      "price": 1426.0
-    },
-    {
-      "item": "foie terrina",
-      "base_price": 175.0,
-      "price": 201.25
-    },
-    {
-      "item": "grasa",
-      "base_price": 305.0,
-      "price": 350.75
-    },
-    {
-      "item": "hamburguesa",
-      "base_price": 59.0,
-      "price": 67.85
-    },
-    {
-      "item": "hueso",
-      "base_price": 782.0,
-      "price": 899.3
-    },
-    {
-      "item": "huevo",
-      "base_price": 479.0,
-      "price": 550.85
-    },
-    {
-      "item": "jamon iberico",
-      "base_price": 445.0,
-      "price": 511.75
-    },
-    {
-      "item": "magret ahumado",
-      "base_price": 445.0,
-      "price": 511.75
-    },
-    {
-      "item": "magret especial",
-      "base_price": 445.0,
-      "price": 511.75
-    },
-    {
-      "item": "magret extra premium",
-      "base_price": 518.0,
-      "price": 595.7
-    },
-    {
-      "item": "magret premium",
-      "base_price": 175.0,
-      "price": 201.25
-    },
-    {
-      "item": "magret serrano",
-      "base_price": 616.0,
-      "price": 708.4
-    },
-    {
-      "item": "pastrami",
-      "base_price": 315.0,
-      "price": 362.25
-    },
-    {
-      "item": "pekin con viscera",
-      "base_price": 341.0,
-      "price": 392.15
-    },
-    {
-      "item": "pierna y muslo alcienne",
-      "base_price": 315.0,
-      "price": 362.25
-    },
-    {
-      "item": "pierna y muslo marinado s/h",
-      "base_price": 6.24,
-      "price": 7.18
-    },
-    {
-      "item": "pierna y muslo natural grande",
-      "base_price": 315.0,
-      "price": 362.25
-    },
-    {
-      "item": "pierna y muslo natural mediano",
-      "base_price": 599.0,
-      "price": 688.85
-    },
-    {
-      "item": "selva negra",
-      "base_price": 137.0,
-      "price": 157.55
+  },
+  {
+    "id": "bufalo:top-sirloin",
+    "name": "top sirloin",
+    "category": "Búfalo",
+    "unit": "kg",
+    "basePrice": 280,
+    "price": {
+      "guadalajara": 322,
+      "colima": 336
     }
-  ],
-  "Pavo": [
-    {
-      "item": "entero",
-      "base_price": 242.0,
-      "price": 278.3
-    },
-    {
-      "item": "molido",
-      "base_price": 175.0,
-      "price": 201.25
-    },
-    {
-      "item": "pechuga",
-      "base_price": 148.8,
-      "price": 171.12
-    },
-    {
-      "item": "pierna natural",
-      "base_price": 129.0,
-      "price": 148.35
+  },
+  {
+    "id": "cabrito:canal",
+    "name": "Canal",
+    "category": "Cabrito",
+    "unit": "kg",
+    "basePrice": 1440,
+    "price": {
+      "guadalajara": 1656,
+      "colima": 1728
     }
-  ],
-  "Pollo": [
-    {
-      "item": "alita natural",
-      "base_price": 114.0,
-      "price": 131.1
-    },
-    {
-      "item": "de leche",
-      "base_price": 130.0,
-      "price": 149.5
-    },
-    {
-      "item": "entero",
-      "base_price": 129.0,
-      "price": 148.35
-    },
-    {
-      "item": "pechuga brasileña",
-      "base_price": 72.96,
-      "price": 83.9
-    },
-    {
-      "item": "pierna y muslo",
-      "base_price": 122.88,
-      "price": 141.31
+  },
+  {
+    "id": "cerdo:adobado",
+    "name": "adobado",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 270,
+    "price": {
+      "guadalajara": 310.5,
+      "colima": 324
     }
-  ],
-  "Queso": [
-    {
-      "item": "adobera",
-      "base_price": 259.6,
-      "price": 298.54
-    },
-    {
-      "item": "de cabra bouquet",
-      "base_price": 62.4,
-      "price": 71.76
-    },
-    {
-      "item": "de cabra con ceniza",
-      "base_price": 62.4,
-      "price": 71.76
-    },
-    {
-      "item": "de cabra finas hierbas",
-      "base_price": 62.4,
-      "price": 71.76
-    },
-    {
-      "item": "de cabra natural",
-      "base_price": 81.6,
-      "price": 93.84
-    },
-    {
-      "item": "oaxaca",
-      "base_price": 203.6,
-      "price": 234.14
-    },
-    {
-      "item": "panela",
-      "base_price": 254.6,
-      "price": 292.79
-    },
-    {
-      "item": "provoleta",
-      "base_price": 302.6,
-      "price": 347.99
+  },
+  {
+    "id": "cerdo:cabezade-lomo",
+    "name": "cabezade lomo",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 158,
+    "price": {
+      "guadalajara": 181.7,
+      "colima": 189.6
     }
-  ],
-  "Res": [
-    {
-      "item": "arrachera",
-      "base_price": 360.0,
-      "price": 414.0
-    },
-    {
-      "item": "arrachera 250 grs",
-      "base_price": 107.6,
-      "price": 123.74
-    },
-    {
-      "item": "arrachera suprema",
-      "base_price": 143.6,
-      "price": 165.14
-    },
-    {
-      "item": "brisket",
-      "base_price": 124.6,
-      "price": 143.29
-    },
-    {
-      "item": "cabreria",
-      "base_price": 114.6,
-      "price": 131.79
-    },
-    {
-      "item": "chinchulines",
-      "base_price": 114.6,
-      "price": 131.79
-    },
-    {
-      "item": "chistorra española",
-      "base_price": 222.72,
-      "price": 256.13
-    },
-    {
-      "item": "chorizo argentino",
-      "base_price": 312.6,
-      "price": 359.49
-    },
-    {
-      "item": "chorizo campestre",
-      "base_price": 456.96,
-      "price": 525.5
-    },
-    {
-      "item": "chorizo ranchero",
-      "base_price": 250.56,
-      "price": 288.14
-    },
-    {
-      "item": "costilla cargada short ryb",
-      "base_price": 413.76,
-      "price": 475.82
-    },
-    {
-      "item": "cowboy",
-      "base_price": 129.6,
-      "price": 149.04
-    },
-    {
-      "item": "cowboy prime",
-      "base_price": 114.6,
-      "price": 131.79
-    },
-    {
-      "item": "fajita de rib eye",
-      "base_price": 106.6,
-      "price": 122.59
-    },
-    {
-      "item": "filete",
-      "base_price": 328.6,
-      "price": 377.89
-    },
-    {
-      "item": "hamburguesa arrachera",
-      "base_price": 150.24,
-      "price": 172.78
-    },
-    {
-      "item": "hamburguesa española",
-      "base_price": 251.6,
-      "price": 289.34
-    },
-    {
-      "item": "hamburguesa texas",
-      "base_price": 282.12,
-      "price": 324.44
-    },
-    {
-      "item": "lengua",
-      "base_price": 274.56,
-      "price": 315.74
-    },
-    {
-      "item": "molida",
-      "base_price": 363.46,
-      "price": 417.98
-    },
-    {
-      "item": "molleja",
-      "base_price": 259.72,
-      "price": 298.68
-    },
-    {
-      "item": "new york",
-      "base_price": 337.54,
-      "price": 388.17
-    },
-    {
-      "item": "peinecillo",
-      "base_price": 328.32,
-      "price": 377.57
-    },
-    {
-      "item": "picaña",
-      "base_price": 492.44,
-      "price": 566.31
-    },
-    {
-      "item": "porterhouse",
-      "base_price": 482.44,
-      "price": 554.81
-    },
-    {
-      "item": "prime rib",
-      "base_price": 254.4,
-      "price": 292.56
-    },
-    {
-      "item": "rib eye",
-      "base_price": 253.72,
-      "price": 291.78
-    },
-    {
-      "item": "rib eye añejo",
-      "base_price": 119.6,
-      "price": 137.54
-    },
-    {
-      "item": "rib eye prime",
-      "base_price": 269.6,
-      "price": 310.04
-    },
-    {
-      "item": "sirloin",
-      "base_price": 151.68,
-      "price": 174.43
-    },
-    {
-      "item": "t bone",
-      "base_price": 268.8,
-      "price": 309.12
-    },
-    {
-      "item": "tuetano",
-      "base_price": 315.84,
-      "price": 363.22
-    },
-    {
-      "item": "vacio nacional",
-      "base_price": 45.0,
-      "price": 51.75
+  },
+  {
+    "id": "cerdo:chamorro-sinpiel",
+    "name": "chamorro sinpiel",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 235.2,
+    "price": {
+      "guadalajara": 270.48,
+      "colima": 282.24
     }
-  ],
-  "Ternera": [
-    {
-      "item": "costilla de pecho",
-      "base_price": 261.12,
-      "price": 300.29
-    },
-    {
-      "item": "escalopa",
-      "base_price": 271.0,
-      "price": 311.65
-    },
-    {
-      "item": "filete",
-      "base_price": 166.08,
-      "price": 190.99
-    },
-    {
-      "item": "hueso",
-      "base_price": 192.0,
-      "price": 220.8
-    },
-    {
-      "item": "lengua",
-      "base_price": 329.28,
-      "price": 378.67
-    },
-    {
-      "item": "lomo",
-      "base_price": 408.0,
-      "price": 469.2
+  },
+  {
+    "id": "cerdo:chuleta-americana-entrecot",
+    "name": "chuleta americana (entrecot)",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 298,
+    "price": {
+      "guadalajara": 342.7,
+      "colima": 357.6
     }
-  ]
-}
+  },
+  {
+    "id": "cerdo:costillababy-back",
+    "name": "costillababy back",
+    "category": "cerdo",
+    "unit": "kg",
+    "basePrice": 272.64,
+    "price": {
+      "guadalajara": 313.54,
+      "colima": 327.17
+    }
+  },
+  {
+    "id": "cerdo:costillahuacal",
+    "name": "costillahuacal",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 298,
+    "price": {
+      "guadalajara": 342.7,
+      "colima": 357.6
+    }
+  },
+  {
+    "id": "cerdo:lechon3-6-0",
+    "name": "lechón3-6.0",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 1500,
+    "price": {
+      "guadalajara": 1725,
+      "colima": 1800
+    }
+  },
+  {
+    "id": "cerdo:lechon6-100-7-0",
+    "name": "lechón6.100-7.0",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 145,
+    "price": {
+      "guadalajara": 166.75,
+      "colima": 174
+    }
+  },
+  {
+    "id": "cerdo:lechon7-100-8-0",
+    "name": "lechón7.100-8.0",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 166.6,
+    "price": {
+      "guadalajara": 191.59,
+      "colima": 199.92
+    }
+  },
+  {
+    "id": "cerdo:lechon8-100-9-0",
+    "name": "lechón8.100-9.0",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 163.2,
+    "price": {
+      "guadalajara": 187.68,
+      "colima": 195.84
+    }
+  },
+  {
+    "id": "cerdo:lechon9-100-10-0",
+    "name": "lechón9.100-10.0",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 115.2,
+    "price": {
+      "guadalajara": 132.48,
+      "colima": 138.24
+    }
+  },
+  {
+    "id": "cerdo:lechon10-100-11-0",
+    "name": "lechón10.100-11.0",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 108,
+    "price": {
+      "guadalajara": 124.2,
+      "colima": 129.6
+    }
+  },
+  {
+    "id": "cerdo:lechon11-100-12-0",
+    "name": "lechón11.100-12.0",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 65.28,
+    "price": {
+      "guadalajara": 75.07,
+      "colima": 78.34
+    }
+  },
+  {
+    "id": "cerdo:lechon12-100-13-0",
+    "name": "lechón12.100-13.0",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 142,
+    "price": {
+      "guadalajara": 163.3,
+      "colima": 170.4
+    }
+  },
+  {
+    "id": "cerdo:lechon13-100-14-0",
+    "name": "lechón13.100-14.0",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 2300,
+    "price": {},
+    "notes": " [auto-hidden guadalajara=2645] [auto-hidden colima=2760]"
+  },
+  {
+    "id": "cerdo:lomo",
+    "name": "lomo",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 2200,
+    "price": {},
+    "notes": " [auto-hidden guadalajara=2530] [auto-hidden colima=2640]"
+  },
+  {
+    "id": "cerdo:manteca",
+    "name": "manteca",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 2100,
+    "price": {},
+    "notes": " [auto-hidden guadalajara=2415] [auto-hidden colima=2520]"
+  },
+  {
+    "id": "cerdo:molida",
+    "name": "molida",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 2000,
+    "price": {},
+    "notes": " [auto-hidden guadalajara=2300] [auto-hidden colima=2400]"
+  },
+  {
+    "id": "cerdo:piernapulpa",
+    "name": "piernapulpa",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 1900,
+    "price": {},
+    "notes": " [auto-hidden guadalajara=2185] [auto-hidden colima=2280]"
+  },
+  {
+    "id": "cerdo:piernaadobada",
+    "name": "piernaadobada",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 1800,
+    "price": {},
+    "notes": " [auto-hidden guadalajara=2070] [auto-hidden colima=2160]"
+  },
+  {
+    "id": "cerdo:salchichapaletita",
+    "name": "salchichapaletita",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 1700,
+    "price": {
+      "guadalajara": 1955
+    },
+    "notes": " [auto-hidden colima=2040]"
+  },
+  {
+    "id": "cerdo:tocinillacrudoconpiel-porkbelly",
+    "name": "tocinillacrudoconpiel(porkbelly)",
+    "category": "Cerdo",
+    "unit": "kg",
+    "basePrice": 1600,
+    "price": {
+      "guadalajara": 1840,
+      "colima": 1920
+    }
+  },
+  {
+    "id": "cerdo:tocinoahumado",
+    "name": "tocinoahumado",
+    "category": "cerdo",
+    "unit": "kg",
+    "basePrice": 105.6,
+    "price": {
+      "guadalajara": 121.44,
+      "colima": 126.72
+    }
+  },
+  {
+    "id": "codorniz:carterahuevito",
+    "name": "carterahuevito",
+    "category": "Codorniz",
+    "unit": "kg",
+    "basePrice": 175.6,
+    "price": {
+      "guadalajara": 201.94,
+      "colima": 210.72
+    }
+  },
+  {
+    "id": "codorniz:marinada",
+    "name": "marinada",
+    "category": "Codorniz",
+    "unit": "kg",
+    "basePrice": 175.6,
+    "price": {
+      "guadalajara": 201.94,
+      "colima": 210.72
+    }
+  },
+  {
+    "id": "codorniz:natural-045",
+    "name": "natural 045",
+    "category": "Codorniz",
+    "unit": "kg",
+    "basePrice": 230.4,
+    "price": {
+      "guadalajara": 264.96,
+      "colima": 276.48
+    }
+  },
+  {
+    "id": "conejo:adobado-pierna-y-muslo",
+    "name": "adobado pierna y muslo",
+    "category": "Conejo",
+    "unit": "kg",
+    "basePrice": 469.44,
+    "price": {
+      "guadalajara": 539.86,
+      "colima": 563.33
+    }
+  },
+  {
+    "id": "conejo:canal",
+    "name": "canal",
+    "category": "Conejo",
+    "unit": "kg",
+    "basePrice": 287.04,
+    "price": {
+      "guadalajara": 330.1,
+      "colima": 344.45
+    }
+  },
+  {
+    "id": "conejo:lomo",
+    "name": "lomo",
+    "category": "Conejo",
+    "unit": "kg",
+    "basePrice": 287.04,
+    "price": {
+      "guadalajara": 330.1,
+      "colima": 344.45
+    }
+  },
+  {
+    "id": "conejo:lomo-marinado",
+    "name": "lomo marinado",
+    "category": "Conejo",
+    "unit": "kg",
+    "basePrice": 287.04,
+    "price": {
+      "guadalajara": 330.1,
+      "colima": 344.45
+    }
+  },
+  {
+    "id": "conejo:marinado-pierna-y-muslo",
+    "name": "marinado pierna y muslo",
+    "category": "Conejo",
+    "unit": "kg",
+    "basePrice": 287.04,
+    "price": {
+      "guadalajara": 330.1,
+      "colima": 344.45
+    }
+  },
+  {
+    "id": "conejo:pierna-y-muslo-natural",
+    "name": "pierna y muslo natural",
+    "category": "Conejo",
+    "unit": "kg",
+    "basePrice": 193,
+    "price": {
+      "guadalajara": 221.95,
+      "colima": 231.6
+    }
+  },
+  {
+    "id": "conejo:pulpa",
+    "name": "pulpa",
+    "category": "Conejo",
+    "unit": "kg",
+    "basePrice": 188,
+    "price": {
+      "guadalajara": 216.2,
+      "colima": 225.6
+    }
+  },
+  {
+    "id": "cordero:arrachera-especial",
+    "name": "arrachera especial",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 183,
+    "price": {
+      "guadalajara": 210.45,
+      "colima": 219.6
+    }
+  },
+  {
+    "id": "cordero:arrachera-campirana",
+    "name": "arrachera campirana",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 185,
+    "price": {
+      "guadalajara": 212.75,
+      "colima": 222
+    }
+  },
+  {
+    "id": "cordero:arrachera-hierbas-finas",
+    "name": "arrachera hierbas finas",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 195,
+    "price": {
+      "guadalajara": 224.25,
+      "colima": 234
+    }
+  },
+  {
+    "id": "cordero:arrachera-al-romero",
+    "name": "arrachera al romero",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 178,
+    "price": {
+      "guadalajara": 204.7,
+      "colima": 213.6
+    }
+  },
+  {
+    "id": "cordero:barbacoa",
+    "name": "barbacoa",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 183,
+    "price": {
+      "guadalajara": 210.45,
+      "colima": 219.6
+    }
+  },
+  {
+    "id": "cordero:birria",
+    "name": "birria",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 25.92,
+    "price": {
+      "guadalajara": 29.81,
+      "colima": 31.1
+    }
+  },
+  {
+    "id": "cordero:cabeza",
+    "name": "cabeza",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 28,
+    "price": {
+      "guadalajara": 32.2,
+      "colima": 33.6
+    }
+  },
+  {
+    "id": "cordero:canal",
+    "name": "canal",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 38.4,
+    "price": {
+      "guadalajara": 44.16,
+      "colima": 46.08
+    }
+  },
+  {
+    "id": "cordero:chistorra-arabe",
+    "name": "chistorra árabe",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 103,
+    "price": {
+      "guadalajara": 118.45,
+      "colima": 123.6
+    }
+  },
+  {
+    "id": "cordero:chistorra-merguez",
+    "name": "chistorra merguez",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 28,
+    "price": {
+      "guadalajara": 32.2,
+      "colima": 33.6
+    }
+  },
+  {
+    "id": "cordero:chistorra-mixta",
+    "name": "chistorra mixta",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 64.6,
+    "price": {
+      "guadalajara": 74.29,
+      "colima": 77.52
+    }
+  },
+  {
+    "id": "cordero:chuleta-especial",
+    "name": "chuleta especial",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 316.8,
+    "price": {
+      "guadalajara": 364.32,
+      "colima": 380.16
+    }
+  },
+  {
+    "id": "cordero:chuleta-estandar",
+    "name": "chuleta estandar",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 216.96,
+    "price": {
+      "guadalajara": 249.5,
+      "colima": 260.35
+    }
+  },
+  {
+    "id": "cordero:chuleta-marinada",
+    "name": "chuleta marinada",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 203.52,
+    "price": {
+      "guadalajara": 234.05,
+      "colima": 244.22
+    }
+  },
+  {
+    "id": "cordero:confit-pulpa",
+    "name": "confit pulpa",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 216.96,
+    "price": {
+      "guadalajara": 249.5,
+      "colima": 260.35
+    }
+  },
+  {
+    "id": "cordero:costilla",
+    "name": "costilla",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 386.88,
+    "price": {
+      "guadalajara": 444.91,
+      "colima": 464.26
+    }
+  },
+  {
+    "id": "cordero:costilla-baby-back",
+    "name": "costilla baby back",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 272.6,
+    "price": {
+      "guadalajara": 313.49,
+      "colima": 327.12
+    }
+  },
+  {
+    "id": "cordero:costilla-marinada",
+    "name": "costilla marinada",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 225.6,
+    "price": {
+      "guadalajara": 259.44,
+      "colima": 270.72
+    }
+  },
+  {
+    "id": "cordero:costilla-hierbas-fina",
+    "name": "costilla hierbas fina",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 201.6,
+    "price": {
+      "guadalajara": 231.84,
+      "colima": 241.92
+    }
+  },
+  {
+    "id": "cordero:costilla-romero",
+    "name": "costilla romero",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 54.6,
+    "price": {
+      "guadalajara": 62.79,
+      "colima": 65.52
+    }
+  },
+  {
+    "id": "cordero:costilla-campirana",
+    "name": "costilla campirana",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 149.6,
+    "price": {
+      "guadalajara": 172.04,
+      "colima": 179.52
+    }
+  },
+  {
+    "id": "cordero:cubo",
+    "name": "cubo",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 154.6,
+    "price": {
+      "guadalajara": 177.79,
+      "colima": 185.52
+    }
+  },
+  {
+    "id": "cordero:escalopas",
+    "name": "escalopas",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 164.6,
+    "price": {
+      "guadalajara": 189.29,
+      "colima": 197.52
+    }
+  },
+  {
+    "id": "cordero:espaldilla",
+    "name": "espaldilla",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 421.44,
+    "price": {
+      "guadalajara": 484.66,
+      "colima": 505.73
+    }
+  },
+  {
+    "id": "cordero:espaldilla-deshuesada",
+    "name": "espaldilla deshuesada",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 246.72,
+    "price": {
+      "guadalajara": 283.73,
+      "colima": 296.06
+    }
+  },
+  {
+    "id": "cordero:espaldilla-pulpa",
+    "name": "espaldilla pulpa",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 256.32,
+    "price": {
+      "guadalajara": 294.77,
+      "colima": 307.58
+    }
+  },
+  {
+    "id": "cordero:espaldilla-pulpa-molida",
+    "name": "espaldilla pulpa molida",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 212.16,
+    "price": {
+      "guadalajara": 243.98,
+      "colima": 254.59
+    }
+  },
+  {
+    "id": "cordero:filete",
+    "name": "filete",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 225.6,
+    "price": {
+      "guadalajara": 259.44,
+      "colima": 270.72
+    }
+  },
+  {
+    "id": "cordero:hamburguesa-arabe",
+    "name": "hamburguesa arabe",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 288.96,
+    "price": {
+      "guadalajara": 332.3,
+      "colima": 346.75
+    }
+  },
+  {
+    "id": "cordero:hamburguesa-merguez",
+    "name": "hamburguesa merguez",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 316.8,
+    "price": {
+      "guadalajara": 364.32,
+      "colima": 380.16
+    }
+  },
+  {
+    "id": "cordero:hamburguesa-mixta",
+    "name": "hamburguesa mixta",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 195.84,
+    "price": {
+      "guadalajara": 225.22,
+      "colima": 235.01
+    }
+  },
+  {
+    "id": "cordero:hueso",
+    "name": "hueso",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 195.84,
+    "price": {
+      "guadalajara": 225.22,
+      "colima": 235.01
+    }
+  },
+  {
+    "id": "cordero:kit-de-panza",
+    "name": "kit de panza",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 195.84,
+    "price": {
+      "guadalajara": 225.22,
+      "colima": 235.01
+    }
+  },
+  {
+    "id": "cordero:kit-chuleta-costilla-marinada",
+    "name": "kit chuleta-costilla marinada",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 195.84,
+    "price": {
+      "guadalajara": 225.22,
+      "colima": 235.01
+    }
+  },
+  {
+    "id": "cordero:lechal",
+    "name": "lechal",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 195.84,
+    "price": {
+      "guadalajara": 225.22,
+      "colima": 235.01
+    }
+  },
+  {
+    "id": "cordero:lomo",
+    "name": "lomo",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 181.44,
+    "price": {
+      "guadalajara": 208.66,
+      "colima": 217.73
+    }
+  },
+  {
+    "id": "cordero:machito-cocido",
+    "name": "machito cocido",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 469.6,
+    "price": {
+      "guadalajara": 540.04,
+      "colima": 563.52
+    }
+  },
+  {
+    "id": "cordero:machito-picado",
+    "name": "machito picado",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 251.52,
+    "price": {
+      "guadalajara": 289.25,
+      "colima": 301.82
+    }
+  },
+  {
+    "id": "cordero:machito-picado-adobado",
+    "name": "machito picado adobado",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 255.36,
+    "price": {
+      "guadalajara": 293.66,
+      "colima": 306.43
+    }
+  },
+  {
+    "id": "cordero:macho-crudo",
+    "name": "macho crudo",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 264.96,
+    "price": {
+      "guadalajara": 304.7,
+      "colima": 317.95
+    }
+  },
+  {
+    "id": "cordero:maciza",
+    "name": "maciza",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 175.6,
+    "price": {
+      "guadalajara": 201.94,
+      "colima": 210.72
+    }
+  },
+  {
+    "id": "cordero:menudo",
+    "name": "menudo",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 203.52,
+    "price": {
+      "guadalajara": 234.05,
+      "colima": 244.22
+    }
+  },
+  {
+    "id": "cordero:molida",
+    "name": "molida",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 515,
+    "price": {
+      "guadalajara": 592.25,
+      "colima": 618
+    }
+  },
+  {
+    "id": "cordero:osobuco",
+    "name": "osobuco",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 470,
+    "price": {
+      "guadalajara": 540.5,
+      "colima": 564
+    }
+  },
+  {
+    "id": "cordero:pescuezo",
+    "name": "pescuezo",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 520,
+    "price": {
+      "guadalajara": 598,
+      "colima": 624
+    }
+  },
+  {
+    "id": "cordero:picana",
+    "name": "picaña",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 250,
+    "price": {
+      "guadalajara": 287.5,
+      "colima": 300
+    }
+  },
+  {
+    "id": "cordero:pierna",
+    "name": "pierna",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 234,
+    "price": {
+      "guadalajara": 269.1,
+      "colima": 280.8
+    }
+  },
+  {
+    "id": "cordero:pierna-con-cadera",
+    "name": "pierna con cadera",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 234,
+    "price": {
+      "guadalajara": 269.1,
+      "colima": 280.8
+    }
+  },
+  {
+    "id": "cordero:pierna-deshuesada-con-el-hueso",
+    "name": "pierna deshuesada con el hueso",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 275,
+    "price": {
+      "guadalajara": 316.25,
+      "colima": 330
+    }
+  },
+  {
+    "id": "cordero:pierna-pulpa",
+    "name": "pierna pulpa",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 292.8,
+    "price": {
+      "guadalajara": 336.72,
+      "colima": 351.36
+    }
+  },
+  {
+    "id": "cordero:rack-americano",
+    "name": "rack americano",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 262.08,
+    "price": {
+      "guadalajara": 301.39,
+      "colima": 314.5
+    }
+  },
+  {
+    "id": "cordero:rack-frances",
+    "name": "rack francés",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 234.6,
+    "price": {
+      "guadalajara": 269.79,
+      "colima": 281.52
+    }
+  },
+  {
+    "id": "cordero:salchicha-alemana",
+    "name": "salchicha alemana",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 139.6,
+    "price": {
+      "guadalajara": 160.54,
+      "colima": 167.52
+    }
+  },
+  {
+    "id": "cordero:salchicha-berlin",
+    "name": "salchicha berlín",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 139.6,
+    "price": {
+      "guadalajara": 160.54,
+      "colima": 167.52
+    }
+  },
+  {
+    "id": "cordero:silla",
+    "name": "silla",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 624,
+    "price": {
+      "guadalajara": 717.6,
+      "colima": 748.8
+    }
+  },
+  {
+    "id": "cordero:sirloin",
+    "name": "sirloin",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 325.44,
+    "price": {
+      "guadalajara": 374.26,
+      "colima": 390.53
+    }
+  },
+  {
+    "id": "cordero:t-bone",
+    "name": "t-bone",
+    "category": "Cordero",
+    "unit": "kg",
+    "basePrice": 331.2,
+    "price": {
+      "guadalajara": 380.88,
+      "colima": 397.44
+    }
+  },
+  {
+    "id": "jabali:arrachera-marinada",
+    "name": "arrachera marinada",
+    "category": "Jabalí",
+    "unit": "kg",
+    "basePrice": 263.31,
+    "price": {
+      "guadalajara": 302.81,
+      "colima": 315.97
+    }
+  },
+  {
+    "id": "jabali:canal",
+    "name": "canal",
+    "category": "Jabalí",
+    "unit": "kg",
+    "basePrice": 258.51,
+    "price": {
+      "guadalajara": 297.29,
+      "colima": 310.21
+    }
+  },
+  {
+    "id": "jabali:costilla-marinada",
+    "name": "costilla marinada",
+    "category": "Jabalí",
+    "unit": "kg",
+    "basePrice": 278.4,
+    "price": {
+      "guadalajara": 320.16,
+      "colima": 334.08
+    }
+  },
+  {
+    "id": "jabali:hamburguesa",
+    "name": "hamburguesa",
+    "category": "Jabalí",
+    "unit": "kg",
+    "basePrice": 307.2,
+    "price": {
+      "guadalajara": 353.28,
+      "colima": 368.64
+    }
+  },
+  {
+    "id": "jabali:filete",
+    "name": "filete",
+    "category": "Jabalí",
+    "unit": "kg",
+    "basePrice": 163.2,
+    "price": {
+      "guadalajara": 187.68,
+      "colima": 195.84
+    }
+  },
+  {
+    "id": "jabali:rack-frances",
+    "name": "rack francés",
+    "category": "Jabalí",
+    "unit": "kg",
+    "basePrice": 275.52,
+    "price": {
+      "guadalajara": 316.85,
+      "colima": 330.62
+    }
+  },
+  {
+    "id": "jabali:lomo",
+    "name": "lomo",
+    "category": "Jabalí",
+    "unit": "kg",
+    "basePrice": 220.8,
+    "price": {
+      "guadalajara": 253.92,
+      "colima": 264.96
+    }
+  },
+  {
+    "id": "pato:confit-molleja",
+    "name": "confit molleja",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 599,
+    "price": {
+      "guadalajara": 688.85,
+      "colima": 718.8
+    }
+  },
+  {
+    "id": "pato:confit-pierna-y-muslo-grande",
+    "name": "confit pierna y muslo grande",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 315,
+    "price": {
+      "guadalajara": 362.25,
+      "colima": 378
+    }
+  },
+  {
+    "id": "pato:confit-pierna-y-muslo-mediano",
+    "name": "confit pierna y muslo mediano",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 315,
+    "price": {
+      "guadalajara": 362.25,
+      "colima": 378
+    }
+  },
+  {
+    "id": "pato:confit-pulpa",
+    "name": "confit pulpa",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 315,
+    "price": {
+      "guadalajara": 362.25,
+      "colima": 378
+    }
+  },
+  {
+    "id": "pato:foie-gras-a",
+    "name": "foie gras a",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 341,
+    "price": {
+      "guadalajara": 392.15,
+      "colima": 409.2
+    }
+  },
+  {
+    "id": "pato:foie-terrina",
+    "name": "foie terrina",
+    "category": "pato",
+    "unit": "kg",
+    "basePrice": 616,
+    "price": {
+      "guadalajara": 708.4,
+      "colima": 739.2
+    }
+  },
+  {
+    "id": "pato:grasa",
+    "name": "grasa",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 175,
+    "price": {
+      "guadalajara": 201.25,
+      "colima": 210
+    }
+  },
+  {
+    "id": "pato:hamburguesa",
+    "name": "hamburguesa",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 518,
+    "price": {
+      "guadalajara": 595.7,
+      "colima": 621.6
+    }
+  },
+  {
+    "id": "pato:hueso",
+    "name": "hueso",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 445,
+    "price": {
+      "guadalajara": 511.75,
+      "colima": 534
+    }
+  },
+  {
+    "id": "pato:huevo",
+    "name": "huevo",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 445,
+    "price": {
+      "guadalajara": 511.75,
+      "colima": 534
+    }
+  },
+  {
+    "id": "pato:jamoniberico",
+    "name": "jamoniberico",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 445,
+    "price": {
+      "guadalajara": 511.75,
+      "colima": 534
+    }
+  },
+  {
+    "id": "pato:magretahumado",
+    "name": "magretahumado",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 479,
+    "price": {
+      "guadalajara": 550.85,
+      "colima": 574.8
+    }
+  },
+  {
+    "id": "pato:magretespecial",
+    "name": "magretespecial",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 782,
+    "price": {
+      "guadalajara": 899.3,
+      "colima": 938.4
+    }
+  },
+  {
+    "id": "pato:magretextra-premium",
+    "name": "magretextra premium",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 59,
+    "price": {
+      "guadalajara": 67.85,
+      "colima": 70.8
+    }
+  },
+  {
+    "id": "pato:magretpremium",
+    "name": "magretpremium",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 305,
+    "price": {
+      "guadalajara": 350.75,
+      "colima": 366
+    }
+  },
+  {
+    "id": "pato:magretserrano",
+    "name": "magretserrano",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 175,
+    "price": {
+      "guadalajara": 201.25,
+      "colima": 210
+    }
+  },
+  {
+    "id": "pato:pekincon-viscera",
+    "name": "pekincon viscera",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 1240,
+    "price": {
+      "guadalajara": 1426,
+      "colima": 1488
+    }
+  },
+  {
+    "id": "pato:pastrami",
+    "name": "pastrami",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 1093,
+    "price": {
+      "guadalajara": 1256.95,
+      "colima": 1311.6
+    }
+  },
+  {
+    "id": "pato:pierna-y-muslo-alcienne",
+    "name": "pierna y muslo alcienne",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 468,
+    "price": {
+      "guadalajara": 538.2,
+      "colima": 561.6
+    }
+  },
+  {
+    "id": "pato:pierna-y-muslo-natural-grande",
+    "name": "pierna y muslo natural grande",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 395,
+    "price": {
+      "guadalajara": 454.25,
+      "colima": 474
+    }
+  },
+  {
+    "id": "pato:pierna-y-muslo-natural-mediano",
+    "name": "pierna y muslo natural mediano",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 395,
+    "price": {
+      "guadalajara": 454.25,
+      "colima": 474
+    }
+  },
+  {
+    "id": "pato:pierna-y-muslo-marinado-s-h",
+    "name": "pierna y muslo marinado s/h",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 254,
+    "price": {
+      "guadalajara": 292.1,
+      "colima": 304.8
+    }
+  },
+  {
+    "id": "pato:selva-negra",
+    "name": "selva negra",
+    "category": "Pato",
+    "unit": "kg",
+    "basePrice": 262,
+    "price": {
+      "guadalajara": 301.3,
+      "colima": 314.4
+    }
+  },
+  {
+    "id": "pavo:pierna-natural",
+    "name": "pierna natural",
+    "category": "Pavo",
+    "unit": "pieza",
+    "basePrice": 81.6,
+    "price": {
+      "guadalajara": 93.84,
+      "colima": 97.92
+    }
+  },
+  {
+    "id": "pollo:alita-natural",
+    "name": "alita natural",
+    "category": "Pollo",
+    "unit": "pieza",
+    "basePrice": 62.4,
+    "price": {
+      "guadalajara": 71.76,
+      "colima": 74.88
+    }
+  },
+  {
+    "id": "pollo:de-leche",
+    "name": "de leche",
+    "category": "Pollo",
+    "unit": "pieza",
+    "basePrice": 62.4,
+    "price": {
+      "guadalajara": 71.76,
+      "colima": 74.88
+    }
+  },
+  {
+    "id": "pollo:entero",
+    "name": "entero",
+    "category": "Pollo",
+    "unit": "pieza",
+    "basePrice": 62.4,
+    "price": {
+      "guadalajara": 71.76,
+      "colima": 74.88
+    }
+  },
+  {
+    "id": "pollo:pierna-y-muslo",
+    "name": "pierna y muslo",
+    "category": "Pollo",
+    "unit": "pieza",
+    "basePrice": 72.96,
+    "price": {
+      "guadalajara": 83.9,
+      "colima": 87.55
+    }
+  },
+  {
+    "id": "pollo:pechuga-brasilena",
+    "name": "pechuga brasileña",
+    "category": "Pollo",
+    "unit": "pieza",
+    "basePrice": 122.88,
+    "price": {
+      "guadalajara": 141.31,
+      "colima": 147.46
+    }
+  },
+  {
+    "id": "queso:de-cabra-bouquet",
+    "name": "de cabra bouquet",
+    "category": "Queso",
+    "unit": "pieza",
+    "basePrice": 129,
+    "price": {
+      "guadalajara": 148.35,
+      "colima": 154.8
+    }
+  },
+  {
+    "id": "queso:de-cabra-con-ceniza",
+    "name": "de cabra con ceniza",
+    "category": "Queso",
+    "unit": "pieza",
+    "basePrice": 130,
+    "price": {
+      "guadalajara": 149.5,
+      "colima": 156
+    }
+  },
+  {
+    "id": "queso:de-cabra-finas-hierbas",
+    "name": "de cabra finas hierbas",
+    "category": "Queso",
+    "unit": "pieza",
+    "basePrice": 114,
+    "price": {
+      "guadalajara": 131.1,
+      "colima": 136.8
+    }
+  },
+  {
+    "id": "queso:de-cabra-natural",
+    "name": "de cabra natural",
+    "category": "Queso",
+    "unit": "pieza",
+    "basePrice": 129,
+    "price": {
+      "guadalajara": 148.35,
+      "colima": 154.8
+    }
+  },
+  {
+    "id": "queso:panela",
+    "name": "panela",
+    "category": "Queso",
+    "unit": "pieza",
+    "basePrice": 148.8,
+    "price": {
+      "guadalajara": 171.12,
+      "colima": 178.56
+    }
+  },
+  {
+    "id": "queso:adobera",
+    "name": "adobera",
+    "category": "Queso",
+    "unit": "pieza",
+    "basePrice": 175,
+    "price": {
+      "guadalajara": 201.25,
+      "colima": 210
+    }
+  },
+  {
+    "id": "queso:provoleta",
+    "name": "provoleta",
+    "category": "Queso",
+    "unit": "pieza",
+    "basePrice": 242,
+    "price": {
+      "guadalajara": 278.3,
+      "colima": 290.4
+    }
+  },
+  {
+    "id": "queso:oaxaca",
+    "name": "oaxaca",
+    "category": "Queso",
+    "unit": "pieza",
+    "basePrice": 137,
+    "price": {
+      "guadalajara": 157.55,
+      "colima": 164.4
+    }
+  },
+  {
+    "id": "res:arrachera",
+    "name": "arrachera",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 269.6,
+    "price": {
+      "guadalajara": 310.04,
+      "colima": 323.52
+    }
+  },
+  {
+    "id": "res:arrachera-250-grs",
+    "name": "arrachera 250 grs",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 119.6,
+    "price": {
+      "guadalajara": 137.54,
+      "colima": 143.52
+    }
+  },
+  {
+    "id": "res:arrachera-suprema",
+    "name": "arrachera suprema",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 253.72,
+    "price": {
+      "guadalajara": 291.78,
+      "colima": 304.46
+    }
+  },
+  {
+    "id": "res:brisket",
+    "name": "brisket",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 254.4,
+    "price": {
+      "guadalajara": 292.56,
+      "colima": 305.28
+    }
+  },
+  {
+    "id": "res:cabreria",
+    "name": "cabreria",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 482.44,
+    "price": {
+      "guadalajara": 554.81,
+      "colima": 578.93
+    }
+  },
+  {
+    "id": "res:chinchulines",
+    "name": "chinchulines",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 492.44,
+    "price": {
+      "guadalajara": 566.31,
+      "colima": 590.93
+    }
+  },
+  {
+    "id": "res:chistorra-espanola",
+    "name": "chistorra española",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 328.32,
+    "price": {
+      "guadalajara": 377.57,
+      "colima": 393.98
+    }
+  },
+  {
+    "id": "res:chorizo-argentino",
+    "name": "chorizo argentino",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 337.54,
+    "price": {
+      "guadalajara": 388.17,
+      "colima": 405.05
+    }
+  },
+  {
+    "id": "res:chorizo-campestre",
+    "name": "chorizo campestre",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 259.72,
+    "price": {
+      "guadalajara": 298.68,
+      "colima": 311.66
+    }
+  },
+  {
+    "id": "res:chorizo-ranchero",
+    "name": "chorizo ranchero",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 363.46,
+    "price": {
+      "guadalajara": 417.98,
+      "colima": 436.15
+    }
+  },
+  {
+    "id": "res:costilla-cargada-short-ryb",
+    "name": "costilla cargada short ryb",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 274.56,
+    "price": {
+      "guadalajara": 315.74,
+      "colima": 329.47
+    }
+  },
+  {
+    "id": "res:cowboy",
+    "name": "cowboy",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 282.12,
+    "price": {
+      "guadalajara": 324.44,
+      "colima": 338.54
+    }
+  },
+  {
+    "id": "res:cowboy-prime",
+    "name": "cowboy prime",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 251.6,
+    "price": {
+      "guadalajara": 289.34,
+      "colima": 301.92
+    }
+  },
+  {
+    "id": "res:fajita-de-ribeye",
+    "name": "fajita de ribeye",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 150.24,
+    "price": {
+      "guadalajara": 172.78,
+      "colima": 180.29
+    }
+  },
+  {
+    "id": "res:filete",
+    "name": "filete",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 328.6,
+    "price": {
+      "guadalajara": 377.89,
+      "colima": 394.32
+    }
+  },
+  {
+    "id": "res:hamburguesa-arrachera",
+    "name": "hamburguesa arrachera",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 106.6,
+    "price": {
+      "guadalajara": 122.59,
+      "colima": 127.92
+    }
+  },
+  {
+    "id": "res:hamburguesa-espanola",
+    "name": "hamburguesa  española",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 114.6,
+    "price": {
+      "guadalajara": 131.79,
+      "colima": 137.52
+    }
+  },
+  {
+    "id": "res:hamburguesa-texas",
+    "name": "hamburguesa texas",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 129.6,
+    "price": {
+      "guadalajara": 149.04,
+      "colima": 155.52
+    }
+  },
+  {
+    "id": "res:lengua",
+    "name": "lengua",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 413.76,
+    "price": {
+      "guadalajara": 475.82,
+      "colima": 496.51
+    }
+  },
+  {
+    "id": "res:molida",
+    "name": "molida",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 250.56,
+    "price": {
+      "guadalajara": 288.14,
+      "colima": 300.67
+    }
+  },
+  {
+    "id": "res:molleja",
+    "name": "molleja",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 456.96,
+    "price": {
+      "guadalajara": 525.5,
+      "colima": 548.35
+    }
+  },
+  {
+    "id": "res:new-york",
+    "name": "new york",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 312.6,
+    "price": {
+      "guadalajara": 359.49,
+      "colima": 375.12
+    }
+  },
+  {
+    "id": "res:peinecillo",
+    "name": "peinecillo",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 222.72,
+    "price": {
+      "guadalajara": 256.13,
+      "colima": 267.26
+    }
+  },
+  {
+    "id": "res:picana",
+    "name": "picaña",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 114.6,
+    "price": {
+      "guadalajara": 131.79,
+      "colima": 137.52
+    }
+  },
+  {
+    "id": "res:porterhouse",
+    "name": "porterhouse",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 114.6,
+    "price": {
+      "guadalajara": 131.79,
+      "colima": 137.52
+    }
+  },
+  {
+    "id": "res:prime-rib",
+    "name": "prime rib",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 124.6,
+    "price": {
+      "guadalajara": 143.29,
+      "colima": 149.52
+    }
+  },
+  {
+    "id": "res:ribeye",
+    "name": "ribeye",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 143.6,
+    "price": {
+      "guadalajara": 165.14,
+      "colima": 172.32
+    }
+  },
+  {
+    "id": "res:ribeyeanejo",
+    "name": "ribeyeañejo",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 107.6,
+    "price": {
+      "guadalajara": 123.74,
+      "colima": 129.12
+    }
+  },
+  {
+    "id": "res:ribeyeprime",
+    "name": "ribeyeprime",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 360,
+    "price": {
+      "guadalajara": 414,
+      "colima": 432
+    }
+  },
+  {
+    "id": "res:sirloin",
+    "name": "sirloin",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 203.6,
+    "price": {
+      "guadalajara": 234.14,
+      "colima": 244.32
+    }
+  },
+  {
+    "id": "res:t-bone",
+    "name": "t bone",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 302.6,
+    "price": {
+      "guadalajara": 347.99,
+      "colima": 363.12
+    }
+  },
+  {
+    "id": "res:tuetano",
+    "name": "tuetano",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 259.6,
+    "price": {
+      "guadalajara": 298.54,
+      "colima": 311.52
+    }
+  },
+  {
+    "id": "res:vacionacional",
+    "name": "vacionacional",
+    "category": "Res",
+    "unit": "pieza",
+    "basePrice": 254.6,
+    "price": {
+      "guadalajara": 292.79,
+      "colima": 305.52
+    }
+  },
+  {
+    "id": "ternera:costilla-de-pecho",
+    "name": "costilla de pecho",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 408,
+    "price": {
+      "guadalajara": 469.2,
+      "colima": 489.6
+    }
+  },
+  {
+    "id": "ternera:escalopa",
+    "name": "escalopa",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 329.28,
+    "price": {
+      "guadalajara": 378.67,
+      "colima": 395.14
+    }
+  },
+  {
+    "id": "ternera:filete",
+    "name": "filete",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 192,
+    "price": {
+      "guadalajara": 220.8,
+      "colima": 230.4
+    }
+  },
+  {
+    "id": "ternera:hueso",
+    "name": "hueso",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 166.08,
+    "price": {
+      "guadalajara": 190.99,
+      "colima": 199.3
+    }
+  },
+  {
+    "id": "ternera:lengua",
+    "name": "lengua",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 271,
+    "price": {
+      "guadalajara": 311.65,
+      "colima": 325.2
+    }
+  },
+  {
+    "id": "ternera:lomo",
+    "name": "lomo",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 261.12,
+    "price": {
+      "guadalajara": 300.29,
+      "colima": 313.34
+    }
+  },
+  {
+    "id": "ternera:molida",
+    "name": "molida",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 45,
+    "price": {
+      "guadalajara": 51.75,
+      "colima": 54
+    }
+  },
+  {
+    "id": "ternera:nuez",
+    "name": "nuez",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 315.84,
+    "price": {
+      "guadalajara": 363.22,
+      "colima": 379.01
+    }
+  },
+  {
+    "id": "ternera:osobuco",
+    "name": "osobuco",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 268.8,
+    "price": {
+      "guadalajara": 309.12,
+      "colima": 322.56
+    }
+  },
+  {
+    "id": "ternera:rack-frances",
+    "name": "rack francés",
+    "category": "Ternera",
+    "unit": "pieza",
+    "basePrice": 151.68,
+    "price": {
+      "guadalajara": 174.43,
+      "colima": 182.02
+    }
+  }
+]

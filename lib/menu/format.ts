@@ -2,6 +2,8 @@
  * Formatting utilities for menu display
  */
 
+import type { UnitType } from "./types";
+
 /**
  * Format price in Mexican pesos with proper currency symbol
  */
@@ -12,6 +14,20 @@ export function formatPrice(amount: number): string {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   }).format(amount);
+}
+
+/**
+ * Format price in Mexican pesos (alias for consistency)
+ */
+export function formatPriceMXN(amount: number): string {
+  return formatPrice(amount);
+}
+
+/**
+ * Pretty print unit type
+ */
+export function prettyUnit(unit: UnitType): string {
+  return unit; // "kg" or "pieza" are already display-ready
 }
 
 /**

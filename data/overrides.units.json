@@ -1,0 +1,6 @@
+{
+  "Cerdo::Manteca": { "units": ["kg"] },
+  "Pollo::Pechuga brasileña": { "units": ["kg"] },
+  "Res::Arrachera marinada": { "units": ["kg", "pieza"] },
+  "Queso::Oaxaca": { "units": ["kg"] }
+}

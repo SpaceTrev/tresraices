@@ -8,6 +8,8 @@
     "build": "next build",
     "start": "next start -p 5173",
     "prod": "pnpm build && pnpm start",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
     "test:api": "bash scripts/test-api.sh",
     "test:prod": "bash scripts/test-api.sh http://localhost:5173",
     "lint": "eslint .",
@@ -29,11 +31,13 @@
     "@types/pdf-parse": "^1.1.5",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
+    "@vitest/ui": "^4.0.8",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.12.0",
     "eslint-config-next": "15.0.3",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.12",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "vitest": "^4.0.8"
   }
 }

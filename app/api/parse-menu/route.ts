@@ -2,6 +2,9 @@ import { NextRequest } from "next/server";
 import pdf from "pdf-parse";
 import { getDb } from "../../../lib/firebaseAdmin";
 import admin from "firebase-admin";
+import type { MenuItem } from "../../../lib/menu/types";
+import { validateItem } from "../../../lib/menu/validate";
+import { computeRegionPrices } from "../../../lib/menu/pricing";
 
 function toFloat(s: string): number | null {
   try {
@@ -14,64 +17,118 @@ function toFloat(s: string): number | null {
   } catch { return null; }
 }
 
-// Very defensive, simplified parser mirroring the local script
-function parseText(text: string) {
-  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
-  const cat = ["Avestruz","Búfalo","Bufalo","Cabrito","Cerdo","Ciervo rojo","Ciervo Rojo","Codorniz","Conejo","Cordero","Jabalí","Jabali","Pato","Pavo","Pollo","Queso","Res","Ternera"];
-  const catRe = new RegExp(`^(${cat.map(s=>s.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&')).join('|')})\s+(.+?)\s*$`, 'i');
-  const priceRe = /\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*[.,][0-9]{2}|[0-9]{1,4}(?:[.,][0-9]{2}))/g;
-
-  const items: {category:string; name:string}[] = [];
-  const prices: number[] = [];
-
-  for (const ln of lines) {
-    const skip = /(presentación|kilo|pieza|diapositiva|precios sujetos|PowerPoint)/i.test(ln);
-    const m = ln.match(catRe);
-    if (m) {
-      const name = m[2].replace(/\*+$/,'').trim();
-      items.push({ category: m[1].replace('Rojo','rojo'), name });
-    }
-    for (const pr of ln.matchAll(priceRe)) {
-      const v = toFloat(pr[1]);
-      if (v != null) prices.push(v);
-    }
-  }
-
-  const n = Math.min(items.length, prices.length);
-  const out = [];
-  for (let i=0;i<n;i++) out.push({ ...items[i], base_price: prices[i] });
-  return out;
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // Remove accents
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 /**
- * Build grouped menu JSON with pricing for all regions.
- * Returns { base, gdl, col } where each is Record<category, item[]>.
+ * Parse text and detect unit column (KILO vs PIEZA) for each item.
+ * Returns items with single unit assignment.
  */
-function buildGroupedMenus(parsed: Array<{ category: string; name: string; base_price: number }>) {
-  const base: Record<string, any[]> = {};
-  const gdl: Record<string, any[]> = {};
-  const col: Record<string, any[]> = {};
-
-  for (const r of parsed) {
-    base[r.category] ??= [];
-    gdl[r.category] ??= [];
-    col[r.category] ??= [];
-
-    const baseItem = { item: r.name, base_price: r.base_price };
-    const gdlItem = { item: r.name, base_price: r.base_price, price: +(r.base_price * 1.15).toFixed(2) };
-    const colItem = { item: r.name, base_price: r.base_price, price: +(r.base_price * 1.20).toFixed(2) };
-
-    base[r.category].push(baseItem);
-    gdl[r.category].push(gdlItem);
-    col[r.category].push(colItem);
+function parseText(text: string) {
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  const cats = ["Avestruz","Búfalo","Bufalo","Cabrito","Cerdo","Ciervo rojo","Ciervo Rojo","Codorniz","Conejo","Cordero","Jabalí","Jabali","Pato","Pavo","Pollo","Queso","Res","Ternera"];
+  
+  // Regex to match product lines: starts with category name (case-insensitive) followed by product name
+  const catRe = new RegExp(`^(${cats.map(s=>s.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&')).join('|')})\\s+(.+?)\\s*$`, 'i');
+  const priceRe = /\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*[.,][0-9]{2}|[0-9]{1,4}(?:[.,][0-9]{2}))/g;
+  
+  const items: Array<{ category: string; name: string; base_price: number | null; unit: "kg" | "pieza"; pending?: boolean }> = [];
+  let currentUnit: "kg" | "pieza" = "kg"; // default unit when parsing
+  let currentCategory: string | null = null;
+  
+  for (const ln of lines) {
+    // Skip header/footer noise
+    if (/(presentación|diapositiva|precios sujetos|PowerPoint)/i.test(ln)) continue;
+    
+    // Detect column headers for unit switching
+    if (/\bKILO\b/i.test(ln)) {
+      currentUnit = "kg";
+      continue;
+    }
+    if (/\bPIEZA\b/i.test(ln)) {
+      currentUnit = "pieza";
+      continue;
+    }
+    
+    // Try to match category+name pattern
+    const m = ln.match(catRe);
+    if (m) {
+      const category = m[1].replace(/Rojo/i, 'rojo');
+      currentCategory = category;
+      const name = m[2].replace(/\*+$/,'').trim();
+      
+      // Look for price on the same line first
+      const priceMatch = ln.match(priceRe);
+      if (priceMatch) {
+        const base_price = toFloat(priceMatch[0]);
+        if (base_price != null && base_price > 5) { // sanity check
+          items.push({ 
+            category, 
+            name, 
+            base_price,
+            unit: currentUnit 
+          });
+        }
+      } else {
+        // If no price on this line, store as pending and try to find price in next lines
+        items.push({ 
+          category, 
+          name, 
+          base_price: null,
+          unit: currentUnit,
+          pending: true
+        });
+      }
+    } else if (currentCategory) {
+      // Check if this line is a standalone price (to match with pending items)
+      const priceMatches = [...ln.matchAll(priceRe)];
+      if (priceMatches.length > 0) {
+        // Try to assign prices to pending items
+        for (let i = items.length - 1; i >= 0 && priceMatches.length > 0; i--) {
+          if (items[i].pending && items[i].base_price === null) {
+            const price = toFloat(priceMatches.shift()![0]);
+            if (price != null && price > 5) {
+              items[i].base_price = price;
+              delete items[i].pending;
+            }
+            break;
+          }
+        }
+      }
+    }
   }
+  
+  // Filter out items without valid prices and return properly typed
+  return items.filter((item): item is { category: string; name: string; base_price: number; unit: "kg" | "pieza" } => 
+    item.base_price !== null && !item.pending
+  );
+}
 
-  // Sort each category by item name
-  for (const cat of Object.keys(base)) base[cat].sort((a, b) => a.item.localeCompare(b.item));
-  for (const cat of Object.keys(gdl)) gdl[cat].sort((a, b) => a.item.localeCompare(b.item));
-  for (const cat of Object.keys(col)) col[cat].sort((a, b) => a.item.localeCompare(b.item));
+/**
+ * Convert parsed items to MenuItem array with single unit and regional pricing
+ */
+function buildMenuItems(parsed: Array<{ category: string; name: string; base_price: number; unit: "kg" | "pieza" }>): MenuItem[] {
+  return parsed.map(p => {
+    const id = `${slugify(p.category)}:${slugify(p.name)}`;
+    const regionPrices = computeRegionPrices(p.base_price);
+    
+    const menuItem: MenuItem = {
+      id,
+      name: p.name,
+      category: p.category,
+      unit: p.unit,
+      basePrice: p.base_price,
+      price: regionPrices
+    };
 
-  return { base, gdl, col };
+    return validateItem(menuItem);
+  });
 }
 
 export async function POST(req: NextRequest) {
@@ -100,17 +157,20 @@ export async function POST(req: NextRequest) {
       return new Response(JSON.stringify({ error: "no items parsed from pdf" }), { status: 400, headers: { "content-type": "application/json" } });
     }
 
-    // Build grouped menus for all regions
-    const { base, gdl, col } = buildGroupedMenus(parsed);
-    const categoriesCount = Object.keys(base).length;
+    // Build menu items with single unit and regional pricing
+    const menuItems = buildMenuItems(parsed);
+
+    // Log any validation warnings
+    const warnings = menuItems.filter(item => item.notes).map(item => `${item.category}::${item.name} — ${item.notes}`);
+    if (warnings.length > 0) {
+      console.warn("⚠️  Validation warnings:", warnings);
+    }
 
     // Write to Firestore
     const db = getDb();
     const timestamp = Date.now();
     const payload = {
-      base,
-      gdl,
-      col,
+      items: menuItems,
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       sourceUrl: storageUrl,
     };
@@ -124,8 +184,8 @@ export async function POST(req: NextRequest) {
     return new Response(
       JSON.stringify({ 
         status: "ok", 
-        parsedCount: parsed.length, 
-        categoriesCount, 
+        parsedCount: menuItems.length,
+        warnings: warnings.length,
         wroteLatest: true,
         timestamp 
       }), 

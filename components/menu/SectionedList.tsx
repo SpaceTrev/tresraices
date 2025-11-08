@@ -2,13 +2,13 @@
  * SectionedList — Grouped category sections with headers
  */
 
-import type { MenuItem } from "@/lib/menu/flatten";
+import type { MenuItem } from "@/lib/menu/types";
 import CategoryBadge from "./CategoryBadge";
 import ProductCard from "./ProductCard";
 
 interface SectionedListProps {
   items: MenuItem[];
-  region: string;
+  region: "guadalajara" | "colima";
   prettyRegion: string;
 }
 
@@ -41,11 +41,7 @@ export default function SectionedList({ items, region, prettyRegion }: Sectioned
               {categoryItems.map((item) => (
                 <ProductCard
                   key={item.id}
-                  id={item.id}
-                  name={item.name}
-                  price={item.price}
-                  basePrice={item.base_price}
-                  category={item.category}
+                  item={item}
                   region={region}
                   prettyRegion={prettyRegion}
                 />

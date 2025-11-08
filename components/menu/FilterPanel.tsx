@@ -1,12 +1,13 @@
 "use client";
 
 /**
- * FilterPanel — Category filters, search, and sort controls with URL persistence
+ * FilterPanel — Category filters, search, sort controls, and unit filtering with URL persistence
  */
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useTransition, useEffect } from "react";
 import type { SortOption } from "@/lib/menu/filters";
+import type { UnitType } from "@/lib/menu/types";
 
 interface FilterPanelProps {
   categories: string[];
@@ -26,6 +27,9 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
   const [sortBy, setSortBy] = useState<SortOption>(
     (searchParams.get("sort") as SortOption) || "relevance"
   );
+  const [selectedUnits, setSelectedUnits] = useState<UnitType[]>(
+    (searchParams.get("units")?.split(",").filter(Boolean) as UnitType[]) || ["kg", "pieza"]
+  );
   
   // Sync state to URL
   useEffect(() => {
@@ -33,12 +37,13 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
     if (search) params.set("q", search);
     if (selectedCategories.length > 0) params.set("cat", selectedCategories.join(","));
     if (sortBy !== "relevance") params.set("sort", sortBy);
+    if (selectedUnits.length < 2) params.set("units", selectedUnits.join(","));
     
     const query = params.toString();
     startTransition(() => {
       router.replace(`/menu/${region}${query ? `?${query}` : ""}`, { scroll: false });
     });
-  }, [search, selectedCategories, sortBy, region, router]);
+  }, [search, selectedCategories, sortBy, selectedUnits, region, router]);
   
   const toggleCategory = (cat: string) => {
     setSelectedCategories(prev =>
@@ -46,13 +51,20 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
     );
   };
   
+  const toggleUnit = (unit: UnitType) => {
+    setSelectedUnits(prev =>
+      prev.includes(unit) ? prev.filter(u => u !== unit) : [...prev, unit]
+    );
+  };
+  
   const clearFilters = () => {
     setSearch("");
     setSelectedCategories([]);
     setSortBy("relevance");
+    setSelectedUnits(["kg", "pieza"]);
   };
   
-  const hasActiveFilters = search || selectedCategories.length > 0 || sortBy !== "relevance";
+  const hasActiveFilters = search || selectedCategories.length > 0 || sortBy !== "relevance" || selectedUnits.length < 2;
   
   return (
     <div className="card p-5 space-y-5">
@@ -103,6 +115,31 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
         </select>
       </div>
       
+      {/* Unit filter */}
+      <div>
+        <h3 className="text-sm font-medium mb-2">Unidad</h3>
+        <div className="space-y-2">
+          <label className="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors">
+            <input
+              type="checkbox"
+              checked={selectedUnits.includes("kg")}
+              onChange={() => toggleUnit("kg")}
+              className="w-4 h-4 text-federalBlue rounded focus:ring-2 focus:ring-federalBlue"
+            />
+            <span className="text-sm">Kilo</span>
+          </label>
+          <label className="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors">
+            <input
+              type="checkbox"
+              checked={selectedUnits.includes("pieza")}
+              onChange={() => toggleUnit("pieza")}
+              className="w-4 h-4 text-federalBlue rounded focus:ring-2 focus:ring-federalBlue"
+            />
+            <span className="text-sm">Pieza</span>
+          </label>
+        </div>
+      </div>
+      
       {/* Categories */}
       <div>
         <h3 className="text-sm font-medium mb-2">Categorías</h3>
@@ -125,12 +162,6 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
             );
           })}
         </div>
-      </div>
-      
-      {/* Future: Unit toggle placeholder */}
-      <div className="pt-4 border-t border-slate-200">
-        <h3 className="text-sm font-medium text-slate-400 mb-2">Unidad</h3>
-        <p className="text-xs text-slate-400">Próximamente: kilo/pieza</p>
       </div>
     </div>
   );

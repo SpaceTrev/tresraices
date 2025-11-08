@@ -72,7 +72,67 @@ Add to Netlify/Vercel:
 
 **Security Note**: Never commit `FIREBASE_SERVICE_ACCOUNT_JSON` to git. Only set via hosting platform environment variables.
 
-## TODO (when you're ready)
-- Add "last updated" time to UI (read from `menus/latest.updatedAt`)
-- Add unit labeling (kilo/pieza) via a small override map
+## Units & Pricing
+
+Our pricing system supports **per-unit pricing** to distinguish between items sold by **kilo** (`kg`) and items sold by **pieza** (piece).
+
+### How It Works
+
+1. **Source of Truth**: Wholesale prices come from **LISTA 2** (our distributor's price list).
+2. **Regional Markups**: 
+   - Guadalajara: +15% markup on our base (wholesale) price
+   - Colima: +20% markup on our base (wholesale) price
+3. **Unit Configuration**: The file `data/overrides.units.json` defines which units are available for specific items:
+   ```json
+   {
+     "Cerdo::Manteca": { "units": ["kg"] },
+     "Res::Arrachera marinada": { "units": ["kg", "pieza"] }
+   }
+   ```
+4. **Automatic Inference**: If an item is not in the overrides file, the parser uses heuristics:
+   - Items with keywords like `pieza`, `entero`, `media`, or `½` are tagged as `["pieza"]`
+   - All other items default to `["kg"]`
+
+### Price Validation & Guardrails
+
+The system includes safeguards to prevent absurd prices from being displayed:
+
+- **Minimum**: 10 MXN (items below this are auto-hidden)
+- **Maximum**: 2,000 MXN (items above this are auto-hidden)
+- When a price is hidden, a note is added to the item's metadata (visible in build logs)
+- These thresholds are configurable in `lib/menu/validate.ts`
+
+### User Experience
+
+- **Product Cards**: Display unit chips (e.g., `$189/kg`, `$49/pieza`) for each available unit
+- **Unit Filtering**: Users can filter products by unit type (Kilo or Pieza) in the filter panel
+- **Cart & WhatsApp**: Unit labels are included in cart summaries and WhatsApp order messages
+
+### Updating Prices
+
+When the distributor updates LISTA 2:
+
+1. **Local Development**:
+   ```bash
+   pnpm parse:local ./input/LISTA2.pdf
+   ```
+   This regenerates `data/menu_{guadalajara|colima}_list2.json`
+
+2. **Production (Admin Upload)**:
+   - Upload PDF via `/admin` page
+   - API route `/api/parse-menu` processes it and writes to Firestore
+   - Both methods apply the same unit inference and validation logic
+
+### Customization
+
+To override unit availability for specific items, edit `data/overrides.units.json`:
+
+```json
+{
+  "Category::Item Name": { "units": ["kg"] },
+  "Category::Item Name 2": { "units": ["kg", "pieza"] }
+}
+```
+
+Keys are case-sensitive and must match the exact category and item name from the PDF.
 ```

@@ -2,7 +2,7 @@
  * WhatsApp URL builder for cart checkout
  */
 
-import { formatPrice } from "@/lib/menu/format";
+import { formatPrice, prettyUnit } from "@/lib/menu/format";
 import type { CartItem } from "./types";
 
 interface BuildWhatsAppUrlParams {
@@ -21,7 +21,7 @@ export function buildWhatsAppUrl({
   const itemLines = items
     .map((item) => {
       const lineTotal = item.unitPrice * item.quantity;
-      return `• ${item.name} x${item.quantity} — ${formatPrice(lineTotal)}`;
+      return `• ${item.name} (${prettyUnit(item.unit)}) x${item.quantity} — ${formatPrice(lineTotal)}`;
     })
     .join("\n");
   

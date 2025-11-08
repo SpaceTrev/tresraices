@@ -2,8 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import type { GroupedMenu } from "@/lib/menu/flatten";
-import { flattenMenu, extractCategories } from "@/lib/menu/flatten";
+import type { MenuItem } from "@/lib/menu/types";
+import { extractCategories } from "@/lib/menu/flatten";
 import MenuLayout from "@/components/menu/MenuLayout";
 import FilterPanel from "@/components/menu/FilterPanel";
 import MenuGrid from "@/components/menu/MenuGrid";
@@ -32,18 +32,17 @@ export default async function MenuPage({
   const { region } = await params;
   if (!["guadalajara", "colima"].includes(region)) return notFound();
 
-  // Load menu data
+  // Load menu data (now an array of MenuItem objects)
   const dataPath = path.join(
     process.cwd(),
     "data",
     `menu_${region}_list2.json`
   );
   const raw = fs.readFileSync(dataPath, "utf-8");
-  const grouped = JSON.parse(raw) as GroupedMenu;
+  const items = JSON.parse(raw) as MenuItem[];
 
-  // Transform data
-  const items = flattenMenu(grouped);
-  const categories = extractCategories(grouped);
+  // Extract categories from items
+  const categories = extractCategories(items);
   const pretty = prettyRegion[region];
 
   return (

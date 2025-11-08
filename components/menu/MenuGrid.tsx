@@ -6,7 +6,7 @@
 
 import { useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import type { MenuItem } from "@/lib/menu/flatten";
+import type { MenuItem, UnitType } from "@/lib/menu/types";
 import type { SortOption } from "@/lib/menu/filters";
 import { applyFilters } from "@/lib/menu/filters";
 import ProductCard from "./ProductCard";
@@ -26,13 +26,14 @@ export default function MenuGrid({ items, categories, region, prettyRegion }: Me
   // Read filter state from URL
   const q = searchParams.get("q") || "";
   const cats = searchParams.get("cat")?.split(",").filter(Boolean) || [];
+  const units = (searchParams.get("units")?.split(",").filter(Boolean) as UnitType[]) || ["kg", "pieza"];
   const sort = (searchParams.get("sort") as SortOption) || "relevance";
   const view = searchParams.get("view") || "grid";
   
   // Apply filters and sorting
   const filteredItems = useMemo(() => {
-    return applyFilters(items, { q, cats, sort });
-  }, [items, q, cats, sort]);
+    return applyFilters(items, region, { q, cats, units, sort });
+  }, [items, region, q, cats, units, sort]);
   
   // Determine if we should show sections
   const showSections = view === "sections" || cats.length > 1;
@@ -56,11 +57,7 @@ export default function MenuGrid({ items, categories, region, prettyRegion }: Me
             {filteredItems.map((item) => (
               <ProductCard
                 key={item.id}
-                id={item.id}
-                name={item.name}
-                price={item.price}
-                basePrice={item.base_price}
-                category={item.category}
+                item={item}
                 region={region}
                 prettyRegion={prettyRegion}
               />

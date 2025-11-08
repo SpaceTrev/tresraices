@@ -21,17 +21,12 @@ export async function GET(req: NextRequest) {
     
     if (doc.exists) {
       const data = doc.data();
-      if (data) {
-        // Return the region-specific menu data
-        const regionKey = region === "guadalajara" ? "gdl" : "col";
-        const menuData = data[regionKey];
-        
-        if (menuData) {
-          return new Response(
-            JSON.stringify(menuData), 
-            { headers: { "content-type": "application/json; charset=utf-8" } }
-          );
-        }
+      if (data?.items) {
+        // New structure: items array with MenuItem objects
+        return new Response(
+          JSON.stringify(data.items), 
+          { headers: { "content-type": "application/json; charset=utf-8" } }
+        );
       }
     }
   } catch (err) {
