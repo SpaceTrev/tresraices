@@ -69,9 +69,10 @@ export default function ProductCard({
         {/* Single unit price display */}
         {price !== undefined ? (
           <div className="mb-3">
-            <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-federalBlue text-white inline-block">
-              {formatPrice(price)}/{prettyUnit(item.unit)}
-            </span>
+            <div className="inline-flex items-baseline gap-1.5 px-3 py-1.5 rounded-full bg-federalBlue text-white">
+              <span className="text-lg font-bold">{formatPrice(price)}</span>
+              <span className="text-xs opacity-90">por {prettyUnit(item.unit)}</span>
+            </div>
           </div>
         ) : (
           <div className="mb-4">

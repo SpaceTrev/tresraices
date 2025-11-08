@@ -24,10 +24,14 @@ export function formatPriceMXN(amount: number): string {
 }
 
 /**
- * Pretty print unit type
+ * Pretty print unit type with proper formatting
  */
 export function prettyUnit(unit: UnitType): string {
-  return unit; // "kg" or "pieza" are already display-ready
+  const unitMap: Record<UnitType, string> = {
+    kg: "kilo",
+    pieza: "pieza"
+  };
+  return unitMap[unit] || unit;
 }
 
 /**
