@@ -35,92 +35,136 @@ function roundMXN(v) {
 }
 
 /**
- * Parse text and detect unit column (KILO vs PIEZA) for each item.
- * Returns items with single unit assignment.
+ * Determine if an item is sold by kg or pieza based on its name/category.
+ */
+function determineUnit(category, name) {
+  const nameLower = name.toLowerCase();
+  const categoryLower = category.toLowerCase();
+  
+  // Lechones are always sold by piece
+  if (nameLower.includes('lechón') || nameLower.includes('lechon')) return 'pieza';
+  
+  // Cabrito Canal is by piece
+  if ((categoryLower.includes('cabrito') || nameLower.includes('cabrito')) && 
+      (nameLower.includes('canal') || name.trim() === 'Canal')) return 'pieza';
+  
+  // Quesos (cheeses) - many are by piece
+  if (categoryLower.includes('queso')) {
+    if (nameLower.includes('bouquet') || nameLower.includes('ceniza') || nameLower.includes('finas hierbas') || 
+        nameLower.includes('natural') || nameLower.includes('panela')) {
+      return 'pieza';
+    }
+  }
+  
+  // Codorniz (quail) items are by piece
+  if (categoryLower.includes('codorniz')) return 'pieza';
+  
+  // Pato huevo is by piece
+  if (nameLower.includes('huevo')) return 'pieza';
+  
+  // Cordero items that are by piece
+  if (nameLower.includes('birria') || nameLower.includes('cabeza')) return 'pieza';
+  
+  // Default to kg
+  return 'kg';
+}
+
+/**
+ * Parse PDF text. The PDF has a batch structure:
+ * 1. Several product lines (Category + Name)
+ * 2. "KILO PIEZA" header
+ * 3. Prices in the same order as products
  */
 function parseText(text) {
-  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
-  const cats = ["Avestruz","Búfalo","Bufalo","Cabrito","Cerdo","Ciervo rojo","Ciervo Rojo","Codorniz","Conejo","Cordero","Jabalí","Jabali","Pato","Pavo","Pollo","Queso","Res","Ternera"];
-  
-  // Regex to match product lines: starts with category name (case-insensitive) followed by product name
-  const catRe = new RegExp(`^(${cats.map(s=>s.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&')).join('|')})\\s+(.+?)\\s*$`, 'i');
-  const priceRe = /\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*[.,][0-9]{2}|[0-9]{1,4}(?:[.,][0-9]{2}))/g;
-  
+  const lines = text.split(/\r?\n/);
   const items = [];
-  let currentUnit = "kg"; // default unit when parsing
-  let currentCategory = null;
   
-  for (const ln of lines) {
-    // Skip header/footer noise
+  // Category prefixes to detect
+  const cats = ["Avestruz","Búfalo","Bufalo","Cabrito","Cerdo","Ciervo rojo","Ciervo Rojo","Ciervorojo","Codorniz","Conejo","Cordero","Jabalí","Jabali","Pato","Pavo","Pollo","Queso","Res","Ternera"];
+  const catRe = new RegExp(`^(${cats.map(s=>s.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&')).join('|')})\\s+(.+?)\\s*$`, 'i');
+  const priceLineRe = /^\$\s*[0-9]/;
+  
+  let pendingProducts = [];
+  let inPriceSection = false;
+  let priceIndex = 0;
+  
+  for (let i = 0; i < lines.length; i++) {
+    let ln = lines[i].trim();
+    if (!ln) continue;
+    
+    // Skip noise
     if (/(presentación|diapositiva|precios sujetos|PowerPoint)/i.test(ln)) continue;
     
-    // Detect column headers for unit switching
-    if (/\bKILO\b/i.test(ln)) {
-      currentUnit = "kg";
-      continue;
-    }
-    if (/\bPIEZA\b/i.test(ln)) {
-      currentUnit = "pieza";
+    // Detect "KILO PIEZA" header - signals end of products, start of prices
+    if (/^KILO\s*PIEZA\s*$/i.test(ln)) {
+      inPriceSection = true;
+      priceIndex = 0;
       continue;
     }
     
-    // Try to match category+name pattern
-    const m = ln.match(catRe);
-    if (m) {
-      const category = m[1].replace(/Rojo/i, 'rojo');
-      currentCategory = category;
-      const name = m[2].replace(/\*+$/,'').trim();
-      
-      // Look for price on the same line first
-      const priceMatch = ln.match(priceRe);
-      if (priceMatch) {
-        const base_price = toFloat(priceMatch[0]);
-        if (base_price != null && base_price > 5) { // sanity check
-          items.push({ 
-            category, 
-            name, 
-            base_price,
-            unit: currentUnit 
-          });
-        }
-      } else {
-        // If no price on this line, store as pending and try to find price in next lines
-        items.push({ 
-          category, 
-          name, 
-          base_price: null,
-          unit: currentUnit,
-          pending: true
-        });
+    if (!inPriceSection) {
+      // We're in the product definition section
+      const m = ln.match(catRe);
+      if (m) {
+        let category = m[1];
+        // Normalize category names
+        if (category.match(/ciervo/i)) category = "Ciervo rojo";
+        else if (category.match(/búfalo|bufalo/i)) category = "Búfalo";
+        else if (category.match(/jabalí|jabali/i)) category = "Jabalí";
+        
+        let name = m[2].replace(/\*+$/,'').replace(/\s+/g, ' ').trim();
+        
+        pendingProducts.push({ category, name });
       }
-    } else if (currentCategory) {
-      // Check if this line is a standalone price (to match with pending items)
-      const priceMatches = [...ln.matchAll(priceRe)];
-      if (priceMatches.length > 0) {
-        // Try to assign prices to pending items
-        for (let i = items.length - 1; i >= 0 && priceMatches.length > 0; i--) {
-          if (items[i].pending && items[i].base_price === null) {
-            const price = toFloat(priceMatches.shift()[0]);
-            if (price != null && price > 5) {
-              items[i].base_price = price;
-              delete items[i].pending;
-            }
-            break;
-          }
+    } else {
+      // We're in the price section - extract prices
+      if (priceLineRe.test(ln)) {
+        const price = toFloat(ln);
+        if (price != null && price > 5 && priceIndex < pendingProducts.length) {
+          const product = pendingProducts[priceIndex];
+          const unit = determineUnit(product.category, product.name);
+          
+          items.push({
+            category: product.category,
+            name: product.name,
+            base_price: price,
+            unit
+          });
+          
+          priceIndex++;
+        }
+      }
+      
+      // Check if we've finished this batch (next product line or another KILO PIEZA)
+      const m = ln.match(catRe);
+      if (m || (priceIndex >= pendingProducts.length && pendingProducts.length > 0)) {
+        // Reset for next batch
+        pendingProducts = [];
+        inPriceSection = false;
+        priceIndex = 0;
+        
+        // If this line is a product, process it
+        if (m) {
+          let category = m[1];
+          if (category.match(/ciervo/i)) category = "Ciervo rojo";
+          else if (category.match(/búfalo|bufalo/i)) category = "Búfalo";
+          else if (category.match(/jabalí|jabali/i)) category = "Jabalí";
+          
+          let name = m[2].replace(/\*+$/,'').replace(/\s+/g, ' ').trim();
+          pendingProducts.push({ category, name });
         }
       }
     }
   }
   
-  // Filter out items without valid prices
-  return items.filter(item => item.base_price !== null && !item.pending);
+  return items;
 }
 
 /**
  * Validate item prices and hide any that fall outside reasonable bounds.
  */
 function validateItem(item) {
-  const MAX_REASONABLE = 2000;
+  const MAX_REASONABLE = 3000;
   const MIN_REASONABLE = 10;
 
   ["guadalajara", "colima"].forEach((r) => {
@@ -137,7 +181,7 @@ function validateItem(item) {
 }
 
 /**
- * Convert parsed items to MenuItem array with single unit and regional pricing
+ * Convert parsed items to MenuItem array with unit and regional pricing
  */
 function buildMenuItems(parsed) {
   return parsed.map(p => {
