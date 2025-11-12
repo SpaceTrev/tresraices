@@ -46,55 +46,56 @@ export default async function MenuPage({
   const pretty = prettyRegion[region];
 
   return (
-    <div className="container py-8 space-y-8">
-      {/* Breadcrumbs */}
-      <Breadcrumbs region={region} prettyRegion={pretty} />
+    <>
+      <div className="container py-8 space-y-8">
+        {/* Breadcrumbs */}
+        <Breadcrumbs region={region} prettyRegion={pretty} />
 
-      {/* Header */}
-      <header className="space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <h1 className="text-4xl font-bold mb-2">Menú {pretty}</h1>
-            <p className="text-slate-600">
-              Carnes premium y productos especiales para tu mesa.
-            </p>
+        {/* Header */}
+        <header className="space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <h1 className="text-4xl font-bold mb-2">Menú {pretty}</h1>
+              <p className="text-slate-600">
+                Carnes premium y productos especiales para tu mesa.
+              </p>
+            </div>
+            <RegionToggle currentRegion={region} />
           </div>
-          <RegionToggle currentRegion={region} />
-        </div>
-      </header>
+        </header>
 
-      {/* Main layout */}
-      <MenuLayout
-        filterPanel={
+        {/* Main layout */}
+        <MenuLayout
+          filterPanel={
+            <Suspense
+              fallback={
+                <div className="card p-5">
+                  <p className="text-sm text-slate-500">Cargando filtros...</p>
+                </div>
+              }
+            >
+              <FilterPanel categories={categories} region={region} />
+            </Suspense>
+          }
+        >
           <Suspense
             fallback={
-              <div className="card p-5">
-                <p className="text-sm text-slate-500">Cargando filtros...</p>
+              <div className="card p-12 text-center">
+                <p className="text-slate-500">Cargando productos...</p>
               </div>
             }
           >
-            <FilterPanel categories={categories} region={region} />
+            <MenuGrid
+              items={items}
+              categories={categories}
+              region={region}
+              prettyRegion={pretty}
+            />
           </Suspense>
-        }
-      >
-        <Suspense
-          fallback={
-            <div className="card p-12 text-center">
-              <p className="text-slate-500">Cargando productos...</p>
-            </div>
-          }
-        >
-          <MenuGrid
-            items={items}
-            categories={categories}
-            region={region}
-            prettyRegion={pretty}
-          />
-        </Suspense>
-      </MenuLayout>
+        </MenuLayout>
+      </div>
       
-      {/* Cart UI */}
       <CartWrapper region={region} />
-    </div>
+    </>
   );
 }

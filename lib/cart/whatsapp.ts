@@ -9,12 +9,18 @@ interface BuildWhatsAppUrlParams {
   region: string;
   items: CartItem[];
   subtotal: number;
+  customerName?: string;
+  customerAddress?: string;
+  customerNotes?: string;
 }
 
 export function buildWhatsAppUrl({
   region,
   items,
   subtotal,
+  customerName,
+  customerAddress,
+  customerNotes,
 }: BuildWhatsAppUrlParams): string {
   const regionName = region === "guadalajara" ? "Guadalajara" : "Colima";
   
@@ -25,16 +31,22 @@ export function buildWhatsAppUrl({
     })
     .join("\n");
   
-  const message = `Hola, quiero realizar un pedido (${regionName}).
-Artículos:
-${itemLines}
-
-Subtotal: ${formatPrice(subtotal)}
-——
-Nombre:
-Teléfono:
-Dirección:
-Notas:`;
+  // Build message with conditional customer info
+  let message = `Hola, quiero realizar un pedido (${regionName}).\n\nArtículos:\n${itemLines}\n`;
+  
+  if (customerName) {
+    message += `\nNombre: ${customerName}`;
+  }
+  
+  if (customerAddress) {
+    message += `\nDirección: ${customerAddress}`;
+  }
+  
+  if (customerNotes) {
+    message += `\nNotas: ${customerNotes}`;
+  }
+  
+  message += `\n\nSubtotal: ${formatPrice(subtotal)}`;
   
   const encoded = encodeURIComponent(message);
   return `https://wa.me/523315126548?text=${encoded}`;

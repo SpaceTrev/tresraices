@@ -23,6 +23,13 @@ body { @apply bg-cream text-slate-900; }
   .animate-slide-in-right {
     animation: slide-in-right 0.3s ease-out;
   }
+  
+  /* Remove rounded borders on mobile form elements */
+  @media (max-width: 640px) {
+    .mobile-no-radius {
+      border-radius: 0 !important;
+    }
+  }
 }
 
 @keyframes slide-in-right {
