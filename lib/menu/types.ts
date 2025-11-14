@@ -15,5 +15,6 @@ export type MenuItem = {
     guadalajara?: number;
     colima?: number;
   };
+  supplier?: string; // supplier/provider name (e.g., "El Barranqueño")
   notes?: string; // parser hints or validation flags
 };

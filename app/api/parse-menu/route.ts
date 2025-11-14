@@ -113,7 +113,10 @@ function parseText(text: string) {
 /**
  * Convert parsed items to MenuItem array with single unit and regional pricing
  */
-function buildMenuItems(parsed: Array<{ category: string; name: string; base_price: number; unit: "kg" | "pieza" }>): MenuItem[] {
+function buildMenuItems(
+  parsed: Array<{ category: string; name: string; base_price: number; unit: "kg" | "pieza" }>,
+  supplier?: string
+): MenuItem[] {
   return parsed.map(p => {
     const id = `${slugify(p.category)}:${slugify(p.name)}`;
     const regionPrices = computeRegionPrices(p.base_price);
@@ -124,7 +127,8 @@ function buildMenuItems(parsed: Array<{ category: string; name: string; base_pri
       category: p.category,
       unit: p.unit,
       basePrice: p.base_price,
-      price: regionPrices
+      price: regionPrices,
+      ...(supplier && { supplier })
     };
 
     return validateItem(menuItem);
@@ -138,7 +142,7 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json().catch(() => ({}));
-  const { storageUrl } = body;
+  const { storageUrl, supplier } = body;
   if (!storageUrl) {
     return new Response(JSON.stringify({ error: "storageUrl required" }), { status: 400, headers: { "content-type": "application/json" } });
   }
@@ -158,7 +162,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Build menu items with single unit and regional pricing
-    const menuItems = buildMenuItems(parsed);
+    const menuItems = buildMenuItems(parsed, supplier);
 
     // Log any validation warnings
     const warnings = menuItems.filter(item => item.notes).map(item => `${item.category}::${item.name} — ${item.notes}`);

@@ -1,6 +1,9 @@
 import fs from 'node:fs'
 import pdf from 'pdf-parse'
 
+// Load supplier mapping
+const supplierMapping = JSON.parse(fs.readFileSync('./data/supplier-mapping.json', 'utf-8'));
+
 if (process.argv.length < 3) {
   console.error('Usage: node scripts/parse-pdf-local.mjs <pdf-path>')
   process.exit(1)
@@ -32,6 +35,25 @@ function slugify(text) {
 
 function roundMXN(v) {
   return Math.round(v * 100) / 100;
+}
+
+/**
+ * Get supplier for a given category and item name.
+ */
+function getSupplier(category, name) {
+  const categoryMapping = supplierMapping[category];
+  if (!categoryMapping) return null;
+  
+  // Check for specific item override
+  const nameLower = name.toLowerCase();
+  for (const [key, supplier] of Object.entries(categoryMapping)) {
+    if (key !== 'default' && nameLower.includes(key.toLowerCase())) {
+      return supplier;
+    }
+  }
+  
+  // Return default supplier for category
+  return categoryMapping.default || null;
 }
 
 /**
@@ -186,6 +208,7 @@ function validateItem(item) {
 function buildMenuItems(parsed) {
   return parsed.map(p => {
     const id = `${slugify(p.category)}:${slugify(p.name)}`;
+    const supplier = getSupplier(p.category, p.name);
     
     const menuItem = {
       id,
@@ -196,7 +219,8 @@ function buildMenuItems(parsed) {
       price: {
         guadalajara: roundMXN(p.base_price * REGION_MULTIPLIER.guadalajara),
         colima: roundMXN(p.base_price * REGION_MULTIPLIER.colima)
-      }
+      },
+      ...(supplier && { supplier })
     };
 
     return validateItem(menuItem);

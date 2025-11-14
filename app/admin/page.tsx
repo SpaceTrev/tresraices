@@ -23,6 +23,7 @@ export default function AdminPage() {
   const [password, setPassword] = useState('');
   const [user, setUser] = useState<any>(null);
   const [file, setFile] = useState<File | null>(null);
+  const [supplier, setSupplier] = useState<string>('El Barranqueño');
   const [progress, setProgress] = useState<number>(0);
   const [message, setMessage] = useState<string>('');
   const [initialized, setInitialized] = useState(false);
@@ -70,7 +71,7 @@ export default function AdminPage() {
         const res = await fetch('/api/parse-menu', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'x-admin-key': adminKey ?? '' },
-          body: JSON.stringify({ storageUrl: url })
+          body: JSON.stringify({ storageUrl: url, supplier })
         });
         const data = await res.json();
         setMessage(`Parse resultado: ${data.status}`);
@@ -97,6 +98,16 @@ export default function AdminPage() {
         <div className="space-y-3">
           <div className="text-sm">Sesión: {user.email}</div>
           <input type="file" accept="application/pdf" onChange={(e)=>setFile(e.target.files?.[0] ?? null)} />
+          <div>
+            <label className="block text-sm font-medium mb-1">Proveedor</label>
+            <select 
+              className="w-full border p-2 rounded" 
+              value={supplier} 
+              onChange={(e)=>setSupplier(e.target.value)}
+            >
+              <option value="El Barranqueño">El Barranqueño</option>
+            </select>
+          </div>
           <button className="btn btn-primary" onClick={upload}>Subir PDF y Parsear</button>
           <div className="text-sm">Progreso: {progress}%</div>
           <div className="text-sm">{message}</div>
