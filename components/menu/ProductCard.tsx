@@ -4,6 +4,7 @@
 
 "use client";
 
+import { useState } from "react";
 import { formatPrice, prettyUnit } from "@/lib/menu/format";
 import { useCartStore } from "@/lib/cart/store";
 import CategoryBadge from "./CategoryBadge";
@@ -23,14 +24,19 @@ export default function ProductCard({
   const add = useCartStore((state) => state.add);
   const increment = useCartStore((state) => state.increment);
   const decrement = useCartStore((state) => state.decrement);
-  const getItemById = useCartStore((state) => state.getItemById);
+  const items = useCartStore((state) => state.items);
+  
+  // State for thickness selection
+  const [selectedThickness, setSelectedThickness] = useState(
+    item.availableThickness?.[1] || item.availableThickness?.[0]
+  );
   
   // Get the price for this region
   const price = item.price[region];
   
   // Cart ID includes unit
   const cartId = `${item.id}|${item.unit}`;
-  const cartItem = getItemById(cartId);
+  const cartItem = items.find((i) => i.id === cartId);
   
   // Detect badges
   const isNew = /nuevo/i.test(item.name);
@@ -47,19 +53,24 @@ export default function ProductCard({
       category: item.category,
       unit: item.unit,
       unitPrice: price,
+      packSize: item.packSize,
+      approxWeightKg: item.approxWeightKg,
+      pricingMode: item.pricingMode,
+      customThickness: item.customThickness,
+      availableThickness: item.availableThickness,
+      selectedThickness: item.customThickness ? selectedThickness : undefined,
     });
   };
   
   return (
-    <article className="card p-5 hover:ring-2 hover:ring-federalBlue hover:shadow-md transition-all group">
-      <div className="flex flex-col h-full">
-        {/* Badges */}
-        <div className="flex items-center gap-2 mb-2 flex-wrap">
-          <CategoryBadge category={item.category} />
-          {isNew && (
-            <span className="badge bg-mintGreen text-slate-800">Nuevo</span>
-          )}
-        </div>
+    <article className="card p-5 hover:ring-2 hover:ring-federalBlue hover:shadow-md transition-all group flex flex-col h-full">
+      {/* Badges */}
+      <div className="flex items-center gap-2 mb-2 flex-wrap">
+        <CategoryBadge category={item.category} />
+        {isNew && (
+          <span className="badge bg-mintGreen text-slate-800">Nuevo</span>
+        )}
+      </div>
         
         {/* Supplier */}
         {item.supplier && (
@@ -72,9 +83,54 @@ export default function ProductCard({
         )}
         
         {/* Title */}
-        <h3 className="text-lg font-semibold mb-2 capitalize flex-grow">
+        <h3 className="text-lg font-semibold mb-2 capitalize">
           {item.name}
         </h3>
+        
+        {/* Pack and thickness info - fixed height container */}
+        <div className="mb-3 min-h-[3rem]">
+          {(item.packSize || item.approxWeightKg || item.customThickness) && (
+            <div className="space-y-2">
+              {item.packSize && (
+                <p className="text-xs text-slate-600">
+                  <span className="font-semibold">Paquete:</span> {item.packSize} {item.packSize === 1 ? 'pieza' : 'piezas'}
+                </p>
+              )}
+              {item.approxWeightKg && (
+                <p className="text-xs text-slate-600">
+                  <span className="font-semibold">Peso aprox:</span> {item.approxWeightKg} kg
+                  {item.approxWeightKg > 0 && price && (
+                    <span className="ml-1 text-slate-500">
+                      (≈ {formatPrice(price * item.approxWeightKg)})
+                    </span>
+                  )}
+                </p>
+              )}
+              {item.customThickness && item.availableThickness && (
+                <div>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">
+                    Grosor:
+                  </label>
+                  <div className="flex gap-1">
+                    {item.availableThickness.map((thickness) => (
+                      <button
+                        key={thickness}
+                        onClick={() => setSelectedThickness(thickness)}
+                        className={`px-2 py-1 text-xs rounded border transition-colors ${
+                          selectedThickness === thickness
+                            ? 'bg-federalBlue text-white border-federalBlue'
+                            : 'bg-white text-slate-700 border-slate-300 hover:border-federalBlue'
+                        }`}
+                      >
+                        {thickness}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
         
         {/* Single unit price display */}
         {price !== undefined ? (
@@ -166,7 +222,6 @@ export default function ProductCard({
             )}
           </>
         )}
-      </div>
     </article>
   );
 }

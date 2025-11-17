@@ -1,0 +1,45 @@
+{
+  "comment": "Thickness options for premium steaks that can be custom cut",
+  "overrides": {
+    "bufalo:rib-eye": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    },
+    "bufalo:new-york": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    },
+    "bufalo:cow-boy": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    },
+    "bufalo:sirloin": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    },
+    "bufalo:porterhouse": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    },
+    "res:rib-eye": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    },
+    "res:new-york": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    },
+    "res:cowboy": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    },
+    "res:sirloin": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    },
+    "res:porterhouse": {
+      "customThickness": true,
+      "availableThickness": ["1/2\"", "3/4\"", "1\""]
+    }
+  }
+}

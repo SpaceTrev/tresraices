@@ -6,6 +6,53 @@ import type { MenuItem, UnitType } from "./types";
 
 export type SortOption = "relevance" | "priceAsc" | "priceDesc" | "nameAsc" | "nameDesc";
 
+// Common meat cut/type patterns to extract from product names
+const MEAT_TYPE_PATTERNS = [
+  "arrachera",
+  "hamburguesa",
+  "chorizo",
+  "chistorra",
+  "molida",
+  "costilla",
+  "filete",
+  "pierna",
+  "pechuga",
+  "muslo",
+  "salchicha",
+  "bistec",
+  "chuleta",
+  "t-bone",
+  "rib eye",
+  "new york",
+  "sirloin",
+  "chamorro",
+] as const;
+
+/**
+ * Extract meat type from product name (e.g., "hamburguesa grande" -> "hamburguesa")
+ */
+export function extractMeatType(name: string): string | null {
+  const lowerName = name.toLowerCase();
+  for (const pattern of MEAT_TYPE_PATTERNS) {
+    if (lowerName.includes(pattern)) {
+      return pattern;
+    }
+  }
+  return null;
+}
+
+/**
+ * Get all unique meat types from a list of menu items
+ */
+export function getAllMeatTypes(items: MenuItem[]): string[] {
+  const types = new Set<string>();
+  items.forEach(item => {
+    const meatType = extractMeatType(item.name);
+    if (meatType) types.add(meatType);
+  });
+  return Array.from(types).sort((a, b) => a.localeCompare(b, "es"));
+}
+
 /**
  * Apply search filter (case-insensitive substring match on item name)
  */
@@ -21,6 +68,17 @@ export function filterBySearch(items: MenuItem[], query: string): MenuItem[] {
 export function filterByCategories(items: MenuItem[], categories: string[]): MenuItem[] {
   if (categories.length === 0) return items;
   return items.filter(item => categories.includes(item.category));
+}
+
+/**
+ * Apply meat type filter (includes any of the selected meat types)
+ */
+export function filterByMeatTypes(items: MenuItem[], meatTypes: string[]): MenuItem[] {
+  if (meatTypes.length === 0) return items;
+  return items.filter(item => {
+    const itemMeatType = extractMeatType(item.name);
+    return itemMeatType && meatTypes.includes(itemMeatType);
+  });
 }
 
 /**
@@ -82,6 +140,7 @@ export function applyFilters(
   options: {
     q?: string;
     cats?: string[];
+    meatTypes?: string[];
     units?: UnitType[];
     sort?: SortOption;
   }
@@ -94,6 +153,10 @@ export function applyFilters(
   
   if (options.cats && options.cats.length > 0) {
     filtered = filterByCategories(filtered, options.cats);
+  }
+  
+  if (options.meatTypes && options.meatTypes.length > 0) {
+    filtered = filterByMeatTypes(filtered, options.meatTypes);
   }
   
   if (options.units) {

@@ -21,7 +21,10 @@
       "guadalajara": 313.54,
       "colima": 327.17
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 3,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "avestruz:molida",
@@ -69,7 +72,13 @@
       "guadalajara": 310.5,
       "colima": 324
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "bufalo:diezmillo",
@@ -93,7 +102,10 @@
       "guadalajara": 155.25,
       "colima": 162
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "bufalo:t-bone",
@@ -189,7 +201,10 @@
       "guadalajara": 165.6,
       "colima": 172.8
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 2,
+    "approxWeightKg": 1,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cerdo:costilla-huacal",
@@ -477,7 +492,10 @@
       "guadalajara": 443.57,
       "colima": 462.85
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "ciervo-rojo:lomo",
@@ -777,7 +795,10 @@
       "guadalajara": 201.94,
       "colima": 210.72
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 1,
+    "approxWeightKg": 0.3,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:chistorra-merguez",
@@ -789,7 +810,10 @@
       "guadalajara": 201.94,
       "colima": 210.72
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 1,
+    "approxWeightKg": 0.3,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:chistorra-mixta",
@@ -801,7 +825,10 @@
       "guadalajara": 201.94,
       "colima": 210.72
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 1,
+    "approxWeightKg": 0.3,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:chuleta-especial",
@@ -1017,7 +1044,10 @@
       "guadalajara": 189.29,
       "colima": 197.52
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:hamburguesa-merguez",
@@ -1029,7 +1059,10 @@
       "guadalajara": 177.79,
       "colima": 185.52
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:hamburguesa-mixta",
@@ -1041,7 +1074,10 @@
       "guadalajara": 172.04,
       "colima": 179.52
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:hueso",
@@ -1233,7 +1269,10 @@
       "guadalajara": 320.16,
       "colima": 334.08
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 1,
+    "approxWeightKg": 2.5,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:pierna-con-cadera",
@@ -1401,7 +1440,10 @@
       "guadalajara": 287.5,
       "colima": 300
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "jabali:filete",
@@ -1545,7 +1587,10 @@
       "guadalajara": 350.75,
       "colima": 366
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "pato:hueso",
@@ -1761,7 +1806,10 @@
       "guadalajara": 201.25,
       "colima": 210
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 1,
+    "approxWeightKg": 1.5,
+    "pricingMode": "per_kg"
   },
   {
     "id": "pavo:pierna-natural",
@@ -2025,7 +2073,10 @@
       "guadalajara": 143.29,
       "colima": 149.52
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 4,
+    "approxWeightKg": 0.6,
+    "pricingMode": "per_kg"
   },
   {
     "id": "res:chorizo-campestre",
@@ -2037,7 +2088,10 @@
       "guadalajara": 131.79,
       "colima": 137.52
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 4,
+    "approxWeightKg": 0.6,
+    "pricingMode": "per_kg"
   },
   {
     "id": "res:chorizo-ranchero",
@@ -2049,7 +2103,10 @@
       "guadalajara": 131.79,
       "colima": 137.52
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "packSize": 4,
+    "approxWeightKg": 0.6,
+    "pricingMode": "per_kg"
   },
   {
     "id": "res:costilla-cargada-short-ryb",
@@ -2073,7 +2130,13 @@
       "guadalajara": 359.49,
       "colima": 375.12
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:cowboy-prime",
@@ -2193,7 +2256,13 @@
       "guadalajara": 324.44,
       "colima": 338.54
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:peinecillo",
@@ -2229,7 +2298,13 @@
       "guadalajara": 298.68,
       "colima": 311.66
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:prime-rib",
@@ -2253,7 +2328,13 @@
       "guadalajara": 377.57,
       "colima": 393.98
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:rib-eye-anejo",
@@ -2289,7 +2370,13 @@
       "guadalajara": 292.56,
       "colima": 305.28
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:t-bone",

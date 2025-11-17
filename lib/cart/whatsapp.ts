@@ -27,7 +27,21 @@ export function buildWhatsAppUrl({
   const itemLines = items
     .map((item) => {
       const lineTotal = item.unitPrice * item.quantity;
-      return `• ${item.name} (${prettyUnit(item.unit)}) x${item.quantity} — ${formatPrice(lineTotal)}`;
+      let line = `• ${item.name} (${prettyUnit(item.unit)}) x${item.quantity} — ${formatPrice(lineTotal)}`;
+      
+      // Add pack/weight info if available
+      if (item.packSize) {
+        line += `\n  Paquete: ${item.packSize} ${item.packSize === 1 ? 'pieza' : 'piezas'}`;
+      }
+      if (item.approxWeightKg) {
+        const approxTotal = item.unitPrice * item.approxWeightKg * item.quantity;
+        line += `\n  Peso aprox: ${item.approxWeightKg} kg/unidad (≈ ${formatPrice(approxTotal)} total)`;
+      }
+      if (item.selectedThickness) {
+        line += `\n  Grosor: ${item.selectedThickness}`;
+      }
+      
+      return line;
     })
     .join("\n");
   
@@ -47,6 +61,12 @@ export function buildWhatsAppUrl({
   }
   
   message += `\n\nSubtotal: ${formatPrice(subtotal)}`;
+  
+  // Add disclaimer for approximate pricing
+  const hasApproxItems = items.some(item => item.approxWeightKg);
+  if (hasApproxItems) {
+    message += `\n\n* El peso del paquete puede variar ligeramente. Precio final según peso real.`;
+  }
   
   const encoded = encodeURIComponent(message);
   return `https://wa.me/523315126548?text=${encoded}`;

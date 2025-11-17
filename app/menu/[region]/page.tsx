@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import type { MenuItem } from "@/lib/menu/types";
 import { extractCategories } from "@/lib/menu/flatten";
+import { getAllMeatTypes } from "@/lib/menu/filters";
 import MenuLayout from "@/components/menu/MenuLayout";
 import FilterPanel from "@/components/menu/FilterPanel";
 import MenuGrid from "@/components/menu/MenuGrid";
@@ -41,8 +42,9 @@ export default async function MenuPage({
   const raw = fs.readFileSync(dataPath, "utf-8");
   const items = JSON.parse(raw) as MenuItem[];
 
-  // Extract categories from items
+  // Extract categories and meat types from items
   const categories = extractCategories(items);
+  const meatTypes = getAllMeatTypes(items);
   const pretty = prettyRegion[region];
 
   return (
@@ -74,7 +76,7 @@ export default async function MenuPage({
                 </div>
               }
             >
-              <FilterPanel categories={categories} region={region} />
+              <FilterPanel categories={categories} meatTypes={meatTypes} region={region} />
             </Suspense>
           }
         >

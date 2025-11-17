@@ -13,7 +13,9 @@
     "test:api": "bash scripts/test-api.sh",
     "test:prod": "bash scripts/test-api.sh http://localhost:5173",
     "lint": "eslint .",
-    "parse:local": "node scripts/parse-pdf-local.mjs ./input/LISTA2.pdf"
+    "parse:local": "node scripts/parse-pdf-local.mjs ./input/LISTA2.pdf",
+    "apply:pack": "node scripts/apply-pack-overrides.mjs",
+    "apply:thickness": "node scripts/apply-thickness-overrides.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -33,6 +35,7 @@
     "@types/react-dom": "^18.2.24",
     "@vitest/ui": "^4.0.8",
     "autoprefixer": "^10.4.19",
+    "dotenv": "^17.2.3",
     "eslint": "^9.12.0",
     "eslint-config-next": "15.0.3",
     "postcss": "^8.4.47",

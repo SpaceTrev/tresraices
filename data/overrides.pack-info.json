@@ -1,0 +1,125 @@
+{
+  "comment": "Pack size and approximate weight overrides for menu items. Merge this data with menu JSON files.",
+  "overrides": {
+    "avestruz:hamburguesa-grande": {
+      "packSize": 3,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "bufalo:hamburguesa": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "ciervo-rojo:hamburguesa": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "cordero:hamburguesa-arabe": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "cordero:hamburguesa-merguez": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "cordero:hamburguesa-mixta": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "jabali:hamburguesa": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "pato:hamburguesa": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "pavo:hamburguesa": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "pollo:hamburguesa": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "res:hamburguesa": {
+      "packSize": 6,
+      "approxWeightKg": 0.9,
+      "pricingMode": "per_kg"
+    },
+    "cordero:chistorra-arabe": {
+      "packSize": 1,
+      "approxWeightKg": 0.3,
+      "pricingMode": "per_kg"
+    },
+    "cordero:chistorra-merguez": {
+      "packSize": 1,
+      "approxWeightKg": 0.3,
+      "pricingMode": "per_kg"
+    },
+    "cordero:chistorra-mixta": {
+      "packSize": 1,
+      "approxWeightKg": 0.3,
+      "pricingMode": "per_kg"
+    },
+    "res:chorizo-argentino": {
+      "packSize": 4,
+      "approxWeightKg": 0.6,
+      "pricingMode": "per_kg"
+    },
+    "res:chorizo-campestre": {
+      "packSize": 4,
+      "approxWeightKg": 0.6,
+      "pricingMode": "per_kg"
+    },
+    "res:chorizo-ranchero": {
+      "packSize": 4,
+      "approxWeightKg": 0.6,
+      "pricingMode": "per_kg"
+    },
+    "cerdo:costilla-bbq": {
+      "packSize": 1,
+      "approxWeightKg": 1.2,
+      "pricingMode": "per_kg"
+    },
+    "cerdo:costilla-baby-back": {
+      "packSize": 2,
+      "approxWeightKg": 1.0,
+      "pricingMode": "per_kg"
+    },
+    "cerdo:chamorro": {
+      "packSize": 1,
+      "approxWeightKg": 0.8,
+      "pricingMode": "per_kg"
+    },
+    "cordero:pierna": {
+      "packSize": 1,
+      "approxWeightKg": 2.5,
+      "pricingMode": "per_kg"
+    },
+    "pavo:pechuga": {
+      "packSize": 1,
+      "approxWeightKg": 1.5,
+      "pricingMode": "per_kg"
+    },
+    "pollo:pechuga": {
+      "packSize": 2,
+      "approxWeightKg": 0.6,
+      "pricingMode": "per_kg"
+    },
+    "queso:queso-de-cabra": {
+      "packSize": 1,
+      "approxWeightKg": 0.5,
+      "pricingMode": "per_kg"
+    }
+  }
+}

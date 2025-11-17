@@ -152,6 +152,11 @@ export default function CartDrawer({ isOpen, onClose, region }: CartDrawerProps)
                       <p className="text-xs text-slate-500">
                         <span className="capitalize">{item.category}</span> · {formatPrice(lineTotal)}
                       </p>
+                      {item.selectedThickness && (
+                        <p className="text-xs text-federalBlue font-medium mt-0.5">
+                          Grosor: {item.selectedThickness}
+                        </p>
+                      )}
                     </div>
                     
                     <div className="flex items-center gap-2">
@@ -246,6 +251,23 @@ export default function CartDrawer({ isOpen, onClose, region }: CartDrawerProps)
         {/* Footer */}
         {items.length > 0 && (
           <footer className="border-t border-slate-200 p-5 space-y-4 bg-slate-50">
+            {/* Disclaimers */}
+            <div className="space-y-2">
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                <div className="flex gap-2">
+                  <svg className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div className="text-xs text-amber-900">
+                    <p className="font-semibold">Nota sobre pesos y precios</p>
+                    <p className="mt-1">
+                      Los pesos pueden variar ligeramente (más o menos). El precio final se ajustará según el peso real de tu pedido.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <div className="flex items-center justify-between text-lg">
               <span className="font-semibold">Subtotal</span>
               <span className="font-bold tabular-nums">{formatPrice(subtotal)}</span>

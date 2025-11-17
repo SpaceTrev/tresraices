@@ -26,14 +26,15 @@ export default function MenuGrid({ items, categories, region, prettyRegion }: Me
   // Read filter state from URL
   const q = searchParams.get("q") || "";
   const cats = searchParams.get("cat")?.split(",").filter(Boolean) || [];
+  const meatTypes = searchParams.get("meat")?.split(",").filter(Boolean) || [];
   const units = (searchParams.get("units")?.split(",").filter(Boolean) as UnitType[]) || ["kg", "pieza"];
   const sort = (searchParams.get("sort") as SortOption) || "relevance";
   const view = searchParams.get("view") || "grid";
   
   // Apply filters and sorting
   const filteredItems = useMemo(() => {
-    return applyFilters(items, region, { q, cats, units, sort });
-  }, [items, region, q, cats, units, sort]);
+    return applyFilters(items, region, { q, cats, meatTypes, units, sort });
+  }, [items, region, q, cats, meatTypes, units, sort]);
   
   // Determine if we should show sections
   const showSections = view === "sections" || cats.length > 1;

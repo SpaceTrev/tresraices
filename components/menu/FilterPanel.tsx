@@ -11,18 +11,28 @@ import type { UnitType } from "@/lib/menu/types";
 
 interface FilterPanelProps {
   categories: string[];
+  meatTypes: string[];
   region: string;
 }
 
-export default function FilterPanel({ categories, region }: FilterPanelProps) {
+export default function FilterPanel({ categories, meatTypes, region }: FilterPanelProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [isPending, startTransition] = useTransition();
+  
+  // Accordion state
+  const [openSections, setOpenSections] = useState({
+    meatTypes: true,
+    categories: true,
+  });
   
   // Read initial state from URL
   const [search, setSearch] = useState(searchParams.get("q") || "");
   const [selectedCategories, setSelectedCategories] = useState<string[]>(
     searchParams.get("cat")?.split(",").filter(Boolean) || []
+  );
+  const [selectedMeatTypes, setSelectedMeatTypes] = useState<string[]>(
+    searchParams.get("meat")?.split(",").filter(Boolean) || []
   );
   const [sortBy, setSortBy] = useState<SortOption>(
     (searchParams.get("sort") as SortOption) || "relevance"
@@ -36,6 +46,7 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
     const params = new URLSearchParams();
     if (search) params.set("q", search);
     if (selectedCategories.length > 0) params.set("cat", selectedCategories.join(","));
+    if (selectedMeatTypes.length > 0) params.set("meat", selectedMeatTypes.join(","));
     if (sortBy !== "relevance") params.set("sort", sortBy);
     if (selectedUnits.length < 2) params.set("units", selectedUnits.join(","));
     
@@ -43,11 +54,17 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
     startTransition(() => {
       router.replace(`/menu/${region}${query ? `?${query}` : ""}`, { scroll: false });
     });
-  }, [search, selectedCategories, sortBy, selectedUnits, region, router]);
+  }, [search, selectedCategories, selectedMeatTypes, sortBy, selectedUnits, region, router]);
   
   const toggleCategory = (cat: string) => {
     setSelectedCategories(prev =>
       prev.includes(cat) ? prev.filter(c => c !== cat) : [...prev, cat]
+    );
+  };
+  
+  const toggleMeatType = (type: string) => {
+    setSelectedMeatTypes(prev =>
+      prev.includes(type) ? prev.filter(t => t !== type) : [...prev, type]
     );
   };
   
@@ -57,17 +74,23 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
     );
   };
   
+  const toggleSection = (section: keyof typeof openSections) => {
+    setOpenSections(prev => ({ ...prev, [section]: !prev[section] }));
+  };
+  
   const clearFilters = () => {
     setSearch("");
     setSelectedCategories([]);
+    setSelectedMeatTypes([]);
     setSortBy("relevance");
     setSelectedUnits(["kg", "pieza"]);
   };
   
-  const hasActiveFilters = search || selectedCategories.length > 0 || sortBy !== "relevance" || selectedUnits.length < 2;
+  const hasActiveFilters = search || selectedCategories.length > 0 || selectedMeatTypes.length > 0 || sortBy !== "relevance" || selectedUnits.length < 2;
   
   return (
-    <div className="card p-5 space-y-5">
+    <div className="space-y-5 lg:sticky lg:top-4">
+      <div className="card p-5 space-y-5">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold">Filtros</h2>
@@ -124,7 +147,7 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
               type="checkbox"
               checked={selectedUnits.includes("kg")}
               onChange={() => toggleUnit("kg")}
-              className="w-4 h-4 text-federalBlue rounded focus:ring-2 focus:ring-federalBlue"
+              className="w-4 h-4 text-federalBlue border-slate-300 rounded focus:ring-2 focus:ring-federalBlue focus:ring-offset-0"
             />
             <span className="text-sm">Kilo</span>
           </label>
@@ -133,35 +156,92 @@ export default function FilterPanel({ categories, region }: FilterPanelProps) {
               type="checkbox"
               checked={selectedUnits.includes("pieza")}
               onChange={() => toggleUnit("pieza")}
-              className="w-4 h-4 text-federalBlue rounded focus:ring-2 focus:ring-federalBlue"
+              className="w-4 h-4 text-federalBlue border-slate-300 rounded focus:ring-2 focus:ring-federalBlue focus:ring-offset-0"
             />
             <span className="text-sm">Pieza</span>
           </label>
         </div>
       </div>
       
-      {/* Categories */}
-      <div>
-        <h3 className="text-sm font-medium mb-2">Categorías</h3>
-        <div className="space-y-2 max-h-96 overflow-y-auto">
-          {categories.map((cat) => {
-            const isSelected = selectedCategories.includes(cat);
-            return (
-              <label
-                key={cat}
-                className="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors"
-              >
-                <input
-                  type="checkbox"
-                  checked={isSelected}
-                  onChange={() => toggleCategory(cat)}
-                  className="w-4 h-4 text-federalBlue rounded focus:ring-2 focus:ring-federalBlue"
-                />
-                <span className="text-sm">{cat}</span>
-              </label>
-            );
-          })}
+      {/* Meat Types */}
+      {meatTypes.length > 0 && (
+        <div className="border-t border-slate-200 pt-4">
+          <button
+            onClick={() => toggleSection('meatTypes')}
+            className="w-full flex items-center justify-between text-sm font-medium mb-2 hover:text-federalBlue transition-colors"
+          >
+            <span>Tipo de Corte</span>
+            <svg
+              className={`w-4 h-4 transition-transform ${openSections.meatTypes ? 'rotate-180' : ''}`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          {openSections.meatTypes && (
+            <div className="space-y-2 max-h-60 overflow-y-auto">
+              {meatTypes.map((type) => {
+                const isSelected = selectedMeatTypes.includes(type);
+                return (
+                  <label
+                    key={type}
+                    className="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isSelected}
+                      onChange={() => toggleMeatType(type)}
+                      className="w-4 h-4 text-federalBlue border-slate-300 rounded focus:ring-2 focus:ring-federalBlue focus:ring-offset-0"
+                    />
+                    <span className="text-sm capitalize">{type}</span>
+                  </label>
+                );
+              })}
+            </div>
+          )}
         </div>
+      )}
+      
+      {/* Categories */}
+      <div className="border-t border-slate-200 pt-4">
+        <button
+          onClick={() => toggleSection('categories')}
+          className="w-full flex items-center justify-between text-sm font-medium mb-2 hover:text-federalBlue transition-colors"
+        >
+          <span>Categorías (Animal)</span>
+          <svg
+            className={`w-4 h-4 transition-transform ${openSections.categories ? 'rotate-180' : ''}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        {openSections.categories && (
+          <div className="space-y-2 max-h-60 overflow-y-auto">
+            {categories.map((cat) => {
+              const isSelected = selectedCategories.includes(cat);
+              return (
+                <label
+                  key={cat}
+                  className="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors"
+                >
+                  <input
+                    type="checkbox"
+                    checked={isSelected}
+                    onChange={() => toggleCategory(cat)}
+                    className="w-4 h-4 text-federalBlue border-slate-300 rounded focus:ring-2 focus:ring-federalBlue focus:ring-offset-0"
+                  />
+                  <span className="text-sm">{cat}</span>
+                </label>
+              );
+            })}
+          </div>
+        )}
+      </div>
       </div>
     </div>
   );
