@@ -20,16 +20,19 @@ export function parseWeightUpdates(text: string): WeightUpdate[] {
     // "Cerdo costilla baby back 1.180 kg"
     // "Res arrachera 250: 1.04 kg"
     // "Res hamburguesa arrachera .500kg"
-    const match = line.match(/(.+?)\s*([:.-]?\s*)?(\d+\.?\d*)\s*k/i);
+    // "Res rib eye 1/2": 1.220kg"
+    const match = line.match(/(.+?)\s*([:.-]?\s*)?(\d+\.?\d*)\s*kg/i);
     
     if (match) {
       const itemName = match[1].trim()
         .replace(/^(Cerdo|Res|Búfalo|Bufalo|Cordero|Pato|Pollo|Pavo|Avestruz|Ciervo rojo|Jabalí|Jabali|Conejo|Codorniz|Cabrito|Ternera|Queso)\s+/i, '')
+        .replace(/["']/g, '') // Remove quotes
         .toLowerCase()
         .trim();
       const weight = parseFloat(match[3]);
       
-      if (!isNaN(weight) && weight > 0) {
+      // Only add if item name is meaningful (more than 2 characters) and weight is valid
+      if (itemName.length > 2 && !isNaN(weight) && weight > 0) {
         updates.push({ itemName, actualWeight: weight });
       }
     }
