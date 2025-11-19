@@ -22,7 +22,8 @@ export default function RecalculatePage() {
       try {
         const response = await fetch(`/api/menu?region=${region}`);
         const data = await response.json();
-        setMenuItems(data.items || []);
+        // API returns array directly, not { items: [...] }
+        setMenuItems(Array.isArray(data) ? data : (data.items || []));
         setLoading(false);
       } catch (err) {
         setError('Error cargando menú');
