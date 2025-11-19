@@ -110,8 +110,17 @@ export default function AdminPage() {
             </button>
           </div>
 
-          <div className="text-center">
-            <Link href="/" className="text-sm text-federalBlue hover:underline">
+          <div className="text-center space-y-2">
+            <Link href="/admin/forgot-password" className="text-sm text-federalBlue hover:underline block">
+              ¿Olvidaste tu contraseña?
+            </Link>
+            <div className="text-sm text-slate-600">
+              ¿No tienes cuenta?{' '}
+              <Link href="/admin/signup" className="text-federalBlue hover:underline">
+                Crear cuenta
+              </Link>
+            </div>
+            <Link href="/" className="text-sm text-slate-500 hover:underline block">
               ← Volver al sitio
             </Link>
           </div>
