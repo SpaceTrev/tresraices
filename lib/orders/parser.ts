@@ -12,28 +12,50 @@ import type { ParsedOrder, WeightUpdate, Region } from './types';
  *  Res hamburguesa arrachera .500kg"
  */
 export function parseWeightUpdates(text: string): WeightUpdate[] {
-  const lines = text.split('\n').filter(line => line.trim());
+  const lines = text.split('\n').map(line => line.trim()).filter(Boolean);
   const updates: WeightUpdate[] = [];
   
+  let currentItem: string | null = null;
+  
   for (const line of lines) {
-    // Match patterns like:
-    // "Cerdo costilla baby back 1.180 kg"
-    // "Res arrachera 250: 1.04 kg"
-    // "Res hamburguesa arrachera .500kg"
-    // "Res rib eye 1/2": 1.220kg"
-    const match = line.match(/(.+?)\s*([:.-]?\s*)?(\d+\.?\d*)\s*kg/i);
+    // Check if this line has a weight (with or without item name)
+    const weightMatch = line.match(/(\d+\.?\d*)\s*kg/i);
     
-    if (match) {
-      const itemName = match[1].trim()
+    if (weightMatch) {
+      const weight = parseFloat(weightMatch[1]);
+      
+      // Check if item name is on the same line
+      const sameLine = line.match(/(.+?)\s*[:.-]?\s*(\d+\.?\d*)\s*kg/i);
+      
+      if (sameLine && sameLine[1].trim().length > 2) {
+        // Item name and weight on same line
+        const itemName = sameLine[1].trim()
+          .replace(/^(Cerdo|Res|Búfalo|Bufalo|Cordero|Pato|Pollo|Pavo|Avestruz|Ciervo rojo|Jabalí|Jabali|Conejo|Codorniz|Cabrito|Ternera|Queso)\s+/i, '')
+          .replace(/["':]/g, '')
+          .toLowerCase()
+          .trim();
+        
+        if (itemName.length > 2 && !isNaN(weight) && weight > 0) {
+          updates.push({ itemName, actualWeight: weight });
+          currentItem = null;
+        }
+      } else if (currentItem) {
+        // Weight on separate line, use previous item name
+        if (!isNaN(weight) && weight > 0) {
+          updates.push({ itemName: currentItem, actualWeight: weight });
+          currentItem = null;
+        }
+      }
+    } else if (!line.match(/^\d+\.?\d*$/)) {
+      // This line might be an item name (no weight, not just a number)
+      const itemName = line
         .replace(/^(Cerdo|Res|Búfalo|Bufalo|Cordero|Pato|Pollo|Pavo|Avestruz|Ciervo rojo|Jabalí|Jabali|Conejo|Codorniz|Cabrito|Ternera|Queso)\s+/i, '')
-        .replace(/["']/g, '') // Remove quotes
+        .replace(/["':]/g, '')
         .toLowerCase()
         .trim();
-      const weight = parseFloat(match[3]);
       
-      // Only add if item name is meaningful (more than 2 characters) and weight is valid
-      if (itemName.length > 2 && !isNaN(weight) && weight > 0) {
-        updates.push({ itemName, actualWeight: weight });
+      if (itemName.length > 2) {
+        currentItem = itemName;
       }
     }
   }
