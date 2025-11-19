@@ -15,7 +15,9 @@
     "lint": "eslint .",
     "parse:local": "node scripts/parse-pdf-local.mjs ./input/LISTA2.pdf",
     "apply:pack": "node scripts/apply-pack-overrides.mjs",
-    "apply:thickness": "node scripts/apply-thickness-overrides.mjs"
+    "apply:thickness": "node scripts/apply-thickness-overrides.mjs",
+    "apply:category": "node scripts/apply-category-overrides.mjs",
+    "apply:all": "pnpm apply:category && pnpm apply:thickness && pnpm apply:pack"
   },
   "dependencies": {
     "clsx": "^2.1.1",

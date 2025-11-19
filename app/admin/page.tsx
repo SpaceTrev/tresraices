@@ -87,7 +87,12 @@ export default function AdminPage() {
 
   return (
     <div className="max-w-xl card p-6 space-y-4">
-      <h1 className="text-2xl font-bold">Admin</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold">Admin</h1>
+        <a href="/admin/recalculate" className="text-sm text-federalBlue hover:underline">
+          🧮 Recalcular Pedido
+        </a>
+      </div>
       {!user ? (
         <div className="space-y-2">
           <input className="w-full border p-2 rounded" placeholder="email" value={email} onChange={e=>setEmail(e.target.value)} />

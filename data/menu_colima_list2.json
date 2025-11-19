@@ -117,7 +117,13 @@
       "guadalajara": 276,
       "colima": 288
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "bufalo:top-sirloin",
@@ -129,7 +135,13 @@
       "guadalajara": 316.25,
       "colima": 330
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "cabrito:canal-pieza",
@@ -840,7 +852,13 @@
       "guadalajara": 304.7,
       "colima": 317.95
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "cordero:chuleta-estandar",
@@ -852,7 +870,13 @@
       "guadalajara": 293.66,
       "colima": 306.43
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "cordero:chuleta-marinada",
@@ -864,7 +888,13 @@
       "guadalajara": 289.25,
       "colima": 301.82
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "cordero:confit-pulpa",
@@ -1032,7 +1062,13 @@
       "guadalajara": 484.66,
       "colima": 505.73
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "cordero:hamburguesa-arabe",
@@ -1137,7 +1173,13 @@
       "guadalajara": 444.91,
       "colima": 464.26
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "cordero:machito-cocido",
@@ -1320,7 +1362,13 @@
       "guadalajara": 374.26,
       "colima": 390.53
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "cordero:rack-frances",
@@ -1332,7 +1380,13 @@
       "guadalajara": 717.6,
       "colima": 748.8
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "cordero:salchicha-alemana",
@@ -2148,12 +2202,18 @@
       "guadalajara": 525.5,
       "colima": 548.35
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:fajita-de-rib-eye",
     "name": "fajita de rib eye",
-    "category": "Res",
+    "category": "Fajitas",
     "unit": "kg",
     "basePrice": 250.56,
     "price": {
@@ -2172,7 +2232,13 @@
       "guadalajara": 475.82,
       "colima": 496.51
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:hamburguesa-arrachera",
@@ -2286,7 +2352,13 @@
       "guadalajara": 417.98,
       "colima": 436.15
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:porterhouse",
@@ -2346,7 +2418,13 @@
       "guadalajara": 566.31,
       "colima": 590.93
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:rib-eye-prime",
@@ -2358,7 +2436,13 @@
       "guadalajara": 554.81,
       "colima": 578.93
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:sirloin",
@@ -2388,7 +2472,13 @@
       "guadalajara": 291.78,
       "colima": 304.46
     },
-    "supplier": "El Barranqueño"
+    "supplier": "El Barranqueño",
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:tuetano",

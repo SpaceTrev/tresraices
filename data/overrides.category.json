@@ -1,0 +1,8 @@
+{
+  "comment": "Category overrides - reassign items to different categories",
+  "overrides": {
+    "res:fajita-de-rib-eye": {
+      "category": "Fajitas"
+    }
+  }
+}
