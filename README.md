@@ -1,8 +1,8 @@
 # Tres Raíces — MVP Website
 
 Informational site with two auto-priced menus:
-- Guadalajara (+15%)
-- Colima (+20%)
+- Guadalajara (+20%)
+- Colima (+30%)
 
 ## Stack
 - Next.js 15 (App Router) + TypeScript + Tailwind
@@ -80,8 +80,8 @@ Our pricing system supports **per-unit pricing** to distinguish between items so
 
 1. **Source of Truth**: Wholesale prices come from **LISTA 2** (our distributor's price list).
 2. **Regional Markups**: 
-   - Guadalajara: +15% markup on our base (wholesale) price
-   - Colima: +20% markup on our base (wholesale) price
+   - Guadalajara: +20% markup on our base (wholesale) price
+   - Colima: +30% markup on our base (wholesale) price
 3. **Unit Configuration**: The file `data/overrides.units.json` defines which units are available for specific items:
    ```json
    {

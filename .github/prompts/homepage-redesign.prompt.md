@@ -14,7 +14,7 @@ mode: agent
 - Typography should feel modern and confident — use Tailwind utilities for weights/sizes.
 - Images and brand graphics will be added later; use placeholder assets in `/public/img/`.
 - Existing routes:
-  - `/menu/[region]` — menus for Guadalajara (+15%) and Colima (+20%)
+  - `/menu/[region]` — menus for Guadalajara (+20%) and Colima (+30%)
   - `/admin` — internal, hidden from main navigation.
 - Favicon already set via `/public/favicon/*` and `metadata.icons` in `app/layout.tsx`.
 

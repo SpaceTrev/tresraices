@@ -11,8 +11,8 @@ if (process.argv.length < 3) {
 const pdfPath = process.argv[2]
 
 const REGION_MULTIPLIER = {
-  guadalajara: 1.15,
-  colima: 1.2,
+  guadalajara: 1.20,
+  colima: 1.30,
 };
 
 function toFloat(s) {

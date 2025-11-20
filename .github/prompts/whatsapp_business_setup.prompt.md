@@ -11,7 +11,7 @@
 
 **Product Catalog:**
 - 203 unique meat products across 15 categories (Avestruz, Búfalo, Cabrito, Cerdo, Ciervo rojo, Codorniz, Conejo, Cordero, Jabalí, Pato, Pavo, Pollo, Queso, Res, Ternera)
-- Two regions: Guadalajara (+15% markup), Colima (+20% markup)
+- Two regions: Guadalajara (+20% markup), Colima (+30% markup)
 - Single supplier: "El Barranqueño"
 - Variable weight pricing model: customers see estimates during ordering, receive final price after packing based on actual weight
 

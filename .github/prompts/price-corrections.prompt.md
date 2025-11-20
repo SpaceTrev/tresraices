@@ -4,7 +4,7 @@ mode: agent
 
 # Copilot Prompt â€” Add Per-Unit Pricing (kilo vs pieza), Correct Markups, and Safeguards
 
-**Goal:** Fix pricing accuracy by distinguishing **per kilo** vs **per pieza** across parsing, data, UI, and WhatsApp checkout. If an item is not sold in a certain unit, that unit should not appear. Add guardrails to prevent absurd prices (e.g., manteca at >$1,000). Ensure regional markups (+15% GDL, +20% Colima) are applied on the **correct base price**.
+**Goal:** Fix pricing accuracy by distinguishing **per kilo** vs **per pieza** across parsing, data, UI, and WhatsApp checkout. If an item is not sold in a certain unit, that unit should not appear. Add guardrails to prevent absurd prices (e.g., manteca at >$1,000). Ensure regional markups (+20% GDL, +30% Colima) are applied on the **correct base price**.
 
 ---
 
@@ -13,7 +13,7 @@ mode: agent
 - Next.js 15 (App Router), TS, Tailwind. No new deps.
 - Existing data source: `data/menu_{guadalajara|colima}_list2.json` derived from distributor **LISTA 2** (our wholesale).
 - Current state has a single `price` per item. We need **structured unit prices**.
-- Regional multipliers remain: Guadalajara = 1.15, Colima = 1.20 (applied to **our** base price).
+- Regional multipliers remain: Guadalajara = 1.20, Colima = 1.30 (applied to **our** base price).
 
 ---
 
@@ -72,7 +72,7 @@ Create a JSON file to define per-item unit configuration when PDF parsing doesnâ
 - **Compute regional prices** per unit with precise rounding:
   ```ts
   const roundMXN = (v: number) => Math.round(v * 100) / 100;
-  GDL = roundMXN(basePrice * 1.15);
+  GDL = roundMXN(basePrice * 1.20);
   COL = roundMXN(basePrice * 1.2);
   ```
 - Write final JSONs as arrays of `MenuItem` at:

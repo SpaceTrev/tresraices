@@ -7,7 +7,7 @@ mode: agent
 **Objective**
 
 1. Parse the distributor PDF so each product has **exactly one** unit: `"kg"` **or** `"pieza"` (never both).
-2. Apply regional markups correctly: Guadalajara **+15%**, Colima **+20%** (from our wholesale base).
+2. Apply regional markups correctly: Guadalajara **+20%**, Colima **+30%** (from our wholesale base).
 3. Update the UI to clearly display the single available unit; hide the other.
 4. Add unit tests asserting the markup math across the dataset.
 
@@ -57,7 +57,7 @@ export interface MenuItem {
 - Re-parse LISTA 2 so that for each line item:
   - Detect the **active unit column** (`KILO` or `PIEZA`) in the current table section and assign `unit` accordingly.
   - Extract the **base wholesale price** from that column.
-  - Compute `price.guadalajara = round2(base * 1.15)` and `price.colima = round2(base * 1.20)`.
+  - Compute `price.guadalajara = round2(base * 1.20)` and `price.colima = round2(base * 1.30)`.
 - Use **robust column alignment**:
   - Locate a `KILO`/`PIEZA` header in that page/section.
   - For every subsequent non-empty product row, map the numeric token to its column by **character x-position windows** (if the PDF text extractor supplies x coordinates) or by **token count alignment** (fallback).
@@ -93,7 +93,7 @@ pnpm parse:local ./input/LISTA2.pdf
 
 ```ts
 export const REGION_MULTIPLIER = {
-  guadalajara: 1.15,
+  guadalajara: 1.20,
   colima: 1.2,
 } as const;
 
@@ -136,7 +136,7 @@ Use **Vitest** (preferred) or Jest.
 import { computeRegionPrices } from "@/lib/menu/pricing";
 
 describe("computeRegionPrices", () => {
-  it("applies +15% (GDL) and +20% (Colima)", () => {
+  it("applies +20% (GDL) and +30% (Colima)", () => {
     const base = 100;
     const { guadalajara, colima } = computeRegionPrices(base);
     expect(guadalajara).toBe(115.0);
@@ -174,7 +174,7 @@ const col = JSON.parse(
 );
 
 describe("dataset markup verification", () => {
-  it("every GDL price is base * 1.15 (±0.01)", () => {
+  it("every GDL price is base * 1.20 (±0.01)", () => {
     for (const item of gdl) {
       const base = toNum(item.basePrice);
       const expected = round2(base * REGION_MULTIPLIER.guadalajara);
@@ -186,7 +186,7 @@ describe("dataset markup verification", () => {
     }
   });
 
-  it("every Colima price is base * 1.20 (±0.01)", () => {
+  it("every Colima price is base * 1.30 (±0.01)", () => {
     for (const item of col) {
       const base = toNum(item.basePrice);
       const expected = round2(base * REGION_MULTIPLIER.colima);
@@ -216,7 +216,7 @@ describe("dataset markup verification", () => {
 ## Acceptance criteria
 
 - Parsing yields **one** unit per item (`kg` or `pieza`), consistent with the PDF column where the price appears.
-- Guadalajara = **base × 1.15**; Colima = **base × 1.20**; tests confirm within ±$0.01.
+- Guadalajara = **base × 1.20**; Colima = **base × 1.30**; tests confirm within ±$0.01.
 - UI shows only the available unit; the other never appears.
 - Guardrails suppress absurd outliers and annotate `notes`.
 - `pnpm test` passes locally and on CI; `pnpm build` passes.

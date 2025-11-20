@@ -1,7 +1,7 @@
 # Tres Raíces Site — AI Agent Instructions
 
 ## Project Overview
-Next.js 15 (App Router) bilingual boutique meat shop with two region-specific menus (Guadalajara +15%, Colima +20%) derived from wholesale pricing PDFs. Uses Firebase Auth + Storage for optional admin uploads but defaults to static JSON in `/data`. Deployed on Netlify.
+Next.js 15 (App Router) bilingual boutique meat shop with two region-specific menus (Guadalajara +20%, Colima +30%) derived from wholesale pricing PDFs. Uses Firebase Auth + Storage for optional admin uploads but defaults to static JSON in `/data`. Deployed on Netlify.
 
 **Stack**: Next.js 15, TypeScript, Tailwind CSS 3.4+, Firebase (Auth + Storage + Firestore), `firebase-admin` for server-side operations.
 
@@ -34,13 +34,13 @@ Next.js 15 (App Router) bilingual boutique meat shop with two region-specific me
 ## Key Conventions
 
 ### Pricing Regions
-Only two valid regions: `guadalajara` (1.15× markup) | `colima` (1.20× markup). Hardcoded in `generateStaticParams()` and `prettyRegion` map.
+Only two valid regions: `guadalajara` (1.20× markup) | `colima` (1.30× markup). Hardcoded in `generateStaticParams()` and `prettyRegion` map.
 
 ### PDF Parsing Pattern
 - Category detection: Regex matching `["Avestruz","Búfalo","Cabrito","Cerdo","Ciervo rojo","Codorniz","Conejo","Cordero","Jabalí","Pato","Pavo","Pollo","Queso","Res","Ternera"]`
 - Price extraction: `\$\s*([0-9]{1,3}(?:[.,][0-9]{3})*[.,][0-9]{2}|[0-9]{1,4}(?:[.,][0-9]{2}))`
 - Normalization: `toFloat()` handles comma/dot separators in Mexican currency format
-- Output: `{ category, name, base_price }` → grouped by category with region-specific `price` field
+- Output: `{ category, name, base_price }` → grouped by category with region-specific `price` field (GDL 1.20×, Colima 1.30×)
 
 ### Styling
 - **Tailwind**: Custom colors defined in `tailwind.config.ts` (darkPurple, federalBlue, cream, mintGreen, etc.)

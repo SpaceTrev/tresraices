@@ -34,7 +34,7 @@ mode: agent
   - Subtext: `Precio base: $XXX` (small, muted)
   - Optional badges: `Nuevo` (if item name includes patterns like “nuevo” / leave a hook), `Popular` (placeholder)
   - CTA button: “WhatsApp” → `https://wa.me/523315126548?text=Hola,%20quiero%20{item}%20({PrettyRegion})`
-- `RegionToggle.tsx` — small control to switch between Guadalajara (+15%) and Colima (+20%), implemented as two links with active styling.
+- `RegionToggle.tsx` — small control to switch between Guadalajara (+20%) and Colima (+30%), implemented as two links with active styling.
 - `Breadcrumbs.tsx` — `Inicio / Menú / Guadalajara` (static links).
 
 ### 2) Restructure page at `app/menu/[region]/page.tsx`:

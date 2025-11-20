@@ -6,10 +6,9 @@
     "unit": "kg",
     "basePrice": 298,
     "price": {
-      "guadalajara": 342.7,
-      "colima": 357.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 357.6,
+      "colima": 387.4
+    }
   },
   {
     "id": "avestruz:hamburguesa-grande",
@@ -18,13 +17,9 @@
     "unit": "kg",
     "basePrice": 272.64,
     "price": {
-      "guadalajara": 313.54,
-      "colima": 327.17
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 3,
-    "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+      "guadalajara": 327.17,
+      "colima": 354.43
+    }
   },
   {
     "id": "avestruz:molida",
@@ -33,10 +28,9 @@
     "unit": "kg",
     "basePrice": 298,
     "price": {
-      "guadalajara": 342.7,
-      "colima": 357.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 357.6,
+      "colima": 387.4
+    }
   },
   {
     "id": "bufalo:arrachera-marinada",
@@ -45,10 +39,9 @@
     "unit": "kg",
     "basePrice": 235.2,
     "price": {
-      "guadalajara": 270.48,
-      "colima": 282.24
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 282.24,
+      "colima": 305.76
+    }
   },
   {
     "id": "bufalo:costilla",
@@ -57,10 +50,9 @@
     "unit": "kg",
     "basePrice": 158,
     "price": {
-      "guadalajara": 181.7,
-      "colima": 189.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 189.6,
+      "colima": 205.4
+    }
   },
   {
     "id": "bufalo:cow-boy",
@@ -69,16 +61,9 @@
     "unit": "kg",
     "basePrice": 270,
     "price": {
-      "guadalajara": 310.5,
-      "colima": 324
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 324,
+      "colima": 351
+    }
   },
   {
     "id": "bufalo:diezmillo",
@@ -87,10 +72,9 @@
     "unit": "kg",
     "basePrice": 280,
     "price": {
-      "guadalajara": 322,
-      "colima": 336
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 336,
+      "colima": 364
+    }
   },
   {
     "id": "bufalo:hamburguesa",
@@ -99,13 +83,9 @@
     "unit": "kg",
     "basePrice": 135,
     "price": {
-      "guadalajara": 155.25,
-      "colima": 162
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 6,
-    "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+      "guadalajara": 162,
+      "colima": 175.5
+    }
   },
   {
     "id": "bufalo:t-bone",
@@ -114,16 +94,9 @@
     "unit": "kg",
     "basePrice": 240,
     "price": {
-      "guadalajara": 276,
-      "colima": 288
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 288,
+      "colima": 312
+    }
   },
   {
     "id": "bufalo:top-sirloin",
@@ -132,16 +105,9 @@
     "unit": "kg",
     "basePrice": 275,
     "price": {
-      "guadalajara": 316.25,
-      "colima": 330
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 330,
+      "colima": 357.5
+    }
   },
   {
     "id": "cabrito:canal-pieza",
@@ -150,10 +116,9 @@
     "unit": "pieza",
     "basePrice": 1440,
     "price": {
-      "guadalajara": 1656,
-      "colima": 1728
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 1728,
+      "colima": 1872
+    }
   },
   {
     "id": "cerdo:adobado",
@@ -162,10 +127,9 @@
     "unit": "kg",
     "basePrice": 133,
     "price": {
-      "guadalajara": 152.95,
-      "colima": 159.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 159.6,
+      "colima": 172.9
+    }
   },
   {
     "id": "cerdo:cabeza-de-lomo",
@@ -174,10 +138,9 @@
     "unit": "kg",
     "basePrice": 134.4,
     "price": {
-      "guadalajara": 154.56,
-      "colima": 161.28
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 161.28,
+      "colima": 174.72
+    }
   },
   {
     "id": "cerdo:chamorro-sin-piel",
@@ -186,10 +149,9 @@
     "unit": "kg",
     "basePrice": 87.3,
     "price": {
-      "guadalajara": 100.4,
-      "colima": 104.76
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 104.76,
+      "colima": 113.49
+    }
   },
   {
     "id": "cerdo:chuleta-americana-entrecot",
@@ -198,10 +160,9 @@
     "unit": "kg",
     "basePrice": 118,
     "price": {
-      "guadalajara": 135.7,
-      "colima": 141.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 141.6,
+      "colima": 153.4
+    }
   },
   {
     "id": "cerdo:costilla-baby-back",
@@ -210,13 +171,9 @@
     "unit": "kg",
     "basePrice": 144,
     "price": {
-      "guadalajara": 165.6,
-      "colima": 172.8
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 2,
-    "approxWeightKg": 1,
-    "pricingMode": "per_kg"
+      "guadalajara": 172.8,
+      "colima": 187.2
+    }
   },
   {
     "id": "cerdo:costilla-huacal",
@@ -225,10 +182,9 @@
     "unit": "kg",
     "basePrice": 135,
     "price": {
-      "guadalajara": 155.25,
-      "colima": 162
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 162,
+      "colima": 175.5
+    }
   },
   {
     "id": "cerdo:lechon-3-6-0-pieza",
@@ -237,10 +193,9 @@
     "unit": "pieza",
     "basePrice": 1500,
     "price": {
-      "guadalajara": 1725,
-      "colima": 1800
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 1800,
+      "colima": 1950
+    }
   },
   {
     "id": "cerdo:lechon-6-100-7-0-pieza",
@@ -249,10 +204,9 @@
     "unit": "pieza",
     "basePrice": 1600,
     "price": {
-      "guadalajara": 1840,
-      "colima": 1920
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 1920,
+      "colima": 2080
+    }
   },
   {
     "id": "cerdo:lechon-7-100-8-0-pieza",
@@ -261,10 +215,9 @@
     "unit": "pieza",
     "basePrice": 1700,
     "price": {
-      "guadalajara": 1955,
-      "colima": 2040
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 2040,
+      "colima": 2210
+    }
   },
   {
     "id": "cerdo:lechon-8-100-9-0-pieza",
@@ -273,10 +226,9 @@
     "unit": "pieza",
     "basePrice": 1800,
     "price": {
-      "guadalajara": 2070,
-      "colima": 2160
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 2160,
+      "colima": 2340
+    }
   },
   {
     "id": "cerdo:lechon-9-100-10-0-pieza",
@@ -285,10 +237,9 @@
     "unit": "pieza",
     "basePrice": 1900,
     "price": {
-      "guadalajara": 2185,
-      "colima": 2280
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 2280,
+      "colima": 2470
+    }
   },
   {
     "id": "cerdo:lechon-10-100-11-0-pieza",
@@ -297,10 +248,9 @@
     "unit": "pieza",
     "basePrice": 2000,
     "price": {
-      "guadalajara": 2300,
-      "colima": 2400
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 2400,
+      "colima": 2600
+    }
   },
   {
     "id": "cerdo:lechon-11-100-12-0-pieza",
@@ -309,10 +259,9 @@
     "unit": "pieza",
     "basePrice": 2100,
     "price": {
-      "guadalajara": 2415,
-      "colima": 2520
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 2520,
+      "colima": 2730
+    }
   },
   {
     "id": "cerdo:lechon-12-100-13-0-pieza",
@@ -321,10 +270,9 @@
     "unit": "pieza",
     "basePrice": 2200,
     "price": {
-      "guadalajara": 2530,
-      "colima": 2640
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 2640,
+      "colima": 2860
+    }
   },
   {
     "id": "cerdo:lechon-13-100-14-0-pieza",
@@ -333,10 +281,9 @@
     "unit": "pieza",
     "basePrice": 2300,
     "price": {
-      "guadalajara": 2645,
-      "colima": 2760
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 2760,
+      "colima": 2990
+    }
   },
   {
     "id": "cerdo:lomo",
@@ -345,10 +292,9 @@
     "unit": "kg",
     "basePrice": 142,
     "price": {
-      "guadalajara": 163.3,
-      "colima": 170.4
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 170.4,
+      "colima": 184.6
+    }
   },
   {
     "id": "cerdo:manteca",
@@ -357,10 +303,9 @@
     "unit": "kg",
     "basePrice": 65.28,
     "price": {
-      "guadalajara": 75.07,
-      "colima": 78.34
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 78.34,
+      "colima": 84.86
+    }
   },
   {
     "id": "cerdo:molida",
@@ -369,10 +314,9 @@
     "unit": "kg",
     "basePrice": 108,
     "price": {
-      "guadalajara": 124.2,
-      "colima": 129.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 129.6,
+      "colima": 140.4
+    }
   },
   {
     "id": "cerdo:pierna-pulpa",
@@ -381,10 +325,9 @@
     "unit": "kg",
     "basePrice": 115.2,
     "price": {
-      "guadalajara": 132.48,
-      "colima": 138.24
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 138.24,
+      "colima": 149.76
+    }
   },
   {
     "id": "cerdo:pierna-adobada-pieza",
@@ -393,10 +336,9 @@
     "unit": "pieza",
     "basePrice": 105.6,
     "price": {
-      "guadalajara": 121.44,
-      "colima": 126.72
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 126.72,
+      "colima": 137.28
+    }
   },
   {
     "id": "cerdo:salchicha-paletita",
@@ -405,10 +347,9 @@
     "unit": "kg",
     "basePrice": 163.2,
     "price": {
-      "guadalajara": 187.68,
-      "colima": 195.84
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 195.84,
+      "colima": 212.16
+    }
   },
   {
     "id": "cerdo:tocinilla-crudo-con-piel-pork-belly",
@@ -417,10 +358,9 @@
     "unit": "kg",
     "basePrice": 166.6,
     "price": {
-      "guadalajara": 191.59,
-      "colima": 199.92
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 199.92,
+      "colima": 216.58
+    }
   },
   {
     "id": "cerdo:tocino-ahumado",
@@ -429,10 +369,9 @@
     "unit": "kg",
     "basePrice": 145,
     "price": {
-      "guadalajara": 166.75,
-      "colima": 174
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 174,
+      "colima": 188.5
+    }
   },
   {
     "id": "ciervo-rojo:arrachera",
@@ -441,10 +380,9 @@
     "unit": "kg",
     "basePrice": 448.2,
     "price": {
-      "guadalajara": 515.43,
-      "colima": 537.84
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 537.84,
+      "colima": 582.66
+    }
   },
   {
     "id": "ciervo-rojo:chamorro",
@@ -453,10 +391,9 @@
     "unit": "kg",
     "basePrice": 386,
     "price": {
-      "guadalajara": 443.9,
-      "colima": 463.2
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 463.2,
+      "colima": 501.8
+    }
   },
   {
     "id": "ciervo-rojo:costilla-marinada",
@@ -465,10 +402,9 @@
     "unit": "kg",
     "basePrice": 386,
     "price": {
-      "guadalajara": 443.9,
-      "colima": 463.2
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 463.2,
+      "colima": 501.8
+    }
   },
   {
     "id": "ciervo-rojo:espaldilla-pulpa",
@@ -477,10 +413,9 @@
     "unit": "kg",
     "basePrice": 429,
     "price": {
-      "guadalajara": 493.35,
-      "colima": 514.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 514.8,
+      "colima": 557.7
+    }
   },
   {
     "id": "ciervo-rojo:filete",
@@ -489,10 +424,9 @@
     "unit": "kg",
     "basePrice": 685,
     "price": {
-      "guadalajara": 787.75,
-      "colima": 822
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 822,
+      "colima": 890.5
+    }
   },
   {
     "id": "ciervo-rojo:hamburguesa",
@@ -501,13 +435,9 @@
     "unit": "kg",
     "basePrice": 385.71,
     "price": {
-      "guadalajara": 443.57,
-      "colima": 462.85
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 6,
-    "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+      "guadalajara": 462.85,
+      "colima": 501.42
+    }
   },
   {
     "id": "ciervo-rojo:lomo",
@@ -516,10 +446,9 @@
     "unit": "kg",
     "basePrice": 588,
     "price": {
-      "guadalajara": 676.2,
-      "colima": 705.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 705.6,
+      "colima": 764.4
+    }
   },
   {
     "id": "ciervo-rojo:pescuezo",
@@ -528,10 +457,9 @@
     "unit": "kg",
     "basePrice": 384.62,
     "price": {
-      "guadalajara": 442.31,
-      "colima": 461.54
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 461.54,
+      "colima": 500.01
+    }
   },
   {
     "id": "ciervo-rojo:pierna-pulpa",
@@ -540,10 +468,9 @@
     "unit": "kg",
     "basePrice": 501.12,
     "price": {
-      "guadalajara": 576.29,
-      "colima": 601.34
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 601.34,
+      "colima": 651.46
+    }
   },
   {
     "id": "ciervo-rojo:rack-frances",
@@ -552,10 +479,9 @@
     "unit": "kg",
     "basePrice": 593,
     "price": {
-      "guadalajara": 681.95,
-      "colima": 711.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 711.6,
+      "colima": 770.9
+    }
   },
   {
     "id": "codorniz:adobada-pieza",
@@ -564,10 +490,9 @@
     "unit": "pieza",
     "basePrice": 28,
     "price": {
-      "guadalajara": 32.2,
-      "colima": 33.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 33.6,
+      "colima": 36.4
+    }
   },
   {
     "id": "codorniz:birria-pieza",
@@ -576,10 +501,9 @@
     "unit": "pieza",
     "basePrice": 103,
     "price": {
-      "guadalajara": 118.45,
-      "colima": 123.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 123.6,
+      "colima": 133.9
+    }
   },
   {
     "id": "codorniz:cartera-huevito-pieza",
@@ -588,10 +512,9 @@
     "unit": "pieza",
     "basePrice": 38.4,
     "price": {
-      "guadalajara": 44.16,
-      "colima": 46.08
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 46.08,
+      "colima": 49.92
+    }
   },
   {
     "id": "codorniz:marinada-pieza",
@@ -600,10 +523,9 @@
     "unit": "pieza",
     "basePrice": 28,
     "price": {
-      "guadalajara": 32.2,
-      "colima": 33.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 33.6,
+      "colima": 36.4
+    }
   },
   {
     "id": "codorniz:natural-045-pieza",
@@ -612,10 +534,9 @@
     "unit": "pieza",
     "basePrice": 25.92,
     "price": {
-      "guadalajara": 29.81,
-      "colima": 31.1
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 31.1,
+      "colima": 33.7
+    }
   },
   {
     "id": "conejo:adobado-pierna-y-muslo",
@@ -624,10 +545,9 @@
     "unit": "kg",
     "basePrice": 183,
     "price": {
-      "guadalajara": 210.45,
-      "colima": 219.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 219.6,
+      "colima": 237.9
+    }
   },
   {
     "id": "conejo:canal",
@@ -636,10 +556,9 @@
     "unit": "kg",
     "basePrice": 178,
     "price": {
-      "guadalajara": 204.7,
-      "colima": 213.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 213.6,
+      "colima": 231.4
+    }
   },
   {
     "id": "conejo:lomo",
@@ -648,10 +567,9 @@
     "unit": "kg",
     "basePrice": 195,
     "price": {
-      "guadalajara": 224.25,
-      "colima": 234
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 234,
+      "colima": 253.5
+    }
   },
   {
     "id": "conejo:lomo-marinado",
@@ -660,10 +578,9 @@
     "unit": "kg",
     "basePrice": 185,
     "price": {
-      "guadalajara": 212.75,
-      "colima": 222
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 222,
+      "colima": 240.5
+    }
   },
   {
     "id": "conejo:marinado-pierna-y-muslo",
@@ -672,10 +589,9 @@
     "unit": "kg",
     "basePrice": 183,
     "price": {
-      "guadalajara": 210.45,
-      "colima": 219.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 219.6,
+      "colima": 237.9
+    }
   },
   {
     "id": "conejo:pierna-y-muslo-natural",
@@ -684,10 +600,9 @@
     "unit": "kg",
     "basePrice": 188,
     "price": {
-      "guadalajara": 216.2,
-      "colima": 225.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 225.6,
+      "colima": 244.4
+    }
   },
   {
     "id": "conejo:pulpa",
@@ -696,10 +611,9 @@
     "unit": "kg",
     "basePrice": 193,
     "price": {
-      "guadalajara": 221.95,
-      "colima": 231.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 231.6,
+      "colima": 250.9
+    }
   },
   {
     "id": "cordero:arrachera-especial",
@@ -708,10 +622,9 @@
     "unit": "kg",
     "basePrice": 287.04,
     "price": {
-      "guadalajara": 330.1,
-      "colima": 344.45
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 344.45,
+      "colima": 373.15
+    }
   },
   {
     "id": "cordero:arrachera-campirana",
@@ -720,10 +633,9 @@
     "unit": "kg",
     "basePrice": 287.04,
     "price": {
-      "guadalajara": 330.1,
-      "colima": 344.45
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 344.45,
+      "colima": 373.15
+    }
   },
   {
     "id": "cordero:arrachera-hierbas-finas",
@@ -732,10 +644,9 @@
     "unit": "kg",
     "basePrice": 287.04,
     "price": {
-      "guadalajara": 330.1,
-      "colima": 344.45
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 344.45,
+      "colima": 373.15
+    }
   },
   {
     "id": "cordero:arrachera-al-romero",
@@ -744,10 +655,9 @@
     "unit": "kg",
     "basePrice": 287.04,
     "price": {
-      "guadalajara": 330.1,
-      "colima": 344.45
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 344.45,
+      "colima": 373.15
+    }
   },
   {
     "id": "cordero:barbacoa",
@@ -756,10 +666,9 @@
     "unit": "kg",
     "basePrice": 469.44,
     "price": {
-      "guadalajara": 539.86,
-      "colima": 563.33
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 563.33,
+      "colima": 610.27
+    }
   },
   {
     "id": "cordero:birria-pieza",
@@ -768,10 +677,9 @@
     "unit": "pieza",
     "basePrice": 189.12,
     "price": {
-      "guadalajara": 217.49,
-      "colima": 226.94
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 226.94,
+      "colima": 245.86
+    }
   },
   {
     "id": "cordero:cabeza-pieza",
@@ -780,10 +688,9 @@
     "unit": "pieza",
     "basePrice": 95.6,
     "price": {
-      "guadalajara": 109.94,
-      "colima": 114.72
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 114.72,
+      "colima": 124.28
+    }
   },
   {
     "id": "cordero:canal",
@@ -792,10 +699,9 @@
     "unit": "kg",
     "basePrice": 230.4,
     "price": {
-      "guadalajara": 264.96,
-      "colima": 276.48
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 276.48,
+      "colima": 299.52
+    }
   },
   {
     "id": "cordero:chistorra-arabe",
@@ -804,13 +710,9 @@
     "unit": "kg",
     "basePrice": 175.6,
     "price": {
-      "guadalajara": 201.94,
-      "colima": 210.72
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 1,
-    "approxWeightKg": 0.3,
-    "pricingMode": "per_kg"
+      "guadalajara": 210.72,
+      "colima": 228.28
+    }
   },
   {
     "id": "cordero:chistorra-merguez",
@@ -819,13 +721,9 @@
     "unit": "kg",
     "basePrice": 175.6,
     "price": {
-      "guadalajara": 201.94,
-      "colima": 210.72
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 1,
-    "approxWeightKg": 0.3,
-    "pricingMode": "per_kg"
+      "guadalajara": 210.72,
+      "colima": 228.28
+    }
   },
   {
     "id": "cordero:chistorra-mixta",
@@ -834,13 +732,9 @@
     "unit": "kg",
     "basePrice": 175.6,
     "price": {
-      "guadalajara": 201.94,
-      "colima": 210.72
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 1,
-    "approxWeightKg": 0.3,
-    "pricingMode": "per_kg"
+      "guadalajara": 210.72,
+      "colima": 228.28
+    }
   },
   {
     "id": "cordero:chuleta-especial",
@@ -849,16 +743,9 @@
     "unit": "kg",
     "basePrice": 264.96,
     "price": {
-      "guadalajara": 304.7,
-      "colima": 317.95
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 317.95,
+      "colima": 344.45
+    }
   },
   {
     "id": "cordero:chuleta-estandar",
@@ -867,16 +754,9 @@
     "unit": "kg",
     "basePrice": 255.36,
     "price": {
-      "guadalajara": 293.66,
-      "colima": 306.43
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 306.43,
+      "colima": 331.97
+    }
   },
   {
     "id": "cordero:chuleta-marinada",
@@ -885,16 +765,9 @@
     "unit": "kg",
     "basePrice": 251.52,
     "price": {
-      "guadalajara": 289.25,
-      "colima": 301.82
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 301.82,
+      "colima": 326.98
+    }
   },
   {
     "id": "cordero:confit-pulpa",
@@ -903,10 +776,9 @@
     "unit": "kg",
     "basePrice": 469.6,
     "price": {
-      "guadalajara": 540.04,
-      "colima": 563.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 563.52,
+      "colima": 610.48
+    }
   },
   {
     "id": "cordero:costilla",
@@ -915,10 +787,9 @@
     "unit": "kg",
     "basePrice": 181.44,
     "price": {
-      "guadalajara": 208.66,
-      "colima": 217.73
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 217.73,
+      "colima": 235.87
+    }
   },
   {
     "id": "cordero:costilla-baby-back",
@@ -927,10 +798,9 @@
     "unit": "kg",
     "basePrice": 195.84,
     "price": {
-      "guadalajara": 225.22,
-      "colima": 235.01
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 235.01,
+      "colima": 254.59
+    }
   },
   {
     "id": "cordero:costilla-marinada",
@@ -939,10 +809,9 @@
     "unit": "kg",
     "basePrice": 195.84,
     "price": {
-      "guadalajara": 225.22,
-      "colima": 235.01
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 235.01,
+      "colima": 254.59
+    }
   },
   {
     "id": "cordero:costilla-hierbas-fina",
@@ -951,10 +820,9 @@
     "unit": "kg",
     "basePrice": 195.84,
     "price": {
-      "guadalajara": 225.22,
-      "colima": 235.01
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 235.01,
+      "colima": 254.59
+    }
   },
   {
     "id": "cordero:costilla-romero",
@@ -963,10 +831,9 @@
     "unit": "kg",
     "basePrice": 195.84,
     "price": {
-      "guadalajara": 225.22,
-      "colima": 235.01
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 235.01,
+      "colima": 254.59
+    }
   },
   {
     "id": "cordero:costilla-campirana",
@@ -975,10 +842,9 @@
     "unit": "kg",
     "basePrice": 195.84,
     "price": {
-      "guadalajara": 225.22,
-      "colima": 235.01
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 235.01,
+      "colima": 254.59
+    }
   },
   {
     "id": "cordero:cubo",
@@ -987,10 +853,9 @@
     "unit": "kg",
     "basePrice": 316.8,
     "price": {
-      "guadalajara": 364.32,
-      "colima": 380.16
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 380.16,
+      "colima": 411.84
+    }
   },
   {
     "id": "cordero:escalopas",
@@ -999,10 +864,9 @@
     "unit": "kg",
     "basePrice": 288.96,
     "price": {
-      "guadalajara": 332.3,
-      "colima": 346.75
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 346.75,
+      "colima": 375.65
+    }
   },
   {
     "id": "cordero:espaldilla",
@@ -1011,10 +875,9 @@
     "unit": "kg",
     "basePrice": 225.6,
     "price": {
-      "guadalajara": 259.44,
-      "colima": 270.72
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 270.72,
+      "colima": 293.28
+    }
   },
   {
     "id": "cordero:espaldilla-deshuesada",
@@ -1023,10 +886,9 @@
     "unit": "kg",
     "basePrice": 212.16,
     "price": {
-      "guadalajara": 243.98,
-      "colima": 254.59
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 254.59,
+      "colima": 275.81
+    }
   },
   {
     "id": "cordero:espaldilla-pulpa",
@@ -1035,10 +897,9 @@
     "unit": "kg",
     "basePrice": 256.32,
     "price": {
-      "guadalajara": 294.77,
-      "colima": 307.58
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 307.58,
+      "colima": 333.22
+    }
   },
   {
     "id": "cordero:espaldilla-pulpa-molida",
@@ -1047,10 +908,9 @@
     "unit": "kg",
     "basePrice": 246.72,
     "price": {
-      "guadalajara": 283.73,
-      "colima": 296.06
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 296.06,
+      "colima": 320.74
+    }
   },
   {
     "id": "cordero:filete",
@@ -1059,16 +919,9 @@
     "unit": "kg",
     "basePrice": 421.44,
     "price": {
-      "guadalajara": 484.66,
-      "colima": 505.73
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 505.73,
+      "colima": 547.87
+    }
   },
   {
     "id": "cordero:hamburguesa-arabe",
@@ -1077,13 +930,9 @@
     "unit": "kg",
     "basePrice": 164.6,
     "price": {
-      "guadalajara": 189.29,
-      "colima": 197.52
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 6,
-    "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+      "guadalajara": 197.52,
+      "colima": 213.98
+    }
   },
   {
     "id": "cordero:hamburguesa-merguez",
@@ -1092,13 +941,9 @@
     "unit": "kg",
     "basePrice": 154.6,
     "price": {
-      "guadalajara": 177.79,
-      "colima": 185.52
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 6,
-    "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+      "guadalajara": 185.52,
+      "colima": 200.98
+    }
   },
   {
     "id": "cordero:hamburguesa-mixta",
@@ -1107,13 +952,9 @@
     "unit": "kg",
     "basePrice": 149.6,
     "price": {
-      "guadalajara": 172.04,
-      "colima": 179.52
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 6,
-    "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+      "guadalajara": 179.52,
+      "colima": 194.48
+    }
   },
   {
     "id": "cordero:hueso",
@@ -1122,10 +963,9 @@
     "unit": "kg",
     "basePrice": 54.6,
     "price": {
-      "guadalajara": 62.79,
-      "colima": 65.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 65.52,
+      "colima": 70.98
+    }
   },
   {
     "id": "cordero:kit-de-panza",
@@ -1134,10 +974,9 @@
     "unit": "kg",
     "basePrice": 201.6,
     "price": {
-      "guadalajara": 231.84,
-      "colima": 241.92
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 241.92,
+      "colima": 262.08
+    }
   },
   {
     "id": "cordero:kit-chuleta-costilla-marinada",
@@ -1146,10 +985,9 @@
     "unit": "kg",
     "basePrice": 225.6,
     "price": {
-      "guadalajara": 259.44,
-      "colima": 270.72
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 270.72,
+      "colima": 293.28
+    }
   },
   {
     "id": "cordero:lechal",
@@ -1158,10 +996,9 @@
     "unit": "kg",
     "basePrice": 272.6,
     "price": {
-      "guadalajara": 313.49,
-      "colima": 327.12
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 327.12,
+      "colima": 354.38
+    }
   },
   {
     "id": "cordero:lomo",
@@ -1170,16 +1007,9 @@
     "unit": "kg",
     "basePrice": 386.88,
     "price": {
-      "guadalajara": 444.91,
-      "colima": 464.26
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 464.26,
+      "colima": 502.94
+    }
   },
   {
     "id": "cordero:machito-cocido",
@@ -1188,10 +1018,9 @@
     "unit": "kg",
     "basePrice": 216.96,
     "price": {
-      "guadalajara": 249.5,
-      "colima": 260.35
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 260.35,
+      "colima": 282.05
+    }
   },
   {
     "id": "cordero:machito-picado",
@@ -1200,10 +1029,9 @@
     "unit": "kg",
     "basePrice": 203.52,
     "price": {
-      "guadalajara": 234.05,
-      "colima": 244.22
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 244.22,
+      "colima": 264.58
+    }
   },
   {
     "id": "cordero:machito-picado-adobado",
@@ -1212,10 +1040,9 @@
     "unit": "kg",
     "basePrice": 216.96,
     "price": {
-      "guadalajara": 249.5,
-      "colima": 260.35
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 260.35,
+      "colima": 282.05
+    }
   },
   {
     "id": "cordero:machito-picado-adobado-pieza",
@@ -1224,10 +1051,9 @@
     "unit": "pieza",
     "basePrice": 203.52,
     "price": {
-      "guadalajara": 234.05,
-      "colima": 244.22
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 244.22,
+      "colima": 264.58
+    }
   },
   {
     "id": "cordero:maciza",
@@ -1236,10 +1062,9 @@
     "unit": "kg",
     "basePrice": 316.8,
     "price": {
-      "guadalajara": 364.32,
-      "colima": 380.16
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 380.16,
+      "colima": 411.84
+    }
   },
   {
     "id": "cordero:menudo",
@@ -1248,10 +1073,9 @@
     "unit": "kg",
     "basePrice": 64.6,
     "price": {
-      "guadalajara": 74.29,
-      "colima": 77.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 77.52,
+      "colima": 83.98
+    }
   },
   {
     "id": "cordero:molida",
@@ -1260,10 +1084,9 @@
     "unit": "kg",
     "basePrice": 220.8,
     "price": {
-      "guadalajara": 253.92,
-      "colima": 264.96
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 264.96,
+      "colima": 287.04
+    }
   },
   {
     "id": "cordero:osobuco",
@@ -1272,10 +1095,9 @@
     "unit": "kg",
     "basePrice": 275.52,
     "price": {
-      "guadalajara": 316.85,
-      "colima": 330.62
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 330.62,
+      "colima": 358.18
+    }
   },
   {
     "id": "cordero:pescuezo",
@@ -1284,10 +1106,9 @@
     "unit": "kg",
     "basePrice": 163.2,
     "price": {
-      "guadalajara": 187.68,
-      "colima": 195.84
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 195.84,
+      "colima": 212.16
+    }
   },
   {
     "id": "cordero:picana",
@@ -1296,10 +1117,9 @@
     "unit": "kg",
     "basePrice": 307.2,
     "price": {
-      "guadalajara": 353.28,
-      "colima": 368.64
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 368.64,
+      "colima": 399.36
+    }
   },
   {
     "id": "cordero:pierna",
@@ -1308,13 +1128,9 @@
     "unit": "kg",
     "basePrice": 278.4,
     "price": {
-      "guadalajara": 320.16,
-      "colima": 334.08
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 1,
-    "approxWeightKg": 2.5,
-    "pricingMode": "per_kg"
+      "guadalajara": 334.08,
+      "colima": 361.92
+    }
   },
   {
     "id": "cordero:pierna-con-cadera",
@@ -1323,10 +1139,9 @@
     "unit": "kg",
     "basePrice": 258.51,
     "price": {
-      "guadalajara": 297.29,
-      "colima": 310.21
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 310.21,
+      "colima": 336.06
+    }
   },
   {
     "id": "cordero:pierna-deshuesada-con-el-hueso",
@@ -1335,10 +1150,9 @@
     "unit": "kg",
     "basePrice": 263.31,
     "price": {
-      "guadalajara": 302.81,
-      "colima": 315.97
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 315.97,
+      "colima": 342.3
+    }
   },
   {
     "id": "cordero:pierna-pulpa",
@@ -1347,10 +1161,9 @@
     "unit": "kg",
     "basePrice": 331.2,
     "price": {
-      "guadalajara": 380.88,
-      "colima": 397.44
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 397.44,
+      "colima": 430.56
+    }
   },
   {
     "id": "cordero:rack-americano",
@@ -1359,16 +1172,9 @@
     "unit": "kg",
     "basePrice": 325.44,
     "price": {
-      "guadalajara": 374.26,
-      "colima": 390.53
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 390.53,
+      "colima": 423.07
+    }
   },
   {
     "id": "cordero:rack-frances",
@@ -1377,16 +1183,9 @@
     "unit": "kg",
     "basePrice": 624,
     "price": {
-      "guadalajara": 717.6,
-      "colima": 748.8
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 748.8,
+      "colima": 811.2
+    }
   },
   {
     "id": "cordero:salchicha-alemana",
@@ -1395,10 +1194,9 @@
     "unit": "kg",
     "basePrice": 139.6,
     "price": {
-      "guadalajara": 160.54,
-      "colima": 167.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 167.52,
+      "colima": 181.48
+    }
   },
   {
     "id": "cordero:salchicha-berlin",
@@ -1407,10 +1205,9 @@
     "unit": "kg",
     "basePrice": 139.6,
     "price": {
-      "guadalajara": 160.54,
-      "colima": 167.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 167.52,
+      "colima": 181.48
+    }
   },
   {
     "id": "cordero:silla",
@@ -1419,10 +1216,9 @@
     "unit": "kg",
     "basePrice": 234.6,
     "price": {
-      "guadalajara": 269.79,
-      "colima": 281.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 281.52,
+      "colima": 304.98
+    }
   },
   {
     "id": "cordero:sirloin",
@@ -1431,10 +1227,9 @@
     "unit": "kg",
     "basePrice": 262.08,
     "price": {
-      "guadalajara": 301.39,
-      "colima": 314.5
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 314.5,
+      "colima": 340.7
+    }
   },
   {
     "id": "cordero:t-bone",
@@ -1443,10 +1238,9 @@
     "unit": "kg",
     "basePrice": 292.8,
     "price": {
-      "guadalajara": 336.72,
-      "colima": 351.36
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 351.36,
+      "colima": 380.64
+    }
   },
   {
     "id": "jabali:arrachera-marinada",
@@ -1455,10 +1249,9 @@
     "unit": "kg",
     "basePrice": 275,
     "price": {
-      "guadalajara": 316.25,
-      "colima": 330
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 330,
+      "colima": 357.5
+    }
   },
   {
     "id": "jabali:canal",
@@ -1467,10 +1260,9 @@
     "unit": "kg",
     "basePrice": 234,
     "price": {
-      "guadalajara": 269.1,
-      "colima": 280.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 280.8,
+      "colima": 304.2
+    }
   },
   {
     "id": "jabali:costilla-marinada",
@@ -1479,10 +1271,9 @@
     "unit": "kg",
     "basePrice": 234,
     "price": {
-      "guadalajara": 269.1,
-      "colima": 280.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 280.8,
+      "colima": 304.2
+    }
   },
   {
     "id": "jabali:hamburguesa",
@@ -1491,13 +1282,9 @@
     "unit": "kg",
     "basePrice": 250,
     "price": {
-      "guadalajara": 287.5,
-      "colima": 300
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 6,
-    "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+      "guadalajara": 300,
+      "colima": 325
+    }
   },
   {
     "id": "jabali:filete",
@@ -1506,10 +1293,9 @@
     "unit": "kg",
     "basePrice": 520,
     "price": {
-      "guadalajara": 598,
-      "colima": 624
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 624,
+      "colima": 676
+    }
   },
   {
     "id": "jabali:rack-frances",
@@ -1518,10 +1304,9 @@
     "unit": "kg",
     "basePrice": 470,
     "price": {
-      "guadalajara": 540.5,
-      "colima": 564
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 564,
+      "colima": 611
+    }
   },
   {
     "id": "jabali:lomo",
@@ -1530,10 +1315,9 @@
     "unit": "kg",
     "basePrice": 515,
     "price": {
-      "guadalajara": 592.25,
-      "colima": 618
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 618,
+      "colima": 669.5
+    }
   },
   {
     "id": "pato:medio-pato-horneado",
@@ -1542,10 +1326,9 @@
     "unit": "kg",
     "basePrice": 262,
     "price": {
-      "guadalajara": 301.3,
-      "colima": 314.4
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 314.4,
+      "colima": 340.6
+    }
   },
   {
     "id": "pato:confit-molleja",
@@ -1554,10 +1337,9 @@
     "unit": "kg",
     "basePrice": 254,
     "price": {
-      "guadalajara": 292.1,
-      "colima": 304.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 304.8,
+      "colima": 330.2
+    }
   },
   {
     "id": "pato:confit-pierna-y-muslo-grande",
@@ -1566,10 +1348,9 @@
     "unit": "kg",
     "basePrice": 395,
     "price": {
-      "guadalajara": 454.25,
-      "colima": 474
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 474,
+      "colima": 513.5
+    }
   },
   {
     "id": "pato:confit-pierna-y-muslo-mediano",
@@ -1578,10 +1359,9 @@
     "unit": "kg",
     "basePrice": 395,
     "price": {
-      "guadalajara": 454.25,
-      "colima": 474
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 474,
+      "colima": 513.5
+    }
   },
   {
     "id": "pato:confit-pulpa",
@@ -1590,10 +1370,9 @@
     "unit": "kg",
     "basePrice": 468,
     "price": {
-      "guadalajara": 538.2,
-      "colima": 561.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 561.6,
+      "colima": 608.4
+    }
   },
   {
     "id": "pato:foie-gras-a",
@@ -1602,10 +1381,9 @@
     "unit": "kg",
     "basePrice": 1093,
     "price": {
-      "guadalajara": 1256.95,
-      "colima": 1311.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 1311.6,
+      "colima": 1420.9
+    }
   },
   {
     "id": "pato:foie-terrina",
@@ -1614,10 +1392,9 @@
     "unit": "kg",
     "basePrice": 1240,
     "price": {
-      "guadalajara": 1426,
-      "colima": 1488
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 1488,
+      "colima": 1612
+    }
   },
   {
     "id": "pato:grasa",
@@ -1626,10 +1403,9 @@
     "unit": "kg",
     "basePrice": 175,
     "price": {
-      "guadalajara": 201.25,
-      "colima": 210
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 210,
+      "colima": 227.5
+    }
   },
   {
     "id": "pato:hamburguesa",
@@ -1638,13 +1414,9 @@
     "unit": "kg",
     "basePrice": 305,
     "price": {
-      "guadalajara": 350.75,
-      "colima": 366
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 6,
-    "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+      "guadalajara": 366,
+      "colima": 396.5
+    }
   },
   {
     "id": "pato:hueso",
@@ -1653,10 +1425,9 @@
     "unit": "kg",
     "basePrice": 59,
     "price": {
-      "guadalajara": 67.85,
-      "colima": 70.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 70.8,
+      "colima": 76.7
+    }
   },
   {
     "id": "pato:huevo-pieza",
@@ -1665,10 +1436,9 @@
     "unit": "pieza",
     "basePrice": 6.24,
     "price": {
-      "guadalajara": 7.18,
-      "colima": 7.49
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 7.49,
+      "colima": 8.11
+    }
   },
   {
     "id": "pato:jamon-iberico",
@@ -1677,10 +1447,9 @@
     "unit": "kg",
     "basePrice": 782,
     "price": {
-      "guadalajara": 899.3,
-      "colima": 938.4
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 938.4,
+      "colima": 1016.6
+    }
   },
   {
     "id": "pato:magret-ahumado",
@@ -1689,10 +1458,9 @@
     "unit": "kg",
     "basePrice": 479,
     "price": {
-      "guadalajara": 550.85,
-      "colima": 574.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 574.8,
+      "colima": 622.7
+    }
   },
   {
     "id": "pato:magret-especial",
@@ -1701,10 +1469,9 @@
     "unit": "kg",
     "basePrice": 445,
     "price": {
-      "guadalajara": 511.75,
-      "colima": 534
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 534,
+      "colima": 578.5
+    }
   },
   {
     "id": "pato:magret-extra-premium",
@@ -1713,10 +1480,9 @@
     "unit": "kg",
     "basePrice": 445,
     "price": {
-      "guadalajara": 511.75,
-      "colima": 534
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 534,
+      "colima": 578.5
+    }
   },
   {
     "id": "pato:magret-premium",
@@ -1725,10 +1491,9 @@
     "unit": "kg",
     "basePrice": 445,
     "price": {
-      "guadalajara": 511.75,
-      "colima": 534
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 534,
+      "colima": 578.5
+    }
   },
   {
     "id": "pato:magret-serrano",
@@ -1737,10 +1502,9 @@
     "unit": "kg",
     "basePrice": 518,
     "price": {
-      "guadalajara": 595.7,
-      "colima": 621.6
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 621.6,
+      "colima": 673.4
+    }
   },
   {
     "id": "pato:pekin-con-viscera",
@@ -1749,10 +1513,9 @@
     "unit": "kg",
     "basePrice": 175,
     "price": {
-      "guadalajara": 201.25,
-      "colima": 210
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 210,
+      "colima": 227.5
+    }
   },
   {
     "id": "pato:pastrami",
@@ -1761,10 +1524,9 @@
     "unit": "kg",
     "basePrice": 616,
     "price": {
-      "guadalajara": 708.4,
-      "colima": 739.2
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 739.2,
+      "colima": 800.8
+    }
   },
   {
     "id": "pato:pierna-y-muslo-alcienne",
@@ -1773,10 +1535,9 @@
     "unit": "kg",
     "basePrice": 341,
     "price": {
-      "guadalajara": 392.15,
-      "colima": 409.2
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 409.2,
+      "colima": 443.3
+    }
   },
   {
     "id": "pato:pierna-y-muslo-natural-grande",
@@ -1785,10 +1546,9 @@
     "unit": "kg",
     "basePrice": 315,
     "price": {
-      "guadalajara": 362.25,
-      "colima": 378
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 378,
+      "colima": 409.5
+    }
   },
   {
     "id": "pato:pierna-y-muslo-natural-mediano",
@@ -1797,10 +1557,9 @@
     "unit": "kg",
     "basePrice": 315,
     "price": {
-      "guadalajara": 362.25,
-      "colima": 378
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 378,
+      "colima": 409.5
+    }
   },
   {
     "id": "pato:pierna-y-muslo-marinado-s-h",
@@ -1809,10 +1568,9 @@
     "unit": "kg",
     "basePrice": 315,
     "price": {
-      "guadalajara": 362.25,
-      "colima": 378
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 378,
+      "colima": 409.5
+    }
   },
   {
     "id": "pato:selva-negra",
@@ -1821,10 +1579,9 @@
     "unit": "kg",
     "basePrice": 599,
     "price": {
-      "guadalajara": 688.85,
-      "colima": 718.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 718.8,
+      "colima": 778.7
+    }
   },
   {
     "id": "pavo:entero",
@@ -1833,10 +1590,9 @@
     "unit": "kg",
     "basePrice": 137,
     "price": {
-      "guadalajara": 157.55,
-      "colima": 164.4
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 164.4,
+      "colima": 178.1
+    }
   },
   {
     "id": "pavo:molido",
@@ -1845,10 +1601,9 @@
     "unit": "kg",
     "basePrice": 242,
     "price": {
-      "guadalajara": 278.3,
-      "colima": 290.4
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 290.4,
+      "colima": 314.6
+    }
   },
   {
     "id": "pavo:pechuga",
@@ -1857,13 +1612,9 @@
     "unit": "kg",
     "basePrice": 175,
     "price": {
-      "guadalajara": 201.25,
-      "colima": 210
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 1,
-    "approxWeightKg": 1.5,
-    "pricingMode": "per_kg"
+      "guadalajara": 210,
+      "colima": 227.5
+    }
   },
   {
     "id": "pavo:pierna-natural",
@@ -1872,10 +1623,9 @@
     "unit": "kg",
     "basePrice": 148.8,
     "price": {
-      "guadalajara": 171.12,
-      "colima": 178.56
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 178.56,
+      "colima": 193.44
+    }
   },
   {
     "id": "pollo:alita-natural",
@@ -1884,10 +1634,9 @@
     "unit": "kg",
     "basePrice": 129,
     "price": {
-      "guadalajara": 148.35,
-      "colima": 154.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 154.8,
+      "colima": 167.7
+    }
   },
   {
     "id": "pollo:de-leche",
@@ -1896,10 +1645,9 @@
     "unit": "kg",
     "basePrice": 114,
     "price": {
-      "guadalajara": 131.1,
-      "colima": 136.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 136.8,
+      "colima": 148.2
+    }
   },
   {
     "id": "pollo:entero",
@@ -1908,10 +1656,9 @@
     "unit": "kg",
     "basePrice": 130,
     "price": {
-      "guadalajara": 149.5,
-      "colima": 156
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 156,
+      "colima": 169
+    }
   },
   {
     "id": "pollo:pierna-y-muslo",
@@ -1920,10 +1667,9 @@
     "unit": "kg",
     "basePrice": 129,
     "price": {
-      "guadalajara": 148.35,
-      "colima": 154.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 154.8,
+      "colima": 167.7
+    }
   },
   {
     "id": "pollo:pechuga-brasilena",
@@ -1932,10 +1678,9 @@
     "unit": "kg",
     "basePrice": 122.88,
     "price": {
-      "guadalajara": 141.31,
-      "colima": 147.46
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 147.46,
+      "colima": 159.74
+    }
   },
   {
     "id": "queso:de-cabra-bouquet-pieza",
@@ -1944,10 +1689,9 @@
     "unit": "pieza",
     "basePrice": 72.96,
     "price": {
-      "guadalajara": 83.9,
-      "colima": 87.55
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 87.55,
+      "colima": 94.85
+    }
   },
   {
     "id": "queso:de-cabra-con-ceniza-pieza",
@@ -1956,10 +1700,9 @@
     "unit": "pieza",
     "basePrice": 62.4,
     "price": {
-      "guadalajara": 71.76,
-      "colima": 74.88
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 74.88,
+      "colima": 81.12
+    }
   },
   {
     "id": "queso:de-cabra-finas-hierbas-pieza",
@@ -1968,10 +1711,9 @@
     "unit": "pieza",
     "basePrice": 62.4,
     "price": {
-      "guadalajara": 71.76,
-      "colima": 74.88
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 74.88,
+      "colima": 81.12
+    }
   },
   {
     "id": "queso:de-cabra-natural-pieza",
@@ -1980,10 +1722,9 @@
     "unit": "pieza",
     "basePrice": 62.4,
     "price": {
-      "guadalajara": 71.76,
-      "colima": 74.88
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 74.88,
+      "colima": 81.12
+    }
   },
   {
     "id": "queso:panela-pieza",
@@ -1992,10 +1733,9 @@
     "unit": "pieza",
     "basePrice": 81.6,
     "price": {
-      "guadalajara": 93.84,
-      "colima": 97.92
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 97.92,
+      "colima": 106.08
+    }
   },
   {
     "id": "queso:adobera",
@@ -2004,10 +1744,9 @@
     "unit": "kg",
     "basePrice": 170.88,
     "price": {
-      "guadalajara": 196.51,
-      "colima": 205.06
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 205.06,
+      "colima": 222.14
+    }
   },
   {
     "id": "queso:provoleta",
@@ -2016,10 +1755,9 @@
     "unit": "kg",
     "basePrice": 364.8,
     "price": {
-      "guadalajara": 419.52,
-      "colima": 437.76
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 437.76,
+      "colima": 474.24
+    }
   },
   {
     "id": "queso:oaxaca",
@@ -2028,10 +1766,9 @@
     "unit": "kg",
     "basePrice": 177.6,
     "price": {
-      "guadalajara": 204.24,
-      "colima": 213.12
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 213.12,
+      "colima": 230.88
+    }
   },
   {
     "id": "res:arrachera",
@@ -2040,10 +1777,9 @@
     "unit": "kg",
     "basePrice": 254.6,
     "price": {
-      "guadalajara": 292.79,
-      "colima": 305.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 305.52,
+      "colima": 330.98
+    }
   },
   {
     "id": "res:arrachera-250-grs",
@@ -2052,10 +1788,9 @@
     "unit": "kg",
     "basePrice": 259.6,
     "price": {
-      "guadalajara": 298.54,
-      "colima": 311.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 311.52,
+      "colima": 337.48
+    }
   },
   {
     "id": "res:arrachera-suprema",
@@ -2064,10 +1799,9 @@
     "unit": "kg",
     "basePrice": 302.6,
     "price": {
-      "guadalajara": 347.99,
-      "colima": 363.12
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 363.12,
+      "colima": 393.38
+    }
   },
   {
     "id": "res:brisket",
@@ -2076,10 +1810,9 @@
     "unit": "kg",
     "basePrice": 203.6,
     "price": {
-      "guadalajara": 234.14,
-      "colima": 244.32
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 244.32,
+      "colima": 264.68
+    }
   },
   {
     "id": "res:cabreria",
@@ -2088,10 +1821,9 @@
     "unit": "kg",
     "basePrice": 360,
     "price": {
-      "guadalajara": 414,
-      "colima": 432
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 432,
+      "colima": 468
+    }
   },
   {
     "id": "res:chinchulines",
@@ -2100,10 +1832,9 @@
     "unit": "kg",
     "basePrice": 107.6,
     "price": {
-      "guadalajara": 123.74,
-      "colima": 129.12
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 129.12,
+      "colima": 139.88
+    }
   },
   {
     "id": "res:chistorra-espanola",
@@ -2112,10 +1843,9 @@
     "unit": "kg",
     "basePrice": 143.6,
     "price": {
-      "guadalajara": 165.14,
-      "colima": 172.32
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 172.32,
+      "colima": 186.68
+    }
   },
   {
     "id": "res:chorizo-argentino",
@@ -2124,13 +1854,9 @@
     "unit": "kg",
     "basePrice": 124.6,
     "price": {
-      "guadalajara": 143.29,
-      "colima": 149.52
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 4,
-    "approxWeightKg": 0.6,
-    "pricingMode": "per_kg"
+      "guadalajara": 149.52,
+      "colima": 161.98
+    }
   },
   {
     "id": "res:chorizo-campestre",
@@ -2139,13 +1865,9 @@
     "unit": "kg",
     "basePrice": 114.6,
     "price": {
-      "guadalajara": 131.79,
-      "colima": 137.52
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 4,
-    "approxWeightKg": 0.6,
-    "pricingMode": "per_kg"
+      "guadalajara": 137.52,
+      "colima": 148.98
+    }
   },
   {
     "id": "res:chorizo-ranchero",
@@ -2154,13 +1876,9 @@
     "unit": "kg",
     "basePrice": 114.6,
     "price": {
-      "guadalajara": 131.79,
-      "colima": 137.52
-    },
-    "supplier": "El Barranqueño",
-    "packSize": 4,
-    "approxWeightKg": 0.6,
-    "pricingMode": "per_kg"
+      "guadalajara": 137.52,
+      "colima": 148.98
+    }
   },
   {
     "id": "res:costilla-cargada-short-ryb",
@@ -2169,10 +1887,9 @@
     "unit": "kg",
     "basePrice": 222.72,
     "price": {
-      "guadalajara": 256.13,
-      "colima": 267.26
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 267.26,
+      "colima": 289.54
+    }
   },
   {
     "id": "res:cowboy",
@@ -2181,16 +1898,9 @@
     "unit": "kg",
     "basePrice": 312.6,
     "price": {
-      "guadalajara": 359.49,
-      "colima": 375.12
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 375.12,
+      "colima": 406.38
+    }
   },
   {
     "id": "res:cowboy-prime",
@@ -2199,28 +1909,20 @@
     "unit": "kg",
     "basePrice": 456.96,
     "price": {
-      "guadalajara": 525.5,
-      "colima": 548.35
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 548.35,
+      "colima": 594.05
+    }
   },
   {
     "id": "res:fajita-de-rib-eye",
     "name": "fajita de rib eye",
-    "category": "Fajitas",
+    "category": "Res",
     "unit": "kg",
     "basePrice": 250.56,
     "price": {
-      "guadalajara": 288.14,
-      "colima": 300.67
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 300.67,
+      "colima": 325.73
+    }
   },
   {
     "id": "res:filete",
@@ -2229,16 +1931,9 @@
     "unit": "kg",
     "basePrice": 413.76,
     "price": {
-      "guadalajara": 475.82,
-      "colima": 496.51
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 496.51,
+      "colima": 537.89
+    }
   },
   {
     "id": "res:hamburguesa-arrachera",
@@ -2247,10 +1942,9 @@
     "unit": "kg",
     "basePrice": 129.6,
     "price": {
-      "guadalajara": 149.04,
-      "colima": 155.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 155.52,
+      "colima": 168.48
+    }
   },
   {
     "id": "res:hamburguesa-espanola",
@@ -2259,10 +1953,9 @@
     "unit": "kg",
     "basePrice": 114.6,
     "price": {
-      "guadalajara": 131.79,
-      "colima": 137.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 137.52,
+      "colima": 148.98
+    }
   },
   {
     "id": "res:hamburguesa-texas",
@@ -2271,10 +1964,9 @@
     "unit": "kg",
     "basePrice": 106.6,
     "price": {
-      "guadalajara": 122.59,
-      "colima": 127.92
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 127.92,
+      "colima": 138.58
+    }
   },
   {
     "id": "res:lengua",
@@ -2283,10 +1975,9 @@
     "unit": "kg",
     "basePrice": 328.6,
     "price": {
-      "guadalajara": 377.89,
-      "colima": 394.32
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 394.32,
+      "colima": 427.18
+    }
   },
   {
     "id": "res:molida",
@@ -2295,10 +1986,9 @@
     "unit": "kg",
     "basePrice": 150.24,
     "price": {
-      "guadalajara": 172.78,
-      "colima": 180.29
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 180.29,
+      "colima": 195.31
+    }
   },
   {
     "id": "res:molleja",
@@ -2307,10 +1997,9 @@
     "unit": "kg",
     "basePrice": 251.6,
     "price": {
-      "guadalajara": 289.34,
-      "colima": 301.92
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 301.92,
+      "colima": 327.08
+    }
   },
   {
     "id": "res:new-york",
@@ -2319,16 +2008,9 @@
     "unit": "kg",
     "basePrice": 282.12,
     "price": {
-      "guadalajara": 324.44,
-      "colima": 338.54
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 338.54,
+      "colima": 366.76
+    }
   },
   {
     "id": "res:peinecillo",
@@ -2337,10 +2019,9 @@
     "unit": "kg",
     "basePrice": 274.56,
     "price": {
-      "guadalajara": 315.74,
-      "colima": 329.47
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 329.47,
+      "colima": 356.93
+    }
   },
   {
     "id": "res:picana",
@@ -2349,16 +2030,9 @@
     "unit": "kg",
     "basePrice": 363.46,
     "price": {
-      "guadalajara": 417.98,
-      "colima": 436.15
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 436.15,
+      "colima": 472.5
+    }
   },
   {
     "id": "res:porterhouse",
@@ -2367,16 +2041,9 @@
     "unit": "kg",
     "basePrice": 259.72,
     "price": {
-      "guadalajara": 298.68,
-      "colima": 311.66
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 311.66,
+      "colima": 337.64
+    }
   },
   {
     "id": "res:prime-rib",
@@ -2385,10 +2052,9 @@
     "unit": "kg",
     "basePrice": 337.54,
     "price": {
-      "guadalajara": 388.17,
-      "colima": 405.05
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 405.05,
+      "colima": 438.8
+    }
   },
   {
     "id": "res:rib-eye",
@@ -2397,16 +2063,9 @@
     "unit": "kg",
     "basePrice": 328.32,
     "price": {
-      "guadalajara": 377.57,
-      "colima": 393.98
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 393.98,
+      "colima": 426.82
+    }
   },
   {
     "id": "res:rib-eye-anejo",
@@ -2415,16 +2074,9 @@
     "unit": "kg",
     "basePrice": 492.44,
     "price": {
-      "guadalajara": 566.31,
-      "colima": 590.93
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 590.93,
+      "colima": 640.17
+    }
   },
   {
     "id": "res:rib-eye-prime",
@@ -2433,16 +2085,9 @@
     "unit": "kg",
     "basePrice": 482.44,
     "price": {
-      "guadalajara": 554.81,
-      "colima": 578.93
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 578.93,
+      "colima": 627.17
+    }
   },
   {
     "id": "res:sirloin",
@@ -2451,16 +2096,9 @@
     "unit": "kg",
     "basePrice": 254.4,
     "price": {
-      "guadalajara": 292.56,
-      "colima": 305.28
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 305.28,
+      "colima": 330.72
+    }
   },
   {
     "id": "res:t-bone",
@@ -2469,16 +2107,9 @@
     "unit": "kg",
     "basePrice": 253.72,
     "price": {
-      "guadalajara": 291.78,
-      "colima": 304.46
-    },
-    "supplier": "El Barranqueño",
-    "customThickness": true,
-    "availableThickness": [
-      "1/2\"",
-      "3/4\"",
-      "1\""
-    ]
+      "guadalajara": 304.46,
+      "colima": 329.84
+    }
   },
   {
     "id": "res:tuetano",
@@ -2487,10 +2118,9 @@
     "unit": "kg",
     "basePrice": 119.6,
     "price": {
-      "guadalajara": 137.54,
-      "colima": 143.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 143.52,
+      "colima": 155.48
+    }
   },
   {
     "id": "res:vacio-nacional",
@@ -2499,10 +2129,9 @@
     "unit": "kg",
     "basePrice": 269.6,
     "price": {
-      "guadalajara": 310.04,
-      "colima": 323.52
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 323.52,
+      "colima": 350.48
+    }
   },
   {
     "id": "ternera:arrachera",
@@ -2511,10 +2140,9 @@
     "unit": "kg",
     "basePrice": 263.4,
     "price": {
-      "guadalajara": 302.91,
-      "colima": 316.08
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 316.08,
+      "colima": 342.42
+    }
   },
   {
     "id": "ternera:chuleta-lomo",
@@ -2523,10 +2151,9 @@
     "unit": "kg",
     "basePrice": 151.68,
     "price": {
-      "guadalajara": 174.43,
-      "colima": 182.02
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 182.02,
+      "colima": 197.18
+    }
   },
   {
     "id": "ternera:costilla",
@@ -2535,10 +2162,9 @@
     "unit": "kg",
     "basePrice": 163.2,
     "price": {
-      "guadalajara": 187.68,
-      "colima": 195.84
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 195.84,
+      "colima": 212.16
+    }
   },
   {
     "id": "ternera:escalopa",
@@ -2547,10 +2173,9 @@
     "unit": "kg",
     "basePrice": 207.36,
     "price": {
-      "guadalajara": 238.46,
-      "colima": 248.83
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 248.83,
+      "colima": 269.57
+    }
   },
   {
     "id": "ternera:filete",
@@ -2559,10 +2184,9 @@
     "unit": "kg",
     "basePrice": 387.24,
     "price": {
-      "guadalajara": 445.33,
-      "colima": 464.69
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 464.69,
+      "colima": 503.41
+    }
   },
   {
     "id": "ternera:hamburguesa",
@@ -2571,10 +2195,9 @@
     "unit": "kg",
     "basePrice": 161.4,
     "price": {
-      "guadalajara": 185.61,
-      "colima": 193.68
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 193.68,
+      "colima": 209.82
+    }
   },
   {
     "id": "ternera:lomo",
@@ -2583,10 +2206,9 @@
     "unit": "kg",
     "basePrice": 295.8,
     "price": {
-      "guadalajara": 340.17,
-      "colima": 354.96
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 354.96,
+      "colima": 384.54
+    }
   },
   {
     "id": "ternera:osobuco",
@@ -2595,10 +2217,9 @@
     "unit": "kg",
     "basePrice": 143.52,
     "price": {
-      "guadalajara": 165.05,
-      "colima": 172.22
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 172.22,
+      "colima": 186.58
+    }
   },
   {
     "id": "ternera:rack-frances",
@@ -2607,9 +2228,8 @@
     "unit": "kg",
     "basePrice": 624,
     "price": {
-      "guadalajara": 717.6,
-      "colima": 748.8
-    },
-    "supplier": "El Barranqueño"
+      "guadalajara": 748.8,
+      "colima": 811.2
+    }
   }
 ]

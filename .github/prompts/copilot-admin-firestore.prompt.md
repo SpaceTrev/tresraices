@@ -11,7 +11,7 @@ Finish admin functionality for **Tres Raíces** MVP.
 - Firebase client (Auth + Storage) already used in `/admin`.
 - `/app/api/parse-menu/route.ts` currently parses a PDF and returns counts only.
 - `/app/api/menu/route.ts` serves local JSON from `/data`.
-- We want: upload PDF → parse → compute markups (+15% GDL, +20% Colima) → **save to Firestore** as `menus/latest` and a historical doc → `/api/menu` should read Firestore first, fallback to bundled JSON.
+- We want: upload PDF → parse → compute markups (+20% GDL, +30% Colima) → **save to Firestore** as `menus/latest` and a historical doc → `/api/menu` should read Firestore first, fallback to bundled JSON.
 - Security: route requires header `x-admin-key` matching `NEXT_PUBLIC_ADMIN_KEY` (already set in Netlify).
 - We will provide a service account via env var: `FIREBASE_SERVICE_ACCOUNT_JSON`.
 
@@ -24,8 +24,8 @@ Finish admin functionality for **Tres Raíces** MVP.
    - Authorize via `x-admin-key`.
    - Accept `{storageUrl}` (public/signed Firebase Storage URL).
    - Download PDF, parse text (reuse existing parser), compute grouped JSON objects:
-     - `gdl` (prices with +15%)
-     - `col` (prices with +20%)
+     - `gdl` (prices with +20%)
+     - `col` (prices with +30%)
      - `base` (unmarked base prices)
    - Write to Firestore:
      - `menus/latest` → `{ gdl, col, base, updatedAt: serverTimestamp() }`

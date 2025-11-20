@@ -159,8 +159,8 @@ export default function RecalculatePage() {
             value={region}
             onChange={(e) => setRegion(e.target.value as Region)}
           >
-            <option value="guadalajara">Guadalajara (+15%)</option>
-            <option value="colima">Colima (+20%)</option>
+            <option value="guadalajara">Guadalajara (+20%)</option>
+            <option value="colima">Colima (+30%)</option>
           </select>
         </div>
 

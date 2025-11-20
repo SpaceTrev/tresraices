@@ -3,8 +3,8 @@ import fs from 'node:fs'
 const manualData = JSON.parse(fs.readFileSync('./data/manual_prices_november.json', 'utf8'));
 
 const REGION_MULTIPLIER = {
-  guadalajara: 1.15,
-  colima: 1.2,
+  guadalajara: 1.20,
+  colima: 1.30,
 };
 
 function slugify(text) {

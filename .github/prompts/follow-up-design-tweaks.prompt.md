@@ -17,7 +17,7 @@ mode: agent
 - Brand palette already implemented
 - Current routes:
   - `/` — homepage
-  - `/menu/[region]` — menus for Guadalajara (+15%) and Colima (+20%)
+  - `/menu/[region]` — menus for Guadalajara (+20%) and Colima (+30%)
   - `/admin` — internal, hidden from nav
 - No new dependencies
 
