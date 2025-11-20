@@ -1,0 +1,5 @@
+# Netlify redirects for SPA routing
+# Ensures Facebook crawler and all other requests properly access the Next.js app
+
+# Redirect all non-existent paths to index.html with 200 status (SPA mode)
+/*    /index.html    200

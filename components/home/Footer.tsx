@@ -38,10 +38,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contacto */}
+          {/* Contacto - Enhanced for Business Verification */}
           <div className="space-y-4">
             <h3 className="font-bold text-lg">Contacto</h3>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-3 text-sm">
+              <div>
+                <div className="font-medium text-cream/90 mb-1">Boutique Tres Raíces</div>
+                <div className="text-cream/70">Carnicería Boutique</div>
+              </div>
+              <div>
+                <div className="text-cream/70">Guadalajara, Jalisco, México</div>
+                <div className="text-cream/70">Colima, Colima, México</div>
+              </div>
               <div>
                 <a 
                   href="https://wa.me/523315126548"
@@ -49,7 +57,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-mintGreen transition-colors font-medium tap-target inline-flex items-center"
                 >
-                  📱 33 1512 6548
+                  📱 +52 33 1512 6548
                 </a>
               </div>
               <div className="text-cream/80">

@@ -135,4 +135,19 @@ To override unit availability for specific items, edit `data/overrides.units.jso
 ```
 
 Keys are case-sensitive and must match the exact category and item name from the PDF.
+
+## Facebook Business Verification
+
+To enable Facebook Business API, WhatsApp Business API, and Instagram API access, you need to verify your business with Meta.
+
+**📖 Complete Guide**: See [`docs/FACEBOOK_VERIFICATION.md`](./docs/FACEBOOK_VERIFICATION.md)
+
+**Quick Summary**:
+1. Site is pre-configured with required Open Graph tags and structured data
+2. Use [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) to verify your site
+3. Add and verify your domain in [Meta Business Suite](https://business.facebook.com)
+4. Complete business identity verification
+5. Connect WhatsApp and Instagram APIs
+
+**Optional**: Consider purchasing a custom domain (`tresraices.com` or `tresraices.mx`) instead of using `tresraices.netlify.app` for better trust and easier verification.
 ```
