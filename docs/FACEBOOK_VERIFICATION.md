@@ -1,6 +1,12 @@
 # Facebook Business Verification Guide
 ## Tres Raíces Meta Business Suite Setup
 
+### ⚠️ IMPORTANT: Custom Domain Required
+
+**Facebook does NOT accept Netlify subdomains** like `tresraices.netlify.app` for business verification. You must use a **root domain** like `tresraices.com` or `tresraices.mx`.
+
+**Before proceeding**, see [`CUSTOM_DOMAIN_SETUP.md`](./CUSTOM_DOMAIN_SETUP.md) for instructions on purchasing and connecting a custom domain.
+
 ### Overview
 This guide helps you verify your Tres Raíces business with Meta (Facebook) to enable access to:
 - Facebook Business API
@@ -12,7 +18,7 @@ This guide helps you verify your Tres Raíces business with Meta (Facebook) to e
 
 ## Prerequisites Completed ✅
 
-The following technical requirements have been implemented on https://tresraices.netlify.app:
+The following technical requirements have been implemented on your site:
 
 1. **HTTPS Compliance**: Site is served over HTTPS via Netlify
 2. **Open Graph Meta Tags**: Complete OG tags including explicit `og:image`, `og:url`, `og:site_name`

@@ -1,10 +1,13 @@
+import ScrollReveal from "./ScrollReveal";
+
 export default function About() {
   return (
     <section className="section-pad">
       <div className="mx-auto max-w-7xl container-pad">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-6">
+          <ScrollReveal>
+            <div className="space-y-6">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-darkPurple leading-tight">
               De la granja a tu mesa
             </h2>
@@ -36,10 +39,12 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
           {/* Image */}
-          <div className="relative">
+          <ScrollReveal delay={200}>
+            <div className="relative">
             <div className="card overflow-hidden shadow-xl">
               <div className="w-full h-[400px] bg-gradient-to-br from-uclaBlue via-lightBlue to-mintGreen flex items-center justify-center">
                 <div className="text-center text-white p-8">
@@ -51,7 +56,8 @@ export default function About() {
             </div>
             {/* Decorative accent */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-mintGreen/30 rounded-full blur-3xl -z-10"></div>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

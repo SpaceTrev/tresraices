@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 const categories = [
   {
     name: "Res",
@@ -29,22 +31,24 @@ export default function CategoryShowcase() {
   return (
     <section className="section-pad bg-white">
       <div className="mx-auto max-w-7xl container-pad">
-        <div className="text-center mb-12">
+        <ScrollReveal>
+          <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-darkPurple mb-4">
             Categorías Destacadas
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Explora nuestra selección de carnes premium, cuidadosamente curadas para tu mesa.
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {categories.map((category) => (
-            <a
-              key={category.slug}
-              href={`/menu/guadalajara?cat=${encodeURIComponent(category.slug)}`}
-              className="card p-6 hover:shadow-xl transition-all hover:-translate-y-1 group cursor-pointer"
-            >
+          {categories.map((category, index) => (
+            <ScrollReveal key={category.slug} delay={index * 100}>
+              <a
+                href={`/menu/guadalajara?cat=${encodeURIComponent(category.slug)}`}
+                className="card p-6 hover:shadow-xl transition-all hover:-translate-y-1 group cursor-pointer"
+              >
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
                 {category.emoji}
               </div>
@@ -57,7 +61,8 @@ export default function CategoryShowcase() {
               <div className="text-federalBlue font-medium text-sm group-hover:underline">
                 Ver productos →
               </div>
-            </a>
+              </a>
+            </ScrollReveal>
           ))}
         </div>
       </div>

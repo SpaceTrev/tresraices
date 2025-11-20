@@ -1,7 +1,10 @@
+import ScrollReveal from "./ScrollReveal";
+
 export default function CTASection() {
   return (
     <section className="section-pad">
-      <div className="bg-darkPurple text-cream py-16 px-4 rounded-2xl mx-auto max-w-7xl">
+      <ScrollReveal>
+        <div className="bg-darkPurple text-cream py-16 px-4 rounded-2xl mx-auto max-w-7xl">
         <div className="container-pad text-center space-y-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Descubre el sabor de la calidad Tres Raíces
@@ -20,7 +23,8 @@ export default function CTASection() {
             </a>
           </div>
         </div>
-      </div>
+        </div>
+      </ScrollReveal>
     </section>
   );
 }

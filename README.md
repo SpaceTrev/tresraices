@@ -138,16 +138,24 @@ Keys are case-sensitive and must match the exact category and item name from the
 
 ## Facebook Business Verification
 
-To enable Facebook Business API, WhatsApp Business API, and Instagram API access, you need to verify your business with Meta.
+⚠️ **IMPORTANT**: Facebook requires a **custom root domain** (like `tresraices.com`) for business verification. The Netlify subdomain `tresraices.netlify.app` **will not be accepted**.
 
-**📖 Complete Guide**: See [`docs/FACEBOOK_VERIFICATION.md`](./docs/FACEBOOK_VERIFICATION.md)
+**📖 Quick Start**: See [`docs/CUSTOM_DOMAIN_SETUP.md`](./docs/CUSTOM_DOMAIN_SETUP.md) to purchase and connect a custom domain ($10-30/year).
 
-**Quick Summary**:
-1. Site is pre-configured with required Open Graph tags and structured data
-2. Use [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) to verify your site
-3. Add and verify your domain in [Meta Business Suite](https://business.facebook.com)
-4. Complete business identity verification
-5. Connect WhatsApp and Instagram APIs
+**📖 Complete Verification Guide**: See [`docs/FACEBOOK_VERIFICATION.md`](./docs/FACEBOOK_VERIFICATION.md) for full setup instructions.
 
-**Optional**: Consider purchasing a custom domain (`tresraices.com` or `tresraices.mx`) instead of using `tresraices.netlify.app` for better trust and easier verification.
+**What's Already Done**:
+- ✅ Open Graph meta tags configured
+- ✅ JSON-LD structured data for business verification
+- ✅ Business contact information visible to crawlers
+- ✅ Netlify SPA routing for Facebook crawler
+
+**What You Need to Do**:
+1. Purchase a custom domain (`tresraices.com` recommended, ~$10-15/year)
+2. Connect domain to Netlify (instructions in guide)
+3. Update code with new domain using `./scripts/update-domain.sh`
+4. Verify domain with Meta Business Suite
+5. Complete business identity verification
+
+**Result**: Access to WhatsApp Business API, Instagram API, and Facebook Business features.
 ```

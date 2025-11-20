@@ -16,22 +16,24 @@ const valueProps = [
   }
 ];
 
+import ScrollReveal from "./ScrollReveal";
+
 export default function ValueProps() {
   return (
     <section className="section-pad bg-cream">
       <div className="mx-auto max-w-7xl container-pad">
-        <div className="text-center mb-12">
+        <ScrollReveal>
+          <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-darkPurple mb-4">
             ¿Por qué elegirnos?
           </h2>
-        </div>
+          </div>
+        </ScrollReveal>
 
         <div className="grid sm:grid-cols-3 gap-8 md:gap-12">
           {valueProps.map((prop, index) => (
-            <div 
-              key={index}
-              className="text-center space-y-4"
-            >
+            <ScrollReveal key={index} delay={index * 150}>
+              <div className="text-center space-y-4">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md text-4xl">
                 {prop.icon}
               </div>
@@ -41,7 +43,8 @@ export default function ValueProps() {
               <p className="text-slate-600 leading-relaxed">
                 {prop.description}
               </p>
-            </div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

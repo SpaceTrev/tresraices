@@ -9,9 +9,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl container-pad text-center text-white py-16">
         <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight animate-fade-in">
             Carnes selectas, <br className="hidden sm:block" />
-            directo a tu mesa
+            <span className="text-mintGreen">directo a tu mesa</span>
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-cream/90 font-light">
