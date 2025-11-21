@@ -535,7 +535,7 @@ export default function ManualMenuPage() {
                 <div className="flex gap-2 pt-4">
                   <button
                     type="submit"
-                    disabled={marginWarning && !forceOverride}
+                    disabled={!!(marginWarning && !forceOverride)}
                     className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
                     {editingId ? "Update" : "Create"}
