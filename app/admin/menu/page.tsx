@@ -1,8 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { initializeApp, getApps } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import type { ManualMenuItem, ProfitMarginWarning } from "@/lib/menu/manual";
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+};
 
 const CATEGORIES = [
   "Avestruz",
@@ -45,7 +55,11 @@ export default function ManualMenuPage() {
   });
 
   useEffect(() => {
+    if (!getApps().length) {
+      initializeApp(firebaseConfig);
+    }
     const auth = getAuth();
+    
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (!user) {
         window.location.href = "/admin";
@@ -245,122 +259,170 @@ export default function ManualMenuPage() {
           </div>
         </div>
 
-        {/* Items by Category */}
-        <div className="space-y-6">
-          {CATEGORIES.map((category) => {
-            const categoryItems = itemsByCategory[category] || [];
-            if (categoryItems.length === 0) return null;
+        {/* Items List - All Categories */}
+        {items.length === 0 ? (
+          <div className="bg-white rounded-lg shadow-sm p-12 text-center">
+            <div className="text-gray-400 mb-4">
+              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-medium text-gray-900 mb-2">No manual items yet</h3>
+            <p className="text-gray-500 mb-4">Add custom products to complement your PDF menu</p>
+            <button
+              onClick={() => handleOpenModal()}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+            >
+              Add First Item
+            </button>
+          </div>
+        ) : (
+          <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Product
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Category
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Pricing
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Region
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Status
+                  </th>
+                  <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {items.map((item) => {
+                  const margin = item.basePrice
+                    ? ((item.price - item.basePrice) / item.basePrice) * 100
+                    : null;
 
-            return (
-              <div key={category} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
-                  <h2 className="text-lg font-semibold text-gray-900">{category}</h2>
-                </div>
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                        Name
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                        Price
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                        Margin
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                        Region
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                        Status
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                        Actions
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    {categoryItems.map((item) => {
-                      const margin = item.basePrice
-                        ? ((item.price - item.basePrice) / item.basePrice) * 100
-                        : null;
-
-                      return (
-                        <tr key={item.id}>
-                          <td className="px-6 py-4">
+                  return (
+                    <tr key={item.id} className="hover:bg-gray-50">
+                      <td className="px-6 py-4">
+                        <div className="flex items-center">
+                          <div>
                             <div className="font-medium text-gray-900">{item.name}</div>
-                            {item.packInfo && (
-                              <div className="text-sm text-gray-500">{item.packInfo}</div>
-                            )}
+                            <div className="flex gap-2 mt-1">
+                              {item.unit && (
+                                <span className="text-xs px-2 py-0.5 bg-gray-100 text-gray-600 rounded">
+                                  {item.unit}
+                                </span>
+                              )}
+                              {item.packInfo && (
+                                <span className="text-xs px-2 py-0.5 bg-gray-100 text-gray-600 rounded">
+                                  {item.packInfo}
+                                </span>
+                              )}
+                              {item.thickness && (
+                                <span className="text-xs px-2 py-0.5 bg-gray-100 text-gray-600 rounded">
+                                  {item.thickness}
+                                </span>
+                              )}
+                            </div>
                             {item.description && (
-                              <div className="text-sm text-gray-500">{item.description}</div>
+                              <div className="text-sm text-gray-500 mt-1">{item.description}</div>
                             )}
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="font-medium">${item.price.toFixed(2)}</div>
-                            {item.basePrice && (
-                              <div className="text-sm text-gray-500">
-                                Base: ${item.basePrice.toFixed(2)}
-                              </div>
-                            )}
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            {margin !== null && (
-                              <span
-                                className={`px-2 py-1 text-xs font-medium rounded ${
-                                  margin < 0
-                                    ? "bg-red-100 text-red-800"
-                                    : margin < 10
-                                    ? "bg-yellow-100 text-yellow-800"
-                                    : "bg-green-100 text-green-800"
-                                }`}
-                              >
-                                {margin > 0 ? "+" : ""}
-                                {margin.toFixed(1)}%
-                              </span>
-                            )}
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm">
-                            {item.region === "both" ? "Ambas" : item.region === "guadalajara" ? "GDL" : "Colima"}
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap">
+                          </div>
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <span className="px-2 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded">
+                          {item.category}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4">
+                        <div className="text-sm">
+                          <div className="font-semibold text-gray-900">
+                            ${item.price.toFixed(2)}
+                          </div>
+                          {item.basePrice && (
+                            <div className="text-xs text-gray-500">
+                              Base: ${item.basePrice.toFixed(2)}
+                            </div>
+                          )}
+                          {margin !== null && (
                             <span
-                              className={`px-2 py-1 text-xs font-medium rounded ${
-                                item.isActive
-                                  ? "bg-green-100 text-green-800"
-                                  : "bg-gray-100 text-gray-800"
+                              className={`inline-block mt-1 px-2 py-0.5 text-xs font-medium rounded ${
+                                margin < 0
+                                  ? "bg-red-100 text-red-800"
+                                  : margin < 10
+                                  ? "bg-yellow-100 text-yellow-800"
+                                  : "bg-green-100 text-green-800"
                               }`}
                             >
-                              {item.isActive ? "Active" : "Inactive"}
+                              {margin > 0 ? "+" : ""}
+                              {margin.toFixed(1)}%
                             </span>
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                            <button
-                              onClick={() => handleOpenModal(item)}
-                              className="text-blue-600 hover:text-blue-900"
-                            >
-                              Edit
-                            </button>
-                            <button
-                              onClick={() => handleToggleActive(item.id, item.isActive)}
-                              className={
-                                item.isActive
-                                  ? "text-red-600 hover:text-red-900"
-                                  : "text-green-600 hover:text-green-900"
+                          )}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        {item.region === "both" ? "Ambas" : item.region === "guadalajara" ? "GDL" : "Colima"}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <button
+                          onClick={() => handleToggleActive(item.id, item.isActive)}
+                          className={`px-3 py-1 text-xs font-medium rounded transition-colors ${
+                            item.isActive
+                              ? "bg-green-100 text-green-800 hover:bg-green-200"
+                              : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                          }`}
+                        >
+                          {item.isActive ? "Active" : "Inactive"}
+                        </button>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-right">
+                        <div className="flex justify-end gap-2">
+                          <button
+                            onClick={() => handleOpenModal(item)}
+                            className="inline-flex items-center px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded hover:bg-blue-100 transition-colors"
+                            title="Edit item"
+                          >
+                            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                            Edit
+                          </button>
+                          <button
+                            onClick={async () => {
+                              if (confirm(`Delete "${item.name}"?`)) {
+                                const auth = getAuth();
+                                const token = await auth.currentUser?.getIdToken();
+                                await fetch(`/api/menu/manual?id=${item.id}`, {
+                                  method: "DELETE",
+                                  headers: { Authorization: `Bearer ${token}` },
+                                });
+                                await fetchItems();
                               }
-                            >
-                              {item.isActive ? "Deactivate" : "Activate"}
-                            </button>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            );
-          })}
-        </div>
+                            }}
+                            className="inline-flex items-center px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded hover:bg-red-100 transition-colors"
+                            title="Delete item"
+                          >
+                            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                            Delete
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
 
         {/* Add/Edit Modal */}
         {showModal && (
