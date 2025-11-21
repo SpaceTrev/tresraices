@@ -63,9 +63,10 @@ export default function ProductCard({
   };
   
   return (
-    <article className="card overflow-hidden hover:ring-2 hover:ring-federalBlue hover:shadow-xl transition-all duration-300 group flex flex-col h-full transform hover:-translate-y-1">
-      {/* Image/Gradient Header */}
+    <article className="card overflow-hidden hover:ring-2 hover:ring-federalBlue/50 hover:shadow-2xl transition-all duration-300 group flex flex-col h-full transform hover:-translate-y-2 bg-gradient-to-br from-white to-cream/30">
+      {/* Image/Gradient Header with animated gradient */}
       <div className="relative h-32 bg-gradient-to-br from-federalBlue/20 via-uclaBlue/10 to-mintGreen/20 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-out"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div className="relative z-10 text-6xl opacity-40 group-hover:scale-110 transition-transform duration-500">
           {item.category === 'Res' && '🥩'}
@@ -80,7 +81,7 @@ export default function ProductCard({
         <div className="absolute top-2 left-2 flex items-center gap-2 flex-wrap z-20">
           <CategoryBadge category={item.category} />
           {isNew && (
-            <span className="badge bg-mintGreen text-slate-800 shadow-sm">Nuevo</span>
+            <span className="badge bg-gradient-to-r from-mintGreen to-lightBlue text-slate-800 shadow-md animate-pulse">Nuevo</span>
           )}
         </div>
       </div>
@@ -175,26 +176,26 @@ export default function ProductCard({
           <>
             {cartItem ? (
               <div className="space-y-2">
-                <div className="flex items-center justify-between bg-slate-100 rounded-lg p-1">
+                <div className="flex items-center justify-between bg-gradient-to-r from-slate-50 to-slate-100 rounded-xl p-1 shadow-inner border border-slate-200">
                   <button
                     onClick={() => decrement(cartId)}
-                    className="p-2 hover:bg-slate-200 rounded-lg transition-colors"
+                    className="p-2 hover:bg-white rounded-lg transition-all hover:shadow-sm active:scale-95"
                     aria-label="Reducir cantidad"
                   >
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
                     </svg>
                   </button>
-                  <div className="flex flex-col items-center">
-                    <span className="text-xs text-slate-600">En carrito</span>
-                    <span className="font-bold tabular-nums">{cartItem.quantity}</span>
+                  <div className="flex flex-col items-center px-2">
+                    <span className="text-xs text-slate-600 font-medium">En carrito</span>
+                    <span className="font-bold tabular-nums text-lg text-federalBlue">{cartItem.quantity}</span>
                   </div>
                   <button
                     onClick={() => increment(cartId)}
-                    className="p-2 hover:bg-slate-200 rounded-lg transition-colors"
+                    className="p-2 hover:bg-white rounded-lg transition-all hover:shadow-sm active:scale-95"
                     aria-label="Aumentar cantidad"
                   >
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                     </svg>
                   </button>
@@ -214,7 +215,7 @@ export default function ProductCard({
               <div className="space-y-2">
                 <button
                   onClick={handleAdd}
-                  className="btn btn-primary w-full justify-center group-hover:bg-darkPurple transition-colors"
+                  className="btn btn-primary w-full justify-center group-hover:bg-darkPurple transition-all shadow-lg hover:shadow-xl active:scale-95"
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />

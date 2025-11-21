@@ -3,15 +3,40 @@
 @tailwind utilities;
 
 :root { color-scheme: light; }
-body { @apply bg-cream text-slate-900; }
-html { scroll-behavior: smooth; }
+body { 
+  @apply bg-cream text-slate-900; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html { 
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background-color: #C2E7D9;
+  color: #0D0221;
+}
+
+::-moz-selection {
+  background-color: #C2E7D9;
+  color: #0D0221;
+}
 .container { @apply mx-auto max-w-6xl px-4; }
 .container-pad { @apply px-4 sm:px-6 lg:px-8; }
 .section-pad { @apply py-10 sm:py-14; }
 .tap-target { @apply min-h-10 min-w-10; }
-.card { @apply rounded-2xl shadow-sm bg-white; }
-.btn { @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-colors; }
-.btn-primary { @apply bg-federalBlue text-white hover:bg-darkPurple; }
+.card { 
+  @apply rounded-2xl shadow-sm bg-white; 
+  backdrop-filter: blur(10px);
+}
+.btn { 
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all duration-300; 
+  transform-style: preserve-3d;
+}
+.btn-primary { 
+  @apply bg-federalBlue text-white hover:bg-darkPurple shadow-md hover:shadow-lg; 
+}
 .badge { @apply text-xs rounded-full px-2 py-1 bg-mintGreen; }
 .filter-chip { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-cream border border-slate-300; }
 .chip { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium; }
@@ -52,6 +77,18 @@ html { scroll-behavior: smooth; }
     animation: fade-in-up 0.8s ease-out;
   }
   
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
   /* Remove rounded borders on mobile form elements */
   @media (max-width: 640px) {
     .mobile-no-radius {
@@ -86,6 +123,21 @@ html { scroll-behavior: smooth; }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(50px, 50px) scale(1.05);
   }
 }
 

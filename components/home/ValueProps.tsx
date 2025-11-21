@@ -33,11 +33,11 @@ export default function ValueProps() {
         <div className="grid sm:grid-cols-3 gap-8 md:gap-12">
           {valueProps.map((prop, index) => (
             <ScrollReveal key={index} delay={index * 150}>
-              <div className="text-center space-y-4">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md text-4xl">
+              <div className="group text-center space-y-4 p-6 rounded-2xl hover:bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-white to-cream rounded-full shadow-lg text-4xl group-hover:scale-110 transition-transform duration-300 group-hover:shadow-xl">
                 {prop.icon}
               </div>
-              <h3 className="text-xl font-bold text-darkPurple">
+              <h3 className="text-xl font-bold text-darkPurple group-hover:text-federalBlue transition-colors">
                 {prop.title}
               </h3>
               <p className="text-slate-600 leading-relaxed">

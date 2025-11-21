@@ -19,8 +19,8 @@ export default function About() {
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-12 h-12 bg-mintGreen rounded-full flex items-center justify-center text-2xl">
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-gradient-to-br from-mintGreen/10 to-mintGreen/5 hover:shadow-md transition-all">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-mintGreen to-lightBlue/50 rounded-full flex items-center justify-center text-2xl shadow-lg">
                   🌱
                 </div>
                 <div>
@@ -29,8 +29,8 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-12 h-12 bg-lightBlue rounded-full flex items-center justify-center text-2xl">
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-gradient-to-br from-lightBlue/10 to-lightBlue/5 hover:shadow-md transition-all">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-lightBlue to-uclaBlue/50 rounded-full flex items-center justify-center text-2xl shadow-lg">
                   ⚡
                 </div>
                 <div>
@@ -45,17 +45,20 @@ export default function About() {
           {/* Image */}
           <ScrollReveal delay={200}>
             <div className="relative">
-            <div className="card overflow-hidden shadow-xl">
-              <div className="w-full h-[400px] bg-gradient-to-br from-uclaBlue via-lightBlue to-mintGreen flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <div className="text-6xl mb-4">🥩</div>
+            <div className="card overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300">
+              <div className="w-full h-[400px] bg-gradient-to-br from-uclaBlue via-lightBlue to-mintGreen flex items-center justify-center relative overflow-hidden">
+                {/* Animated gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-darkPurple/20 to-transparent"></div>
+                <div className="text-center text-white p-8 relative z-10">
+                  <div className="text-6xl mb-4 animate-bounce" style={{animationDuration: '3s'}}>🥩</div>
                   <div className="text-2xl font-bold">Cortes Premium</div>
                   <div className="text-sm opacity-90 mt-2">Calidad excepcional</div>
                 </div>
               </div>
             </div>
-            {/* Decorative accent */}
+            {/* Enhanced decorative accents */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-mintGreen/30 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-lightBlue/30 rounded-full blur-2xl -z-10"></div>
             </div>
           </ScrollReveal>
         </div>
