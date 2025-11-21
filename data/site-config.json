@@ -1,0 +1,62 @@
+{
+  "content": {
+    "hero": {
+      "headline": "Carnes selectas, directo a tu mesa",
+      "tagline": "Calidad premium en Guadalajara y Colima",
+      "ctaText": "Ver Menú"
+    },
+    "about": {
+      "headline": "De la granja a tu mesa",
+      "description": "Carnicería boutique especializada en cortes premium y carnes exóticas. Entrega a domicilio en Guadalajara y Colima."
+    },
+    "valueProps": [
+      {
+        "title": "Calidad Premium",
+        "description": "Selección cuidadosa de los mejores cortes"
+      },
+      {
+        "title": "100% Fresco",
+        "description": "Producto del día, nunca congelado"
+      },
+      {
+        "title": "Entrega 24h",
+        "description": "Pedidos rápidos por WhatsApp"
+      }
+    ],
+    "cta": {
+      "headline": "Descubre el sabor de la calidad Tres Raíces",
+      "description": "Haz tu pedido hoy mismo por WhatsApp",
+      "buttonText": "Pedir Ahora"
+    },
+    "footer": {
+      "brandDescription": "Carnicería boutique con cortes selectos y entrega a domicilio.",
+      "regionsServed": ["Guadalajara", "Colima"]
+    },
+    "contact": {
+      "whatsappNumber": "523315126548",
+      "phone": "+52 33 1512 6548"
+    }
+  },
+  "regions": {
+    "guadalajara": {
+      "markup": 1.20,
+      "displayName": "Guadalajara"
+    },
+    "colima": {
+      "markup": 1.30,
+      "displayName": "Colima"
+    }
+  },
+  "theme": {
+    "activePaletteId": "default"
+  },
+  "font": {
+    "family": "system"
+  },
+  "features": {
+    "loyaltyProgram": false,
+    "autoReorder": false,
+    "multiLocation": false,
+    "autoCreateWhatsAppOrders": false
+  }
+}

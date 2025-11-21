@@ -72,6 +72,58 @@ Add to Netlify/Vercel:
 
 **Security Note**: Never commit `FIREBASE_SERVICE_ACCOUNT_JSON` to git. Only set via hosting platform environment variables.
 
+### Admin CMS Environment Variables (New)
+
+For the admin back-office system (user management, content editor, supplier management, etc.):
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `NETLIFY_BUILD_HOOK_URL` | Auto-triggers deployment when site config changes. Get from: Netlify Dashboard → Site Settings → Build & deploy → Build hooks | Optional |
+
+**Example**: `https://api.netlify.com/build_hooks/691fce8f068766b564170395`
+
+## Admin CMS Features
+
+The site includes a comprehensive admin back-office at `/admin` with:
+
+- **User Management**: Role-based access control (Owner/Manager/Staff)
+- **Content Editor**: Edit hero, about, CTA sections without code changes
+- **Theme Manager**: Choose color palettes with WCAG contrast validation
+- **Font Selector**: Pick Google Fonts with live preview
+- **Supplier Management**: Track wholesale suppliers and default markups
+- **Manual Menu Items**: Add custom items with profit margin validation
+- **Audit Logging**: Track all admin actions with user/IP/timestamp
+
+### First-Time Setup
+
+1. Create the owner account:
+   ```bash
+   node scripts/create-owner.mjs
+   ```
+   Enter email and password when prompted.
+
+2. Seed initial supplier data:
+   ```bash
+   node scripts/seed-suppliers.mjs
+   ```
+
+3. Initialize site configuration:
+   ```bash
+   node scripts/init-site-config.mjs
+   ```
+
+4. Visit `/admin` and log in with your owner credentials
+
+### Admin Routes
+
+- `/admin` - Login dashboard
+- `/admin/users` - User management (owner only)
+- `/admin/content` - Site content/theme/font editor
+- `/admin/suppliers` - Supplier management
+- `/admin/menu` - Manual menu items with profit validation
+
+All admin actions are logged to Firestore `audit_log` collection.
+
 ## Units & Pricing
 
 Our pricing system supports **per-unit pricing** to distinguish between items sold by **kilo** (`kg`) and items sold by **pieza** (piece).
