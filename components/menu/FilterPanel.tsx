@@ -90,89 +90,123 @@ export default function FilterPanel({ categories, meatTypes, region }: FilterPan
   
   return (
     <div className="space-y-5 lg:sticky lg:top-4">
-      <div className="card p-5 space-y-5">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold">Filtros</h2>
-        {hasActiveFilters && (
-          <button
-            onClick={clearFilters}
-            className="text-sm text-federalBlue hover:underline"
-          >
-            Limpiar
-          </button>
-        )}
-      </div>
-      
-      {/* Search */}
-      <div>
-        <label htmlFor="search" className="block text-sm font-medium mb-2">
-          Buscar
-        </label>
-        <input
-          id="search"
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Nombre del producto..."
-          className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-federalBlue"
-        />
-      </div>
-      
-      {/* Sort */}
-      <div>
-        <label htmlFor="sort" className="block text-sm font-medium mb-2">
-          Ordenar por
-        </label>
-        <select
-          id="sort"
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value as SortOption)}
-          className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-federalBlue"
-        >
-          <option value="relevance">Relevancia</option>
-          <option value="priceAsc">Precio: Menor a Mayor</option>
-          <option value="priceDesc">Precio: Mayor a Menor</option>
-          <option value="nameAsc">Nombre: A–Z</option>
-          <option value="nameDesc">Nombre: Z–A</option>
-        </select>
-      </div>
-      
-      {/* Unit filter */}
-      <div>
-        <h3 className="text-sm font-medium mb-2">Unidad</h3>
-        <div className="space-y-2">
-          <label className="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors">
-            <input
-              type="checkbox"
-              checked={selectedUnits.includes("kg")}
-              onChange={() => toggleUnit("kg")}
-              className="w-4 h-4 text-federalBlue border-slate-300 rounded focus:ring-2 focus:ring-federalBlue focus:ring-offset-0"
-            />
-            <span className="text-sm">Kilo</span>
-          </label>
-          <label className="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors">
-            <input
-              type="checkbox"
-              checked={selectedUnits.includes("pieza")}
-              onChange={() => toggleUnit("pieza")}
-              className="w-4 h-4 text-federalBlue border-slate-300 rounded focus:ring-2 focus:ring-federalBlue focus:ring-offset-0"
-            />
-            <span className="text-sm">Pieza</span>
-          </label>
+      {/* Main Filter Card */}
+      <div className="card overflow-hidden">
+        {/* Header with gradient */}
+        <div className="bg-gradient-to-r from-federalBlue to-uclaBlue p-5 text-white">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+              </svg>
+              <h2 className="text-lg font-bold">Filtros</h2>
+            </div>
+            {hasActiveFilters && (
+              <button
+                onClick={clearFilters}
+                className="text-sm bg-white/20 hover:bg-white/30 backdrop-blur-sm px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Limpiar
+              </button>
+            )}
+          </div>
         </div>
-      </div>
+        
+        {/* Filter Content */}
+        <div className="p-5 space-y-6">
+          {/* Search - Enhanced */}
+          <div>
+            <label htmlFor="search" className="block text-sm font-semibold text-slate-700 mb-2">
+              Buscar Producto
+            </label>
+            <div className="relative">
+              <input
+                id="search"
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Arrachera, ribeye, pechuga..."
+                className="w-full pl-10 pr-4 py-2.5 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-federalBlue focus:border-transparent transition-all"
+              />
+              <svg className="w-5 h-5 text-slate-400 absolute left-3 top-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+          
+          {/* Sort - Enhanced */}
+          <div>
+            <label htmlFor="sort" className="block text-sm font-semibold text-slate-700 mb-2">
+              Ordenar por
+            </label>
+            <div className="relative">
+              <select
+                id="sort"
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as SortOption)}
+                className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-federalBlue focus:border-transparent appearance-none bg-white transition-all cursor-pointer"
+              >
+                <option value="relevance">🎯 Relevancia</option>
+                <option value="priceAsc">💰 Precio: Menor a Mayor</option>
+                <option value="priceDesc">💎 Precio: Mayor a Menor</option>
+                <option value="nameAsc">🔤 Nombre: A–Z</option>
+                <option value="nameDesc">🔡 Nombre: Z–A</option>
+              </select>
+              <svg className="w-5 h-5 text-slate-400 absolute right-3 top-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          
+          {/* Unit filter - Enhanced with toggle buttons */}
+          <div>
+            <h3 className="text-sm font-semibold text-slate-700 mb-3">Unidad de Venta</h3>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={() => toggleUnit("kg")}
+                className={`px-4 py-3 rounded-xl border-2 transition-all font-medium text-sm ${
+                  selectedUnits.includes("kg")
+                    ? "bg-federalBlue text-white border-federalBlue shadow-md"
+                    : "bg-white text-slate-700 border-slate-200 hover:border-federalBlue"
+                }`}
+              >
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-xl">⚖️</span>
+                  <span>Kilo</span>
+                </div>
+              </button>
+              <button
+                onClick={() => toggleUnit("pieza")}
+                className={`px-4 py-3 rounded-xl border-2 transition-all font-medium text-sm ${
+                  selectedUnits.includes("pieza")
+                    ? "bg-federalBlue text-white border-federalBlue shadow-md"
+                    : "bg-white text-slate-700 border-slate-200 hover:border-federalBlue"
+                }`}
+              >
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-xl">🥩</span>
+                  <span>Pieza</span>
+                </div>
+              </button>
+            </div>
+          </div>
       
       {/* Meat Types */}
       {meatTypes.length > 0 && (
-        <div className="border-t border-slate-200 pt-4">
+        <div className="border-t-2 border-slate-100 pt-5">
           <button
             onClick={() => toggleSection('meatTypes')}
-            className="w-full flex items-center justify-between text-sm font-medium mb-2 hover:text-federalBlue transition-colors"
+            className="w-full flex items-center justify-between text-sm font-semibold text-slate-700 mb-3 hover:text-federalBlue transition-colors"
           >
-            <span>Tipo de Corte</span>
+            <div className="flex items-center gap-2">
+              <span>🔪</span>
+              <span>Tipo de Corte</span>
+            </div>
             <svg
-              className={`w-4 h-4 transition-transform ${openSections.meatTypes ? 'rotate-180' : ''}`}
+              className={`w-5 h-5 transition-transform ${openSections.meatTypes ? 'rotate-180' : ''}`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -181,13 +215,17 @@ export default function FilterPanel({ categories, meatTypes, region }: FilterPan
             </svg>
           </button>
           {openSections.meatTypes && (
-            <div className="space-y-2 max-h-60 overflow-y-auto">
+            <div className="space-y-1 max-h-60 overflow-y-auto custom-scrollbar">
               {meatTypes.map((type) => {
                 const isSelected = selectedMeatTypes.includes(type);
                 return (
                   <label
                     key={type}
-                    className="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors"
+                    className={`flex items-center gap-3 cursor-pointer p-2.5 rounded-lg transition-all ${
+                      isSelected
+                        ? 'bg-federalBlue/10 text-federalBlue font-medium'
+                        : 'hover:bg-slate-50'
+                    }`}
                   >
                     <input
                       type="checkbox"
@@ -205,14 +243,17 @@ export default function FilterPanel({ categories, meatTypes, region }: FilterPan
       )}
       
       {/* Categories */}
-      <div className="border-t border-slate-200 pt-4">
+      <div className="border-t-2 border-slate-100 pt-5">
         <button
           onClick={() => toggleSection('categories')}
-          className="w-full flex items-center justify-between text-sm font-medium mb-2 hover:text-federalBlue transition-colors"
+          className="w-full flex items-center justify-between text-sm font-semibold text-slate-700 mb-3 hover:text-federalBlue transition-colors"
         >
-          <span>Categorías (Animal)</span>
+          <div className="flex items-center gap-2">
+            <span>🏷️</span>
+            <span>Categorías</span>
+          </div>
           <svg
-            className={`w-4 h-4 transition-transform ${openSections.categories ? 'rotate-180' : ''}`}
+            className={`w-5 h-5 transition-transform ${openSections.categories ? 'rotate-180' : ''}`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -221,13 +262,17 @@ export default function FilterPanel({ categories, meatTypes, region }: FilterPan
           </svg>
         </button>
         {openSections.categories && (
-          <div className="space-y-2 max-h-60 overflow-y-auto">
+          <div className="space-y-1 max-h-60 overflow-y-auto custom-scrollbar">
             {categories.map((cat) => {
               const isSelected = selectedCategories.includes(cat);
               return (
                 <label
                   key={cat}
-                  className="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors"
+                  className={`flex items-center gap-3 cursor-pointer p-2.5 rounded-lg transition-all ${
+                    isSelected
+                      ? 'bg-federalBlue/10 text-federalBlue font-medium'
+                      : 'hover:bg-slate-50'
+                  }`}
                 >
                   <input
                     type="checkbox"
@@ -242,6 +287,7 @@ export default function FilterPanel({ categories, meatTypes, region }: FilterPan
           </div>
         )}
       </div>
+        </div>
       </div>
     </div>
   );

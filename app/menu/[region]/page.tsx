@@ -53,14 +53,33 @@ export default async function MenuPage({
         {/* Breadcrumbs */}
         <Breadcrumbs region={region} prettyRegion={pretty} />
 
-        {/* Header */}
-        <header className="space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <h1 className="text-4xl font-bold mb-2">Menú {pretty}</h1>
-              <p className="text-slate-600">
-                Carnes premium y productos especiales para tu mesa.
+        {/* Header - Enhanced */}
+        <header className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-darkPurple via-federalBlue to-uclaBlue p-8 sm:p-12 text-white shadow-xl">
+          <div className="absolute inset-0 bg-[url('/img/hero-bg.jpg')] bg-cover bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(194,231,217,0.15),transparent)]"></div>
+          
+          <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+            <div className="space-y-3">
+              <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                Menú {pretty}
+              </h1>
+              <p className="text-lg text-cream/90 max-w-2xl">
+                Carnes premium y productos especiales para tu mesa. Entrega directa a domicilio.
               </p>
+              <div className="flex items-center gap-4 text-sm">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                  <svg className="w-5 h-5 text-mintGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Calidad Premium</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                  <svg className="w-5 h-5 text-mintGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Entrega 24h</span>
+                </div>
+              </div>
             </div>
             <RegionToggle currentRegion={region} />
           </div>

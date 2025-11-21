@@ -16,6 +16,25 @@ html { scroll-behavior: smooth; }
 .filter-chip { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-cream border border-slate-300; }
 .chip { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium; }
 
+/* Custom scrollbar for filter lists */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
 @layer utilities {
   .tabular-nums {
     font-variant-numeric: tabular-nums;
