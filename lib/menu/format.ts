@@ -35,7 +35,8 @@ export function prettyUnit(unit: UnitType, packSize?: number): string {
   
   const unitMap: Record<UnitType, string> = {
     kg: "kilo",
-    pieza: "pieza"
+    pieza: "pieza",
+    paquete: "paquete"
   };
   return unitMap[unit] || unit;
 }

@@ -96,11 +96,21 @@ export function filterByUnits(
   region: "guadalajara" | "colima"
 ): MenuItem[] {
   if (selectedUnits.length === 0) return []; // No units selected = show nothing
-  if (selectedUnits.length === 2) return items; // Both units selected = show all
+  if (selectedUnits.length === 3) return items; // All units selected = show all
   
-  return items.filter(item => 
-    selectedUnits.includes(item.unit) && item.price[region] !== undefined
-  );
+  return items.filter(item => {
+    if (!item.price[region]) return false;
+    
+    // Check if item matches selected unit filter
+    // Items with packSize display as "paquete" but have base unit of kg/pieza
+    const hasPack = item.packSize && item.packSize > 0;
+    
+    // If "paquete" is selected, show items with packSize
+    if (selectedUnits.includes("paquete") && hasPack) return true;
+    
+    // Otherwise check the base unit (kg or pieza)
+    return selectedUnits.includes(item.unit);
+  });
 }
 
 /**

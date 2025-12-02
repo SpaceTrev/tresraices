@@ -2,7 +2,7 @@
  * Menu item type definitions with single-unit pricing support.
  */
 
-export type UnitType = "kg" | "pieza";
+export type UnitType = "kg" | "pieza" | "paquete";
 
 export type PricingMode = "per_kg" | "per_pack" | "per_piece";
 

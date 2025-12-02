@@ -85,7 +85,7 @@ export default async function MenuPage({
           </div>
         </header>
 
-        {/* Main layout */}
+        {/* Filters and Products */}
         <MenuLayout
           filterPanel={
             <Suspense
