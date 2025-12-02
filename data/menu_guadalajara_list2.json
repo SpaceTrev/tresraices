@@ -19,7 +19,10 @@
     "price": {
       "guadalajara": 327.17,
       "colima": 354.43
-    }
+    },
+    "packSize": 3,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "avestruz:molida",
@@ -85,7 +88,10 @@
     "price": {
       "guadalajara": 162,
       "colima": 175.5
-    }
+    },
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "bufalo:t-bone",
@@ -173,7 +179,10 @@
     "price": {
       "guadalajara": 172.8,
       "colima": 187.2
-    }
+    },
+    "packSize": 2,
+    "approxWeightKg": 1,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cerdo:costilla-huacal",
@@ -437,7 +446,10 @@
     "price": {
       "guadalajara": 462.85,
       "colima": 501.42
-    }
+    },
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "ciervo-rojo:lomo",
@@ -712,7 +724,10 @@
     "price": {
       "guadalajara": 210.72,
       "colima": 228.28
-    }
+    },
+    "packSize": 1,
+    "approxWeightKg": 0.3,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:chistorra-merguez",
@@ -723,7 +738,10 @@
     "price": {
       "guadalajara": 210.72,
       "colima": 228.28
-    }
+    },
+    "packSize": 1,
+    "approxWeightKg": 0.3,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:chistorra-mixta",
@@ -734,7 +752,10 @@
     "price": {
       "guadalajara": 210.72,
       "colima": 228.28
-    }
+    },
+    "packSize": 1,
+    "approxWeightKg": 0.3,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:chuleta-especial",
@@ -932,7 +953,10 @@
     "price": {
       "guadalajara": 197.52,
       "colima": 213.98
-    }
+    },
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:hamburguesa-merguez",
@@ -943,7 +967,10 @@
     "price": {
       "guadalajara": 185.52,
       "colima": 200.98
-    }
+    },
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:hamburguesa-mixta",
@@ -954,7 +981,10 @@
     "price": {
       "guadalajara": 179.52,
       "colima": 194.48
-    }
+    },
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:hueso",
@@ -1130,7 +1160,10 @@
     "price": {
       "guadalajara": 334.08,
       "colima": 361.92
-    }
+    },
+    "packSize": 1,
+    "approxWeightKg": 2.5,
+    "pricingMode": "per_kg"
   },
   {
     "id": "cordero:pierna-con-cadera",
@@ -1284,7 +1317,10 @@
     "price": {
       "guadalajara": 300,
       "colima": 325
-    }
+    },
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "jabali:filete",
@@ -1416,7 +1452,10 @@
     "price": {
       "guadalajara": 366,
       "colima": 396.5
-    }
+    },
+    "packSize": 6,
+    "approxWeightKg": 0.9,
+    "pricingMode": "per_kg"
   },
   {
     "id": "pato:hueso",
@@ -1614,7 +1653,10 @@
     "price": {
       "guadalajara": 210,
       "colima": 227.5
-    }
+    },
+    "packSize": 1,
+    "approxWeightKg": 1.5,
+    "pricingMode": "per_kg"
   },
   {
     "id": "pavo:pierna-natural",
@@ -1856,7 +1898,10 @@
     "price": {
       "guadalajara": 149.52,
       "colima": 161.98
-    }
+    },
+    "packSize": 4,
+    "approxWeightKg": 0.6,
+    "pricingMode": "per_kg"
   },
   {
     "id": "res:chorizo-campestre",
@@ -1867,7 +1912,10 @@
     "price": {
       "guadalajara": 137.52,
       "colima": 148.98
-    }
+    },
+    "packSize": 4,
+    "approxWeightKg": 0.6,
+    "pricingMode": "per_kg"
   },
   {
     "id": "res:chorizo-ranchero",
@@ -1878,7 +1926,10 @@
     "price": {
       "guadalajara": 137.52,
       "colima": 148.98
-    }
+    },
+    "packSize": 4,
+    "approxWeightKg": 0.6,
+    "pricingMode": "per_kg"
   },
   {
     "id": "res:costilla-cargada-short-ryb",
@@ -1900,7 +1951,13 @@
     "price": {
       "guadalajara": 375.12,
       "colima": 406.38
-    }
+    },
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:cowboy-prime",
@@ -1911,7 +1968,13 @@
     "price": {
       "guadalajara": 548.35,
       "colima": 594.05
-    }
+    },
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:fajita-de-rib-eye",
@@ -2010,7 +2073,13 @@
     "price": {
       "guadalajara": 338.54,
       "colima": 366.76
-    }
+    },
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:peinecillo",
@@ -2043,7 +2112,13 @@
     "price": {
       "guadalajara": 311.66,
       "colima": 337.64
-    }
+    },
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:prime-rib",
@@ -2065,7 +2140,13 @@
     "price": {
       "guadalajara": 393.98,
       "colima": 426.82
-    }
+    },
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:rib-eye-anejo",
@@ -2076,7 +2157,13 @@
     "price": {
       "guadalajara": 590.93,
       "colima": 640.17
-    }
+    },
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:rib-eye-prime",
@@ -2087,7 +2174,13 @@
     "price": {
       "guadalajara": 578.93,
       "colima": 627.17
-    }
+    },
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:sirloin",
@@ -2098,7 +2191,13 @@
     "price": {
       "guadalajara": 305.28,
       "colima": 330.72
-    }
+    },
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:t-bone",
@@ -2109,7 +2208,13 @@
     "price": {
       "guadalajara": 304.46,
       "colima": 329.84
-    }
+    },
+    "customThickness": true,
+    "availableThickness": [
+      "1/2\"",
+      "3/4\"",
+      "1\""
+    ]
   },
   {
     "id": "res:tuetano",

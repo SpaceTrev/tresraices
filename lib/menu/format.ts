@@ -25,8 +25,14 @@ export function formatPriceMXN(amount: number): string {
 
 /**
  * Pretty print unit type with proper formatting
+ * If item has packSize, show "paquete" instead of base unit for clarity
  */
-export function prettyUnit(unit: UnitType): string {
+export function prettyUnit(unit: UnitType, packSize?: number): string {
+  // If item is sold in packs, show "paquete" regardless of base unit
+  if (packSize && packSize > 0) {
+    return "paquete";
+  }
+  
   const unitMap: Record<UnitType, string> = {
     kg: "kilo",
     pieza: "pieza"

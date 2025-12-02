@@ -27,7 +27,7 @@ export function buildWhatsAppUrl({
   const itemLines = items
     .map((item) => {
       const lineTotal = item.unitPrice * item.quantity;
-      let line = `• ${item.name} (${prettyUnit(item.unit)}) x${item.quantity} — ${formatPrice(lineTotal)}`;
+      let line = `• ${item.category} ${item.name} (${prettyUnit(item.unit, item.packSize)}) x${item.quantity} — ${formatPrice(lineTotal)}`;
       
       // Add pack/weight info if available
       if (item.packSize) {

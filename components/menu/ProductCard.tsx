@@ -42,7 +42,7 @@ export default function ProductCard({
   const isNew = /nuevo/i.test(item.name);
   
   // WhatsApp deep link (secondary CTA)
-  const whatsappMessage = `Hola, quiero ${item.name} (${prettyUnit(item.unit)}) — ${prettyRegion}`;
+  const whatsappMessage = `Hola, quiero ${item.name} (${prettyUnit(item.unit, item.packSize)}) — ${prettyRegion}`;
   const whatsappUrl = `https://wa.me/523315126548?text=${encodeURIComponent(whatsappMessage)}`;
   
   const handleAdd = () => {
@@ -115,12 +115,7 @@ export default function ProductCard({
               )}
               {item.approxWeightKg && (
                 <p className="text-xs text-slate-600">
-                  <span className="font-semibold">Peso aprox:</span> {item.approxWeightKg} kg
-                  {item.approxWeightKg > 0 && price && (
-                    <span className="ml-1 text-slate-500">
-                      (≈ {formatPrice(price * item.approxWeightKg)})
-                    </span>
-                  )}
+                  <span className="font-semibold">Peso aprox:</span> {item.approxWeightKg} kg {item.packSize ? `por paquete` : ''}
                 </p>
               )}
               {item.customThickness && item.availableThickness && (
@@ -154,7 +149,7 @@ export default function ProductCard({
           <div className="mb-3">
             <div className="inline-flex items-baseline gap-1.5">
               <span className="text-2xl font-bold text-federalBlue">{formatPrice(price)}</span>
-              <span className="text-sm text-slate-600">por {prettyUnit(item.unit)}</span>
+              <span className="text-sm text-slate-600">por {prettyUnit(item.unit, item.packSize)}</span>
             </div>
           </div>
         ) : (

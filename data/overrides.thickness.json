@@ -1,43 +1,15 @@
 {
-  "comment": "Thickness options for premium steaks that can be custom cut",
+  "comment": "Thickness options (pulgadas) for premium Res steaks that can be custom cut",
   "overrides": {
-    "bufalo:rib-eye": {
+    "res:sirloin": {
       "customThickness": true,
       "availableThickness": ["1/2\"", "3/4\"", "1\""]
     },
-    "bufalo:new-york": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "bufalo:cow-boy": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "bufalo:sirloin": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "bufalo:top-sirloin": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "bufalo:porterhouse": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "bufalo:t-bone": {
+    "res:t-bone": {
       "customThickness": true,
       "availableThickness": ["1/2\"", "3/4\"", "1\""]
     },
     "res:rib-eye": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "res:rib-eye-prime": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "res:rib-eye-anejo": {
       "customThickness": true,
       "availableThickness": ["1/2\"", "3/4\"", "1\""]
     },
@@ -53,51 +25,15 @@
       "customThickness": true,
       "availableThickness": ["1/2\"", "3/4\"", "1\""]
     },
-    "res:sirloin": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
     "res:porterhouse": {
       "customThickness": true,
       "availableThickness": ["1/2\"", "3/4\"", "1\""]
     },
-    "res:t-bone": {
+    "res:rib-eye-anejo": {
       "customThickness": true,
       "availableThickness": ["1/2\"", "3/4\"", "1\""]
     },
-    "res:filete": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "res:picana": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "cordero:chuleta-especial": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "cordero:chuleta-estandar": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "cordero:chuleta-marinada": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "cordero:filete": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "cordero:lomo": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "cordero:rack-americano": {
-      "customThickness": true,
-      "availableThickness": ["1/2\"", "3/4\"", "1\""]
-    },
-    "cordero:rack-frances": {
+    "res:rib-eye-prime": {
       "customThickness": true,
       "availableThickness": ["1/2\"", "3/4\"", "1\""]
     }
