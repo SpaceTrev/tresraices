@@ -151,12 +151,10 @@ export default function CartDrawer({ isOpen, onClose, region }: CartDrawerProps)
                       <h3 className="font-semibold text-sm capitalize truncate">{item.name}</h3>
                       <p className="text-xs text-slate-500">
                         <span className="capitalize">{item.category}</span> · {formatPrice(lineTotal)}
+                        {item.selectedThickness && (
+                          <span className="text-slate-400"> · Grosor: {item.selectedThickness}</span>
+                        )}
                       </p>
-                      {item.selectedThickness && (
-                        <p className="text-xs text-federalBlue font-medium mt-0.5">
-                          Grosor: {item.selectedThickness}
-                        </p>
-                      )}
                     </div>
                     
                     <div className="flex items-center gap-2">

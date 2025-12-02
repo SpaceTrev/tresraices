@@ -27,13 +27,20 @@ export function buildWhatsAppUrl({
   const itemLines = items
     .map((item) => {
       const lineTotal = item.unitPrice * item.quantity;
-      let line = `• ${item.category} ${item.name} (${prettyUnit(item.unit, item.packSize)}) x${item.quantity} — ${formatPrice(lineTotal)}`;
       
-      // Add thickness if selected
-      if (item.selectedThickness) {
-        line += `\n  Grosor: ${item.selectedThickness}`;
+      // Format quantity with unit for kilos, simple count for pieces/packs
+      let quantityStr = "";
+      if (item.unit === "kg") {
+        quantityStr = `x${item.quantity} ${item.quantity === 1 ? "kilo" : "kilos"}`;
+        // Add thickness for kilos if selected
+        if (item.selectedThickness) {
+          quantityStr += ` grosor: ${item.selectedThickness}`;
+        }
+      } else {
+        quantityStr = `x${item.quantity}`;
       }
       
+      const line = `• ${item.category} ${item.name} ${quantityStr} — ${formatPrice(lineTotal)}`;
       return line;
     })
     .join("\n");

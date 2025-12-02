@@ -15,7 +15,7 @@ const regions = [
 
 export default function RegionToggle({ currentRegion }: RegionToggleProps) {
   return (
-    <div className="inline-flex items-center gap-1 p-1 bg-slate-100 rounded-lg">
+    <div className="inline-flex items-center gap-1 p-1 bg-white/20 backdrop-blur-sm rounded-lg">
       {regions.map(({ value, label }) => {
         const isActive = currentRegion === value;
         return (
@@ -23,10 +23,10 @@ export default function RegionToggle({ currentRegion }: RegionToggleProps) {
             key={value}
             href={`/menu/${value}`}
             className={`
-              px-4 py-2 rounded-md text-sm font-medium transition-colors
+              px-3 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all
               ${isActive
-                ? "bg-white text-federalBlue shadow-sm"
-                : "text-slate-600 hover:text-slate-900"
+                ? "bg-white text-federalBlue shadow-md"
+                : "text-white/80 hover:text-white hover:bg-white/10"
               }
             `}
           >
