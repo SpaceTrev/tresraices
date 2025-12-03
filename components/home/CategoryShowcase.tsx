@@ -50,7 +50,7 @@ export default function CategoryShowcase() {
                 className="block p-6 rounded-2xl shadow-sm bg-gradient-to-br from-white to-cream/20 border border-slate-100 hover:border-federalBlue/30 relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group cursor-pointer"
               >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-federalBlue/0 via-uclaBlue/0 to-mintGreen/0 group-hover:from-federalBlue/10 group-hover:via-uclaBlue/5 group-hover:to-mintGreen/10 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-darkPurple/0 to-stone-700/0 group-hover:from-darkPurple/5 group-hover:to-stone-700/10 transition-all duration-500"></div>
               
               <div className="relative z-10">
                 <div className="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">

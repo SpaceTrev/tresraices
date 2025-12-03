@@ -54,9 +54,8 @@ export default async function MenuPage({
         <Breadcrumbs region={region} prettyRegion={pretty} />
 
         {/* Header - Enhanced */}
-        <header className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-darkPurple via-federalBlue to-uclaBlue p-8 sm:p-12 text-white shadow-xl">
-          <div className="absolute inset-0 bg-[url('/img/hero-bg.jpg')] bg-cover bg-center opacity-10"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(194,231,217,0.15),transparent)]"></div>
+        <header className="relative overflow-hidden rounded-3xl bg-darkPurple p-8 sm:p-12 text-white shadow-xl">
+          <div className="absolute inset-0 bg-[url('/img/hero-bg.jpg')] bg-cover bg-center opacity-5"></div>
           
           <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <div className="space-y-3">
@@ -68,13 +67,13 @@ export default async function MenuPage({
               </p>
               <div className="flex items-center gap-4 text-sm">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                  <svg className="w-5 h-5 text-mintGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Calidad Premium</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                  <svg className="w-5 h-5 text-mintGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Entrega 24h</span>

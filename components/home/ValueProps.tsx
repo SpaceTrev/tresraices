@@ -1,18 +1,18 @@
 const valueProps = [
   {
-    icon: "🐄",
-    title: "Cortes Premium",
-    description: "Solo la mejor calidad de productores seleccionados"
+    icon: "🥩",
+    title: "Calidad Excepcional",
+    description: "Cortes premium seleccionados cuidadosamente de productores de confianza"
   },
   {
-    icon: "🚚",
-    title: "Entrega Rápida",
-    description: "Envíos en 24 horas a Guadalajara y Colima"
+    icon: "⚡",
+    title: "Entrega 24 Horas",
+    description: "Frescura garantizada con envío rápido a tu domicilio en GDL y Colima"
   },
   {
-    icon: "🇲🇽",
-    title: "Hecho en México",
-    description: "Apoyamos a productores y granjas locales"
+    icon: "🌱",
+    title: "Producto Nacional",
+    description: "100% mexicano - apoyamos a productores y granjas locales"
   }
 ];
 
@@ -37,7 +37,7 @@ export default function ValueProps() {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-white to-cream rounded-full shadow-lg text-4xl group-hover:scale-110 transition-transform duration-300 group-hover:shadow-xl">
                 {prop.icon}
               </div>
-              <h3 className="text-xl font-bold text-darkPurple group-hover:text-federalBlue transition-colors">
+              <h3 className="text-xl font-bold text-darkPurple group-hover:text-yellow-700 transition-colors">
                 {prop.title}
               </h3>
               <p className="text-slate-600 leading-relaxed">

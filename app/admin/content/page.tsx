@@ -39,6 +39,9 @@ export default function ContentPage() {
   const [activeTab, setActiveTab] = useState<Tab>("content");
   const [config, setConfig] = useState<SiteConfig | null>(null);
   const [buildTriggered, setBuildTriggered] = useState(false);
+  
+  // Track which field is being edited
+  const [editingField, setEditingField] = useState<string | null>(null);
 
   // Content state
   const [content, setContent] = useState<SiteContent>({
@@ -236,33 +239,71 @@ export default function ContentPage() {
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Headline
                       </label>
-                      <input
-                        type="text"
-                        value={content.hero.headline}
-                        onChange={(e) =>
-                          setContent({
-                            ...content,
-                            hero: { ...content.hero, headline: e.target.value },
-                          })
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
+                      {editingField === "hero.headline" ? (
+                        <div className="flex gap-2">
+                          <input
+                            type="text"
+                            value={content.hero.headline}
+                            onChange={(e) =>
+                              setContent({
+                                ...content,
+                                hero: { ...content.hero, headline: e.target.value },
+                              })
+                            }
+                            onBlur={() => setEditingField(null)}
+                            autoFocus
+                            className="flex-1 px-3 py-2 border border-blue-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          />
+                          <button
+                            onClick={() => setEditingField(null)}
+                            className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                          >
+                            Done
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() => setEditingField("hero.headline")}
+                          className="px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-colors"
+                        >
+                          {content.hero.headline || <span className="text-gray-400">Click to edit...</span>}
+                        </div>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Tagline
                       </label>
-                      <input
-                        type="text"
-                        value={content.hero.tagline}
-                        onChange={(e) =>
-                          setContent({
-                            ...content,
-                            hero: { ...content.hero, tagline: e.target.value },
-                          })
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
+                      {editingField === "hero.tagline" ? (
+                        <div className="flex gap-2">
+                          <input
+                            type="text"
+                            value={content.hero.tagline}
+                            onChange={(e) =>
+                              setContent({
+                                ...content,
+                                hero: { ...content.hero, tagline: e.target.value },
+                              })
+                            }
+                            onBlur={() => setEditingField(null)}
+                            autoFocus
+                            className="flex-1 px-3 py-2 border border-blue-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          />
+                          <button
+                            onClick={() => setEditingField(null)}
+                            className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                          >
+                            Done
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() => setEditingField("hero.tagline")}
+                          className="px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-colors"
+                        >
+                          {content.hero.tagline || <span className="text-gray-400">Click to edit...</span>}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -274,33 +315,74 @@ export default function ContentPage() {
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Headline
                       </label>
-                      <input
-                        type="text"
-                        value={content.about.headline}
-                        onChange={(e) =>
-                          setContent({
-                            ...content,
-                            about: { ...content.about, headline: e.target.value },
-                          })
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
+                      {editingField === "about.headline" ? (
+                        <div className="flex gap-2">
+                          <input
+                            type="text"
+                            value={content.about.headline}
+                            onChange={(e) =>
+                              setContent({
+                                ...content,
+                                about: { ...content.about, headline: e.target.value },
+                              })
+                            }
+                            onBlur={() => setEditingField(null)}
+                            autoFocus
+                            className="flex-1 px-3 py-2 border border-blue-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          />
+                          <button
+                            onClick={() => setEditingField(null)}
+                            className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                          >
+                            Done
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() => setEditingField("about.headline")}
+                          className="px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-colors"
+                        >
+                          {content.about.headline || <span className="text-gray-400">Click to edit...</span>}
+                        </div>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Description
                       </label>
-                      <textarea
-                        value={content.about.description}
-                        onChange={(e) =>
-                          setContent({
-                            ...content,
-                            about: { ...content.about, description: e.target.value },
-                          })
-                        }
-                        rows={4}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
+                      {editingField === "about.description" ? (
+                        <div className="space-y-2">
+                          <textarea
+                            value={content.about.description}
+                            onChange={(e) =>
+                              setContent({
+                                ...content,
+                                about: { ...content.about, description: e.target.value },
+                              })
+                            }
+                            autoFocus
+                            rows={4}
+                            className="w-full px-3 py-2 border border-blue-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          />
+                          <button
+                            onClick={() => setEditingField(null)}
+                            className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                          >
+                            Done
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() => setEditingField("about.description")}
+                          className="px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-colors min-h-[100px]"
+                        >
+                          {content.about.description ? (
+                            <p className="whitespace-pre-wrap">{content.about.description}</p>
+                          ) : (
+                            <span className="text-gray-400">Click to edit...</span>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -312,49 +394,106 @@ export default function ContentPage() {
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Headline
                       </label>
-                      <input
-                        type="text"
-                        value={content.cta.headline}
-                        onChange={(e) =>
-                          setContent({
-                            ...content,
-                            cta: { ...content.cta, headline: e.target.value },
-                          })
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
+                      {editingField === "cta.headline" ? (
+                        <div className="flex gap-2">
+                          <input
+                            type="text"
+                            value={content.cta.headline}
+                            onChange={(e) =>
+                              setContent({
+                                ...content,
+                                cta: { ...content.cta, headline: e.target.value },
+                              })
+                            }
+                            onBlur={() => setEditingField(null)}
+                            autoFocus
+                            className="flex-1 px-3 py-2 border border-blue-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          />
+                          <button
+                            onClick={() => setEditingField(null)}
+                            className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                          >
+                            Done
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() => setEditingField("cta.headline")}
+                          className="px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-colors"
+                        >
+                          {content.cta.headline || <span className="text-gray-400">Click to edit...</span>}
+                        </div>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Description
                       </label>
-                      <input
-                        type="text"
-                        value={content.cta.description}
-                        onChange={(e) =>
-                          setContent({
-                            ...content,
-                            cta: { ...content.cta, description: e.target.value },
-                          })
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
+                      {editingField === "cta.description" ? (
+                        <div className="flex gap-2">
+                          <input
+                            type="text"
+                            value={content.cta.description}
+                            onChange={(e) =>
+                              setContent({
+                                ...content,
+                                cta: { ...content.cta, description: e.target.value },
+                              })
+                            }
+                            onBlur={() => setEditingField(null)}
+                            autoFocus
+                            className="flex-1 px-3 py-2 border border-blue-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          />
+                          <button
+                            onClick={() => setEditingField(null)}
+                            className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                          >
+                            Done
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() => setEditingField("cta.description")}
+                          className="px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-colors"
+                        >
+                          {content.cta.description || <span className="text-gray-400">Click to edit...</span>}
+                        </div>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Button Text
                       </label>
-                      <input
-                        type="text"
-                        value={content.cta.buttonText}
-                        onChange={(e) =>
-                          setContent({
-                            ...content,
-                            cta: { ...content.cta, buttonText: e.target.value },
-                          })
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
+                      {editingField === "cta.buttonText" ? (
+                        <div className="flex gap-2">
+                          <input
+                            type="text"
+                            value={content.cta.buttonText}
+                            onChange={(e) =>
+                              setContent({
+                                ...content,
+                                cta: { ...content.cta, buttonText: e.target.value },
+                              })
+                            }
+                            onBlur={() => setEditingField(null)}
+                            autoFocus
+                            className="flex-1 px-3 py-2 border border-blue-500 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          />
+                          <button
+                            onClick={() => setEditingField(null)}
+                            className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                          >
+                            Done
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() => setEditingField("cta.buttonText")}
+                          className="px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-colors"
+                        >
+                          {content.cta.buttonText || <span className="text-gray-400">Click to edit...</span>}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

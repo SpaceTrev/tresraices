@@ -59,7 +59,7 @@ export default function NavBar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="hover:text-mintGreen transition-colors font-medium tap-target flex items-center"
+                  className="hover:text-yellow-500 transition-colors font-medium tap-target flex items-center"
                   {...(link.external && {
                     target: "_blank",
                     rel: "noopener noreferrer",
@@ -149,7 +149,7 @@ export default function NavBar() {
                     <li key={link.href}>
                       <a
                         href={link.href}
-                        className="flex items-center min-h-[44px] px-4 py-3 rounded-xl text-darkPurple font-medium hover:bg-mintGreen/30 transition-colors"
+                        className="flex items-center min-h-[44px] px-4 py-3 rounded-xl text-darkPurple font-medium hover:bg-yellow-100 transition-colors"
                         onClick={() => setIsOpen(false)}
                         {...(link.external && {
                           target: "_blank",
