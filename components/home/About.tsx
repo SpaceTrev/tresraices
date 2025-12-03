@@ -46,14 +46,14 @@ export default function About() {
           <ScrollReveal delay={200}>
             <div className="relative">
             <div className="card overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300">
-              <div className="w-full h-[400px] bg-gradient-to-br from-darkPurple via-stone-800 to-darkPurple flex items-center justify-center relative overflow-hidden">
-                {/* Animated gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-darkPurple/20 to-transparent"></div>
-                <div className="text-center text-white p-8 relative z-10">
-                  <div className="text-6xl mb-4 animate-bounce" style={{animationDuration: '3s'}}>🥩</div>
-                  <div className="text-2xl font-bold">Cortes Premium</div>
-                  <div className="text-sm opacity-90 mt-2">Calidad excepcional</div>
-                </div>
+              <div className="relative w-full h-[400px] overflow-hidden">
+                <img 
+                  src="/img/tabla-de-cortes.png" 
+                  alt="Tabla de cortes premium - Variedad de carnes frescas Tres Raíces"
+                  className="w-full h-full object-cover"
+                />
+                {/* Subtle overlay for text contrast if needed */}
+                <div className="absolute inset-0 bg-gradient-to-t from-darkPurple/10 to-transparent pointer-events-none"></div>
               </div>
             </div>
             {/* Enhanced decorative accents */}
