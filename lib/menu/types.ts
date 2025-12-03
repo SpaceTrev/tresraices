@@ -19,6 +19,7 @@ export type MenuItem = {
     guadalajara?: number;
     colima?: number;
   };
+  image?: string; // path to product placeholder image (e.g., "/product-placeholders/res.png")
   supplier?: string; // supplier/provider name (e.g., "El Barranqueño")
   notes?: string; // parser hints or validation flags
   packSize?: number; // number of units per pack (e.g., 6 for a 6-pack)
