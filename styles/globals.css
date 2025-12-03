@@ -38,7 +38,7 @@ html {
   @apply bg-federalBlue text-white hover:bg-darkPurple shadow-md hover:shadow-lg; 
 }
 .badge { @apply text-xs rounded-full px-2 py-1 bg-mintGreen; }
-.filter-chip { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-cream border border-slate-300; }
+.filter-chip { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-white border-2 border-darkPurple text-darkPurple font-medium; }
 .chip { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium; }
 
 /* Custom scrollbar for filter lists */

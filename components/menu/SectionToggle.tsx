@@ -32,8 +32,8 @@ export default function SectionToggle({ region }: SectionToggleProps) {
         onClick={() => setView("sections")}
         className={`filter-chip ${
           currentView === "sections"
-            ? "bg-federalBlue text-white border-federalBlue"
-            : "hover:border-slate-400"
+            ? "!bg-yellow-600 !text-white !border-yellow-600"
+            : "hover:border-yellow-600"
         }`}
         aria-pressed={currentView === "sections"}
       >
@@ -47,8 +47,8 @@ export default function SectionToggle({ region }: SectionToggleProps) {
         onClick={() => setView("grid")}
         className={`filter-chip ${
           currentView === "grid"
-            ? "bg-federalBlue text-white border-federalBlue"
-            : "hover:border-slate-400"
+            ? "!bg-yellow-600 !text-white !border-yellow-600"
+            : "hover:border-yellow-600"
         }`}
         aria-pressed={currentView === "grid"}
       >
