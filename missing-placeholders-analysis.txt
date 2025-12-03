@@ -1,0 +1,267 @@
+=== PRODUCTS NEEDING SPECIFIC CUT/TYPE PLACEHOLDERS ===
+
+## Avestruz (avestruz.png)
+Total products: 1
+Unique cuts/types:
+  - arrachera
+
+## Búfalo (buffalo.png)
+Total products: 6
+Unique cuts/types:
+  - arrachera marinada
+  - costilla
+  - cow boy
+  - diezmillo
+  - t-bone
+  - top sirloin
+
+## Cerdo (cerdo.png)
+Total products: 12
+Unique cuts/types:
+  - adobado
+  - cabeza de lomo
+  - chamorro sin piel
+  - chuleta americana (entrecot)
+  - costilla baby back
+  - costilla huacal
+  - lomo
+  - pierna adobada
+  - pierna pulpa
+  - salchicha paletita
+  - tocinilla crudo con piel (pork belly)
+  - tocino ahumado
+
+## Ciervo rojo (ciervorojo.png)
+Total products: 9
+Unique cuts/types:
+  - arrachera
+  - chamorro
+  - costilla marinada
+  - espaldilla pulpa
+  - filete
+  - lomo
+  - pescuezo
+  - pierna pulpa
+  - rack francés
+
+## Conejo (conejo.png)
+Total products: 7
+Unique cuts/types:
+  - adobado pierna y muslo
+  - canal
+  - lomo
+  - lomo marinado
+  - marinado pierna y muslo
+  - pierna y muslo natural
+  - pulpa
+
+## Cordero (cordero.png)
+Total products: 48
+Unique cuts/types:
+  - arrachera al romero
+  - arrachera campirana
+  - arrachera especial
+  - arrachera hierbas finas
+  - barbacoa
+  - cabeza
+  - canal
+  - chuleta especial
+  - chuleta estandar
+  - chuleta marinada
+  - confit pulpa
+  - costilla
+  - costilla baby back
+  - costilla campirana
+  - costilla hierbas fina
+  - costilla marinada
+  - costilla romero
+  - cubo
+  - escalopas
+  - espaldilla
+  - espaldilla deshuesada
+  - espaldilla pulpa
+  - filete
+  - hueso
+  - kit chuleta-costilla marinada
+  - kit de panza
+  - lechal
+  - lomo
+  - machito cocido
+  - machito picado
+  - machito picado adobado
+  - maciza
+  - menudo
+  - osobuco
+  - pescuezo
+  - picaña
+  - pierna
+  - pierna con cadera
+  - pierna deshuesada con el hueso
+  - pierna pulpa
+  - rack americano
+  - rack francés
+  - salchicha alemana
+  - salchicha berlin
+  - silla
+  - sirloin
+  - t-bone
+
+## Codorniz (cordoniz.png)
+Total products: 4
+Unique cuts/types:
+  - adobada
+  - cartera huevito
+  - marinada
+  - natural 045
+
+## Jabalí (jabali.png)
+Total products: 6
+Unique cuts/types:
+  - arrachera marinada
+  - canal
+  - costilla marinada
+  - filete
+  - lomo
+  - rack francés
+
+## Pato (pato.png)
+Total products: 23
+Unique cuts/types:
+  - Medio pato horneado
+  - confit molleja
+  - confit pierna y muslo grande
+  - confit pierna y muslo mediano
+  - confit pulpa
+  - foie gras a
+  - foie terrina
+  - grasa
+  - hueso
+  - huevo
+  - jamon iberico
+  - magret ahumado
+  - magret especial
+  - magret extra premium
+  - magret premium
+  - magret serrano
+  - pastrami
+  - pekin con viscera
+  - pierna y muslo alcienne
+  - pierna y muslo marinado s/h
+  - pierna y muslo natural grande
+  - pierna y muslo natural mediano
+  - selva negra
+
+## Pavo (pavo.png)
+Total products: 3
+Unique cuts/types:
+  - entero
+  - pechuga
+  - pierna natural
+
+## Pollo (pollo.png)
+Total products: 5
+Unique cuts/types:
+  - alita natural
+  - de leche
+  - entero
+  - pechuga brasileña
+  - pierna y muslo
+
+## Queso (queso.png)
+Total products: 8
+Unique cuts/types:
+  - adobera
+  - de cabra bouquet
+  - de cabra con ceniza
+  - de cabra finas hierbas
+  - de cabra natural
+  - oaxaca
+  - panela
+  - provoleta
+
+## Res (res.png)
+Total products: 24
+Unique cuts/types:
+  - arrachera
+  - arrachera 250 grs
+  - arrachera suprema
+  - brisket
+  - cabreria
+  - chinchulines
+  - costilla cargada short ryb
+  - cowboy
+  - cowboy prime
+  - filete
+  - lengua
+  - molleja
+  - new york
+  - peinecillo
+  - picaña
+  - porterhouse
+  - prime rib
+  - rib eye
+  - rib eye añejo
+  - rib eye prime
+  - sirloin
+  - t bone
+  - tuetano
+  - vacio nacional
+
+## Ternera (ternura.png)
+Total products: 8
+Unique cuts/types:
+  - arrachera
+  - chuleta lomo
+  - costilla
+  - escalopa
+  - filete
+  - lomo
+  - osobuco
+  - rack francés
+
+
+=== RECOMMENDED NEW PLACEHOLDER FILES ===
+
+Priority cuts to create (most common):
+1. avestruz-arrachera.png
+   Category: Avestruz | Cut: arrachera
+2. búfalo-arrachera-marinada.png
+   Category: Búfalo | Cut: arrachera marinada
+3. búfalo-costilla.png
+   Category: Búfalo | Cut: costilla
+4. búfalo-cow-boy.png
+   Category: Búfalo | Cut: cow boy
+5. búfalo-diezmillo.png
+   Category: Búfalo | Cut: diezmillo
+6. búfalo-t-bone.png
+   Category: Búfalo | Cut: t-bone
+7. búfalo-top-sirloin.png
+   Category: Búfalo | Cut: top sirloin
+8. cerdo-adobado.png
+   Category: Cerdo | Cut: adobado
+9. cerdo-cabeza-de-lomo.png
+   Category: Cerdo | Cut: cabeza de lomo
+10. cerdo-chamorro-sin-piel.png
+   Category: Cerdo | Cut: chamorro sin piel
+11. cerdo-chuleta-americana-entrecot-.png
+   Category: Cerdo | Cut: chuleta americana (entrecot)
+12. cerdo-costilla-baby-back.png
+   Category: Cerdo | Cut: costilla baby back
+13. cerdo-costilla-huacal.png
+   Category: Cerdo | Cut: costilla huacal
+14. cerdo-lomo.png
+   Category: Cerdo | Cut: lomo
+15. cerdo-pierna-adobada.png
+   Category: Cerdo | Cut: pierna adobada
+16. cerdo-pierna-pulpa.png
+   Category: Cerdo | Cut: pierna pulpa
+17. cerdo-salchicha-paletita.png
+   Category: Cerdo | Cut: salchicha paletita
+18. cerdo-tocinilla-crudo-con-piel-pork-belly-.png
+   Category: Cerdo | Cut: tocinilla crudo con piel (pork belly)
+19. cerdo-tocino-ahumado.png
+   Category: Cerdo | Cut: tocino ahumado
+20. ciervo-rojo-arrachera.png
+   Category: Ciervo rojo | Cut: arrachera
+
+Total unique cuts needing placeholders: 163

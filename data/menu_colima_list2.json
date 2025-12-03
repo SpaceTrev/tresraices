@@ -8,7 +8,8 @@
     "price": {
       "guadalajara": 357.6,
       "colima": 387.4
-    }
+    },
+    "image": "/product-placeholders/avestruz.png"
   },
   {
     "id": "avestruz:hamburguesa-grande",
@@ -22,7 +23,8 @@
     },
     "packSize": 3,
     "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "avestruz:molida",
@@ -33,7 +35,8 @@
     "price": {
       "guadalajara": 357.6,
       "colima": 387.4
-    }
+    },
+    "image": "/product-placeholders/carnemolida.png"
   },
   {
     "id": "bufalo:arrachera-marinada",
@@ -44,7 +47,8 @@
     "price": {
       "guadalajara": 282.24,
       "colima": 305.76
-    }
+    },
+    "image": "/product-placeholders/buffalo.png"
   },
   {
     "id": "bufalo:costilla",
@@ -55,7 +59,8 @@
     "price": {
       "guadalajara": 189.6,
       "colima": 205.4
-    }
+    },
+    "image": "/product-placeholders/buffalo.png"
   },
   {
     "id": "bufalo:cow-boy",
@@ -66,7 +71,8 @@
     "price": {
       "guadalajara": 324,
       "colima": 351
-    }
+    },
+    "image": "/product-placeholders/buffalo.png"
   },
   {
     "id": "bufalo:diezmillo",
@@ -77,7 +83,8 @@
     "price": {
       "guadalajara": 336,
       "colima": 364
-    }
+    },
+    "image": "/product-placeholders/buffalo.png"
   },
   {
     "id": "bufalo:hamburguesa",
@@ -91,7 +98,8 @@
     },
     "packSize": 6,
     "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "bufalo:t-bone",
@@ -102,7 +110,8 @@
     "price": {
       "guadalajara": 288,
       "colima": 312
-    }
+    },
+    "image": "/product-placeholders/buffalo.png"
   },
   {
     "id": "bufalo:top-sirloin",
@@ -113,7 +122,8 @@
     "price": {
       "guadalajara": 330,
       "colima": 357.5
-    }
+    },
+    "image": "/product-placeholders/buffalo.png"
   },
   {
     "id": "cabrito:canal-pieza",
@@ -124,7 +134,8 @@
     "price": {
       "guadalajara": 1728,
       "colima": 1872
-    }
+    },
+    "image": "/product-placeholders/cabrito2.png"
   },
   {
     "id": "cerdo:adobado",
@@ -135,7 +146,8 @@
     "price": {
       "guadalajara": 159.6,
       "colima": 172.9
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:cabeza-de-lomo",
@@ -146,7 +158,8 @@
     "price": {
       "guadalajara": 161.28,
       "colima": 174.72
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:chamorro-sin-piel",
@@ -157,7 +170,8 @@
     "price": {
       "guadalajara": 104.76,
       "colima": 113.49
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:chuleta-americana-entrecot",
@@ -168,7 +182,8 @@
     "price": {
       "guadalajara": 141.6,
       "colima": 153.4
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:costilla-baby-back",
@@ -182,7 +197,8 @@
     },
     "packSize": 2,
     "approxWeightKg": 1,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:costilla-huacal",
@@ -193,7 +209,8 @@
     "price": {
       "guadalajara": 162,
       "colima": 175.5
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:lechon-3-6-0-pieza",
@@ -204,7 +221,8 @@
     "price": {
       "guadalajara": 1800,
       "colima": 1950
-    }
+    },
+    "image": "/product-placeholders/lechon.png"
   },
   {
     "id": "cerdo:lechon-6-100-7-0-pieza",
@@ -215,7 +233,8 @@
     "price": {
       "guadalajara": 1920,
       "colima": 2080
-    }
+    },
+    "image": "/product-placeholders/lechon.png"
   },
   {
     "id": "cerdo:lechon-7-100-8-0-pieza",
@@ -226,7 +245,8 @@
     "price": {
       "guadalajara": 2040,
       "colima": 2210
-    }
+    },
+    "image": "/product-placeholders/lechon.png"
   },
   {
     "id": "cerdo:lechon-8-100-9-0-pieza",
@@ -237,7 +257,8 @@
     "price": {
       "guadalajara": 2160,
       "colima": 2340
-    }
+    },
+    "image": "/product-placeholders/lechon.png"
   },
   {
     "id": "cerdo:lechon-9-100-10-0-pieza",
@@ -248,7 +269,8 @@
     "price": {
       "guadalajara": 2280,
       "colima": 2470
-    }
+    },
+    "image": "/product-placeholders/lechon.png"
   },
   {
     "id": "cerdo:lechon-10-100-11-0-pieza",
@@ -259,7 +281,8 @@
     "price": {
       "guadalajara": 2400,
       "colima": 2600
-    }
+    },
+    "image": "/product-placeholders/lechon.png"
   },
   {
     "id": "cerdo:lechon-11-100-12-0-pieza",
@@ -270,7 +293,8 @@
     "price": {
       "guadalajara": 2520,
       "colima": 2730
-    }
+    },
+    "image": "/product-placeholders/lechon.png"
   },
   {
     "id": "cerdo:lechon-12-100-13-0-pieza",
@@ -281,7 +305,8 @@
     "price": {
       "guadalajara": 2640,
       "colima": 2860
-    }
+    },
+    "image": "/product-placeholders/lechon.png"
   },
   {
     "id": "cerdo:lechon-13-100-14-0-pieza",
@@ -292,7 +317,8 @@
     "price": {
       "guadalajara": 2760,
       "colima": 2990
-    }
+    },
+    "image": "/product-placeholders/lechon.png"
   },
   {
     "id": "cerdo:lomo",
@@ -303,7 +329,8 @@
     "price": {
       "guadalajara": 170.4,
       "colima": 184.6
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:manteca",
@@ -314,7 +341,8 @@
     "price": {
       "guadalajara": 78.34,
       "colima": 84.86
-    }
+    },
+    "image": "/product-placeholders/manteca.png"
   },
   {
     "id": "cerdo:molida",
@@ -325,7 +353,8 @@
     "price": {
       "guadalajara": 129.6,
       "colima": 140.4
-    }
+    },
+    "image": "/product-placeholders/carnemolida.png"
   },
   {
     "id": "cerdo:pierna-pulpa",
@@ -336,7 +365,8 @@
     "price": {
       "guadalajara": 138.24,
       "colima": 149.76
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:pierna-adobada-pieza",
@@ -347,7 +377,8 @@
     "price": {
       "guadalajara": 126.72,
       "colima": 137.28
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:salchicha-paletita",
@@ -358,7 +389,8 @@
     "price": {
       "guadalajara": 195.84,
       "colima": 212.16
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:tocinilla-crudo-con-piel-pork-belly",
@@ -369,7 +401,8 @@
     "price": {
       "guadalajara": 199.92,
       "colima": 216.58
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "cerdo:tocino-ahumado",
@@ -380,7 +413,8 @@
     "price": {
       "guadalajara": 174,
       "colima": 188.5
-    }
+    },
+    "image": "/product-placeholders/cerdo.png"
   },
   {
     "id": "ciervo-rojo:arrachera",
@@ -391,7 +425,8 @@
     "price": {
       "guadalajara": 537.84,
       "colima": 582.66
-    }
+    },
+    "image": "/product-placeholders/ciervorojo.png"
   },
   {
     "id": "ciervo-rojo:chamorro",
@@ -402,7 +437,8 @@
     "price": {
       "guadalajara": 463.2,
       "colima": 501.8
-    }
+    },
+    "image": "/product-placeholders/ciervorojo.png"
   },
   {
     "id": "ciervo-rojo:costilla-marinada",
@@ -413,7 +449,8 @@
     "price": {
       "guadalajara": 463.2,
       "colima": 501.8
-    }
+    },
+    "image": "/product-placeholders/ciervorojo.png"
   },
   {
     "id": "ciervo-rojo:espaldilla-pulpa",
@@ -424,7 +461,8 @@
     "price": {
       "guadalajara": 514.8,
       "colima": 557.7
-    }
+    },
+    "image": "/product-placeholders/ciervorojo.png"
   },
   {
     "id": "ciervo-rojo:filete",
@@ -435,7 +473,8 @@
     "price": {
       "guadalajara": 822,
       "colima": 890.5
-    }
+    },
+    "image": "/product-placeholders/ciervorojo.png"
   },
   {
     "id": "ciervo-rojo:hamburguesa",
@@ -449,7 +488,8 @@
     },
     "packSize": 6,
     "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "ciervo-rojo:lomo",
@@ -460,7 +500,8 @@
     "price": {
       "guadalajara": 705.6,
       "colima": 764.4
-    }
+    },
+    "image": "/product-placeholders/ciervorojo.png"
   },
   {
     "id": "ciervo-rojo:pescuezo",
@@ -471,7 +512,8 @@
     "price": {
       "guadalajara": 461.54,
       "colima": 500.01
-    }
+    },
+    "image": "/product-placeholders/ciervorojo.png"
   },
   {
     "id": "ciervo-rojo:pierna-pulpa",
@@ -482,7 +524,8 @@
     "price": {
       "guadalajara": 601.34,
       "colima": 651.46
-    }
+    },
+    "image": "/product-placeholders/ciervorojo.png"
   },
   {
     "id": "ciervo-rojo:rack-frances",
@@ -493,7 +536,8 @@
     "price": {
       "guadalajara": 711.6,
       "colima": 770.9
-    }
+    },
+    "image": "/product-placeholders/ciervorojo.png"
   },
   {
     "id": "codorniz:adobada-pieza",
@@ -504,7 +548,8 @@
     "price": {
       "guadalajara": 33.6,
       "colima": 36.4
-    }
+    },
+    "image": "/product-placeholders/cordoniz.png"
   },
   {
     "id": "codorniz:birria-pieza",
@@ -515,7 +560,8 @@
     "price": {
       "guadalajara": 123.6,
       "colima": 133.9
-    }
+    },
+    "image": "/product-placeholders/birria.png"
   },
   {
     "id": "codorniz:cartera-huevito-pieza",
@@ -526,7 +572,8 @@
     "price": {
       "guadalajara": 46.08,
       "colima": 49.92
-    }
+    },
+    "image": "/product-placeholders/cordoniz.png"
   },
   {
     "id": "codorniz:marinada-pieza",
@@ -537,7 +584,8 @@
     "price": {
       "guadalajara": 33.6,
       "colima": 36.4
-    }
+    },
+    "image": "/product-placeholders/cordoniz.png"
   },
   {
     "id": "codorniz:natural-045-pieza",
@@ -548,7 +596,8 @@
     "price": {
       "guadalajara": 31.1,
       "colima": 33.7
-    }
+    },
+    "image": "/product-placeholders/cordoniz.png"
   },
   {
     "id": "conejo:adobado-pierna-y-muslo",
@@ -559,7 +608,8 @@
     "price": {
       "guadalajara": 219.6,
       "colima": 237.9
-    }
+    },
+    "image": "/product-placeholders/conejo.png"
   },
   {
     "id": "conejo:canal",
@@ -570,7 +620,8 @@
     "price": {
       "guadalajara": 213.6,
       "colima": 231.4
-    }
+    },
+    "image": "/product-placeholders/conejo.png"
   },
   {
     "id": "conejo:lomo",
@@ -581,7 +632,8 @@
     "price": {
       "guadalajara": 234,
       "colima": 253.5
-    }
+    },
+    "image": "/product-placeholders/conejo.png"
   },
   {
     "id": "conejo:lomo-marinado",
@@ -592,7 +644,8 @@
     "price": {
       "guadalajara": 222,
       "colima": 240.5
-    }
+    },
+    "image": "/product-placeholders/conejo.png"
   },
   {
     "id": "conejo:marinado-pierna-y-muslo",
@@ -603,7 +656,8 @@
     "price": {
       "guadalajara": 219.6,
       "colima": 237.9
-    }
+    },
+    "image": "/product-placeholders/conejo.png"
   },
   {
     "id": "conejo:pierna-y-muslo-natural",
@@ -614,7 +668,8 @@
     "price": {
       "guadalajara": 225.6,
       "colima": 244.4
-    }
+    },
+    "image": "/product-placeholders/conejo.png"
   },
   {
     "id": "conejo:pulpa",
@@ -625,7 +680,8 @@
     "price": {
       "guadalajara": 231.6,
       "colima": 250.9
-    }
+    },
+    "image": "/product-placeholders/conejo.png"
   },
   {
     "id": "cordero:arrachera-especial",
@@ -636,7 +692,8 @@
     "price": {
       "guadalajara": 344.45,
       "colima": 373.15
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:arrachera-campirana",
@@ -647,7 +704,8 @@
     "price": {
       "guadalajara": 344.45,
       "colima": 373.15
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:arrachera-hierbas-finas",
@@ -658,7 +716,8 @@
     "price": {
       "guadalajara": 344.45,
       "colima": 373.15
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:arrachera-al-romero",
@@ -669,7 +728,8 @@
     "price": {
       "guadalajara": 344.45,
       "colima": 373.15
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:barbacoa",
@@ -680,7 +740,8 @@
     "price": {
       "guadalajara": 563.33,
       "colima": 610.27
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:birria-pieza",
@@ -691,7 +752,8 @@
     "price": {
       "guadalajara": 226.94,
       "colima": 245.86
-    }
+    },
+    "image": "/product-placeholders/birria.png"
   },
   {
     "id": "cordero:cabeza-pieza",
@@ -702,7 +764,8 @@
     "price": {
       "guadalajara": 114.72,
       "colima": 124.28
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:canal",
@@ -713,7 +776,8 @@
     "price": {
       "guadalajara": 276.48,
       "colima": 299.52
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:chistorra-arabe",
@@ -727,7 +791,8 @@
     },
     "packSize": 1,
     "approxWeightKg": 0.3,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/chistorra.png"
   },
   {
     "id": "cordero:chistorra-merguez",
@@ -741,7 +806,8 @@
     },
     "packSize": 1,
     "approxWeightKg": 0.3,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/chistorra.png"
   },
   {
     "id": "cordero:chistorra-mixta",
@@ -755,7 +821,8 @@
     },
     "packSize": 1,
     "approxWeightKg": 0.3,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/chistorra.png"
   },
   {
     "id": "cordero:chuleta-especial",
@@ -766,7 +833,8 @@
     "price": {
       "guadalajara": 317.95,
       "colima": 344.45
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:chuleta-estandar",
@@ -777,7 +845,8 @@
     "price": {
       "guadalajara": 306.43,
       "colima": 331.97
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:chuleta-marinada",
@@ -788,7 +857,8 @@
     "price": {
       "guadalajara": 301.82,
       "colima": 326.98
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:confit-pulpa",
@@ -799,7 +869,8 @@
     "price": {
       "guadalajara": 563.52,
       "colima": 610.48
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:costilla",
@@ -810,7 +881,8 @@
     "price": {
       "guadalajara": 217.73,
       "colima": 235.87
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:costilla-baby-back",
@@ -821,7 +893,8 @@
     "price": {
       "guadalajara": 235.01,
       "colima": 254.59
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:costilla-marinada",
@@ -832,7 +905,8 @@
     "price": {
       "guadalajara": 235.01,
       "colima": 254.59
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:costilla-hierbas-fina",
@@ -843,7 +917,8 @@
     "price": {
       "guadalajara": 235.01,
       "colima": 254.59
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:costilla-romero",
@@ -854,7 +929,8 @@
     "price": {
       "guadalajara": 235.01,
       "colima": 254.59
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:costilla-campirana",
@@ -865,7 +941,8 @@
     "price": {
       "guadalajara": 235.01,
       "colima": 254.59
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:cubo",
@@ -876,7 +953,8 @@
     "price": {
       "guadalajara": 380.16,
       "colima": 411.84
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:escalopas",
@@ -887,7 +965,8 @@
     "price": {
       "guadalajara": 346.75,
       "colima": 375.65
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:espaldilla",
@@ -898,7 +977,8 @@
     "price": {
       "guadalajara": 270.72,
       "colima": 293.28
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:espaldilla-deshuesada",
@@ -909,7 +989,8 @@
     "price": {
       "guadalajara": 254.59,
       "colima": 275.81
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:espaldilla-pulpa",
@@ -920,7 +1001,8 @@
     "price": {
       "guadalajara": 307.58,
       "colima": 333.22
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:espaldilla-pulpa-molida",
@@ -931,7 +1013,8 @@
     "price": {
       "guadalajara": 296.06,
       "colima": 320.74
-    }
+    },
+    "image": "/product-placeholders/carnemolida.png"
   },
   {
     "id": "cordero:filete",
@@ -942,7 +1025,8 @@
     "price": {
       "guadalajara": 505.73,
       "colima": 547.87
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:hamburguesa-arabe",
@@ -956,7 +1040,8 @@
     },
     "packSize": 6,
     "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "cordero:hamburguesa-merguez",
@@ -970,7 +1055,8 @@
     },
     "packSize": 6,
     "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "cordero:hamburguesa-mixta",
@@ -984,7 +1070,8 @@
     },
     "packSize": 6,
     "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "cordero:hueso",
@@ -995,7 +1082,8 @@
     "price": {
       "guadalajara": 65.52,
       "colima": 70.98
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:kit-de-panza",
@@ -1006,7 +1094,8 @@
     "price": {
       "guadalajara": 241.92,
       "colima": 262.08
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:kit-chuleta-costilla-marinada",
@@ -1017,7 +1106,8 @@
     "price": {
       "guadalajara": 270.72,
       "colima": 293.28
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:lechal",
@@ -1028,7 +1118,8 @@
     "price": {
       "guadalajara": 327.12,
       "colima": 354.38
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:lomo",
@@ -1039,7 +1130,8 @@
     "price": {
       "guadalajara": 464.26,
       "colima": 502.94
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:machito-cocido",
@@ -1050,7 +1142,8 @@
     "price": {
       "guadalajara": 260.35,
       "colima": 282.05
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:machito-picado",
@@ -1061,7 +1154,8 @@
     "price": {
       "guadalajara": 244.22,
       "colima": 264.58
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:machito-picado-adobado",
@@ -1072,7 +1166,8 @@
     "price": {
       "guadalajara": 260.35,
       "colima": 282.05
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:machito-picado-adobado-pieza",
@@ -1083,7 +1178,8 @@
     "price": {
       "guadalajara": 244.22,
       "colima": 264.58
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:maciza",
@@ -1094,7 +1190,8 @@
     "price": {
       "guadalajara": 380.16,
       "colima": 411.84
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:menudo",
@@ -1105,7 +1202,8 @@
     "price": {
       "guadalajara": 77.52,
       "colima": 83.98
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:molida",
@@ -1116,7 +1214,8 @@
     "price": {
       "guadalajara": 264.96,
       "colima": 287.04
-    }
+    },
+    "image": "/product-placeholders/carnemolida.png"
   },
   {
     "id": "cordero:osobuco",
@@ -1127,7 +1226,8 @@
     "price": {
       "guadalajara": 330.62,
       "colima": 358.18
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:pescuezo",
@@ -1138,7 +1238,8 @@
     "price": {
       "guadalajara": 195.84,
       "colima": 212.16
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:picana",
@@ -1149,7 +1250,8 @@
     "price": {
       "guadalajara": 368.64,
       "colima": 399.36
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:pierna",
@@ -1163,7 +1265,8 @@
     },
     "packSize": 1,
     "approxWeightKg": 2.5,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:pierna-con-cadera",
@@ -1174,7 +1277,8 @@
     "price": {
       "guadalajara": 310.21,
       "colima": 336.06
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:pierna-deshuesada-con-el-hueso",
@@ -1185,7 +1289,8 @@
     "price": {
       "guadalajara": 315.97,
       "colima": 342.3
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:pierna-pulpa",
@@ -1196,7 +1301,8 @@
     "price": {
       "guadalajara": 397.44,
       "colima": 430.56
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:rack-americano",
@@ -1207,7 +1313,8 @@
     "price": {
       "guadalajara": 390.53,
       "colima": 423.07
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:rack-frances",
@@ -1218,7 +1325,8 @@
     "price": {
       "guadalajara": 748.8,
       "colima": 811.2
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:salchicha-alemana",
@@ -1229,7 +1337,8 @@
     "price": {
       "guadalajara": 167.52,
       "colima": 181.48
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:salchicha-berlin",
@@ -1240,7 +1349,8 @@
     "price": {
       "guadalajara": 167.52,
       "colima": 181.48
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:silla",
@@ -1251,7 +1361,8 @@
     "price": {
       "guadalajara": 281.52,
       "colima": 304.98
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:sirloin",
@@ -1262,7 +1373,8 @@
     "price": {
       "guadalajara": 314.5,
       "colima": 340.7
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "cordero:t-bone",
@@ -1273,7 +1385,8 @@
     "price": {
       "guadalajara": 351.36,
       "colima": 380.64
-    }
+    },
+    "image": "/product-placeholders/cordero.png"
   },
   {
     "id": "jabali:arrachera-marinada",
@@ -1284,7 +1397,8 @@
     "price": {
       "guadalajara": 330,
       "colima": 357.5
-    }
+    },
+    "image": "/product-placeholders/jabali.png"
   },
   {
     "id": "jabali:canal",
@@ -1295,7 +1409,8 @@
     "price": {
       "guadalajara": 280.8,
       "colima": 304.2
-    }
+    },
+    "image": "/product-placeholders/jabali.png"
   },
   {
     "id": "jabali:costilla-marinada",
@@ -1306,7 +1421,8 @@
     "price": {
       "guadalajara": 280.8,
       "colima": 304.2
-    }
+    },
+    "image": "/product-placeholders/jabali.png"
   },
   {
     "id": "jabali:hamburguesa",
@@ -1320,7 +1436,8 @@
     },
     "packSize": 6,
     "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "jabali:filete",
@@ -1331,7 +1448,8 @@
     "price": {
       "guadalajara": 624,
       "colima": 676
-    }
+    },
+    "image": "/product-placeholders/jabali.png"
   },
   {
     "id": "jabali:rack-frances",
@@ -1342,7 +1460,8 @@
     "price": {
       "guadalajara": 564,
       "colima": 611
-    }
+    },
+    "image": "/product-placeholders/jabali.png"
   },
   {
     "id": "jabali:lomo",
@@ -1353,7 +1472,8 @@
     "price": {
       "guadalajara": 618,
       "colima": 669.5
-    }
+    },
+    "image": "/product-placeholders/jabali.png"
   },
   {
     "id": "pato:medio-pato-horneado",
@@ -1364,7 +1484,8 @@
     "price": {
       "guadalajara": 314.4,
       "colima": 340.6
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:confit-molleja",
@@ -1375,7 +1496,8 @@
     "price": {
       "guadalajara": 304.8,
       "colima": 330.2
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:confit-pierna-y-muslo-grande",
@@ -1386,7 +1508,8 @@
     "price": {
       "guadalajara": 474,
       "colima": 513.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:confit-pierna-y-muslo-mediano",
@@ -1397,7 +1520,8 @@
     "price": {
       "guadalajara": 474,
       "colima": 513.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:confit-pulpa",
@@ -1408,7 +1532,8 @@
     "price": {
       "guadalajara": 561.6,
       "colima": 608.4
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:foie-gras-a",
@@ -1419,7 +1544,8 @@
     "price": {
       "guadalajara": 1311.6,
       "colima": 1420.9
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:foie-terrina",
@@ -1430,7 +1556,8 @@
     "price": {
       "guadalajara": 1488,
       "colima": 1612
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:grasa",
@@ -1441,7 +1568,8 @@
     "price": {
       "guadalajara": 210,
       "colima": 227.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:hamburguesa",
@@ -1455,7 +1583,8 @@
     },
     "packSize": 6,
     "approxWeightKg": 0.9,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "pato:hueso",
@@ -1466,7 +1595,8 @@
     "price": {
       "guadalajara": 70.8,
       "colima": 76.7
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:huevo-pieza",
@@ -1477,7 +1607,8 @@
     "price": {
       "guadalajara": 7.49,
       "colima": 8.11
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:jamon-iberico",
@@ -1488,7 +1619,8 @@
     "price": {
       "guadalajara": 938.4,
       "colima": 1016.6
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:magret-ahumado",
@@ -1499,7 +1631,8 @@
     "price": {
       "guadalajara": 574.8,
       "colima": 622.7
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:magret-especial",
@@ -1510,7 +1643,8 @@
     "price": {
       "guadalajara": 534,
       "colima": 578.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:magret-extra-premium",
@@ -1521,7 +1655,8 @@
     "price": {
       "guadalajara": 534,
       "colima": 578.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:magret-premium",
@@ -1532,7 +1667,8 @@
     "price": {
       "guadalajara": 534,
       "colima": 578.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:magret-serrano",
@@ -1543,7 +1679,8 @@
     "price": {
       "guadalajara": 621.6,
       "colima": 673.4
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:pekin-con-viscera",
@@ -1554,7 +1691,8 @@
     "price": {
       "guadalajara": 210,
       "colima": 227.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:pastrami",
@@ -1565,7 +1703,8 @@
     "price": {
       "guadalajara": 739.2,
       "colima": 800.8
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:pierna-y-muslo-alcienne",
@@ -1576,7 +1715,8 @@
     "price": {
       "guadalajara": 409.2,
       "colima": 443.3
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:pierna-y-muslo-natural-grande",
@@ -1587,7 +1727,8 @@
     "price": {
       "guadalajara": 378,
       "colima": 409.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:pierna-y-muslo-natural-mediano",
@@ -1598,7 +1739,8 @@
     "price": {
       "guadalajara": 378,
       "colima": 409.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:pierna-y-muslo-marinado-s-h",
@@ -1609,7 +1751,8 @@
     "price": {
       "guadalajara": 378,
       "colima": 409.5
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pato:selva-negra",
@@ -1620,7 +1763,8 @@
     "price": {
       "guadalajara": 718.8,
       "colima": 778.7
-    }
+    },
+    "image": "/product-placeholders/pato.png"
   },
   {
     "id": "pavo:entero",
@@ -1631,7 +1775,8 @@
     "price": {
       "guadalajara": 164.4,
       "colima": 178.1
-    }
+    },
+    "image": "/product-placeholders/pavo.png"
   },
   {
     "id": "pavo:molido",
@@ -1642,7 +1787,8 @@
     "price": {
       "guadalajara": 290.4,
       "colima": 314.6
-    }
+    },
+    "image": "/product-placeholders/carnemolida.png"
   },
   {
     "id": "pavo:pechuga",
@@ -1656,7 +1802,8 @@
     },
     "packSize": 1,
     "approxWeightKg": 1.5,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/pavo.png"
   },
   {
     "id": "pavo:pierna-natural",
@@ -1667,7 +1814,8 @@
     "price": {
       "guadalajara": 178.56,
       "colima": 193.44
-    }
+    },
+    "image": "/product-placeholders/pavo.png"
   },
   {
     "id": "pollo:alita-natural",
@@ -1678,7 +1826,8 @@
     "price": {
       "guadalajara": 154.8,
       "colima": 167.7
-    }
+    },
+    "image": "/product-placeholders/pollo.png"
   },
   {
     "id": "pollo:de-leche",
@@ -1689,7 +1838,8 @@
     "price": {
       "guadalajara": 136.8,
       "colima": 148.2
-    }
+    },
+    "image": "/product-placeholders/pollo.png"
   },
   {
     "id": "pollo:entero",
@@ -1700,7 +1850,8 @@
     "price": {
       "guadalajara": 156,
       "colima": 169
-    }
+    },
+    "image": "/product-placeholders/pollo.png"
   },
   {
     "id": "pollo:pierna-y-muslo",
@@ -1711,7 +1862,8 @@
     "price": {
       "guadalajara": 154.8,
       "colima": 167.7
-    }
+    },
+    "image": "/product-placeholders/pollo.png"
   },
   {
     "id": "pollo:pechuga-brasilena",
@@ -1722,7 +1874,8 @@
     "price": {
       "guadalajara": 147.46,
       "colima": 159.74
-    }
+    },
+    "image": "/product-placeholders/pollo.png"
   },
   {
     "id": "queso:de-cabra-bouquet-pieza",
@@ -1733,7 +1886,8 @@
     "price": {
       "guadalajara": 87.55,
       "colima": 94.85
-    }
+    },
+    "image": "/product-placeholders/queso.png"
   },
   {
     "id": "queso:de-cabra-con-ceniza-pieza",
@@ -1744,7 +1898,8 @@
     "price": {
       "guadalajara": 74.88,
       "colima": 81.12
-    }
+    },
+    "image": "/product-placeholders/queso.png"
   },
   {
     "id": "queso:de-cabra-finas-hierbas-pieza",
@@ -1755,7 +1910,8 @@
     "price": {
       "guadalajara": 74.88,
       "colima": 81.12
-    }
+    },
+    "image": "/product-placeholders/queso.png"
   },
   {
     "id": "queso:de-cabra-natural-pieza",
@@ -1766,7 +1922,8 @@
     "price": {
       "guadalajara": 74.88,
       "colima": 81.12
-    }
+    },
+    "image": "/product-placeholders/queso.png"
   },
   {
     "id": "queso:panela-pieza",
@@ -1777,7 +1934,8 @@
     "price": {
       "guadalajara": 97.92,
       "colima": 106.08
-    }
+    },
+    "image": "/product-placeholders/queso.png"
   },
   {
     "id": "queso:adobera",
@@ -1788,7 +1946,8 @@
     "price": {
       "guadalajara": 205.06,
       "colima": 222.14
-    }
+    },
+    "image": "/product-placeholders/queso.png"
   },
   {
     "id": "queso:provoleta",
@@ -1799,7 +1958,8 @@
     "price": {
       "guadalajara": 437.76,
       "colima": 474.24
-    }
+    },
+    "image": "/product-placeholders/queso.png"
   },
   {
     "id": "queso:oaxaca",
@@ -1810,7 +1970,8 @@
     "price": {
       "guadalajara": 213.12,
       "colima": 230.88
-    }
+    },
+    "image": "/product-placeholders/queso.png"
   },
   {
     "id": "res:arrachera",
@@ -1821,7 +1982,8 @@
     "price": {
       "guadalajara": 305.52,
       "colima": 330.98
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:arrachera-250-grs",
@@ -1832,7 +1994,8 @@
     "price": {
       "guadalajara": 311.52,
       "colima": 337.48
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:arrachera-suprema",
@@ -1843,7 +2006,8 @@
     "price": {
       "guadalajara": 363.12,
       "colima": 393.38
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:brisket",
@@ -1854,7 +2018,8 @@
     "price": {
       "guadalajara": 244.32,
       "colima": 264.68
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:cabreria",
@@ -1865,7 +2030,8 @@
     "price": {
       "guadalajara": 432,
       "colima": 468
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:chinchulines",
@@ -1876,7 +2042,8 @@
     "price": {
       "guadalajara": 129.12,
       "colima": 139.88
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:chistorra-espanola",
@@ -1887,7 +2054,8 @@
     "price": {
       "guadalajara": 172.32,
       "colima": 186.68
-    }
+    },
+    "image": "/product-placeholders/chistorra.png"
   },
   {
     "id": "res:chorizo-argentino",
@@ -1901,7 +2069,8 @@
     },
     "packSize": 4,
     "approxWeightKg": 0.6,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/chorizo.png"
   },
   {
     "id": "res:chorizo-campestre",
@@ -1915,7 +2084,8 @@
     },
     "packSize": 4,
     "approxWeightKg": 0.6,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/chorizo.png"
   },
   {
     "id": "res:chorizo-ranchero",
@@ -1929,7 +2099,8 @@
     },
     "packSize": 4,
     "approxWeightKg": 0.6,
-    "pricingMode": "per_kg"
+    "pricingMode": "per_kg",
+    "image": "/product-placeholders/chorizo.png"
   },
   {
     "id": "res:costilla-cargada-short-ryb",
@@ -1940,7 +2111,8 @@
     "price": {
       "guadalajara": 267.26,
       "colima": 289.54
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:cowboy",
@@ -1957,7 +2129,8 @@
       "1/2\"",
       "3/4\"",
       "1\""
-    ]
+    ],
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:cowboy-prime",
@@ -1974,7 +2147,8 @@
       "1/2\"",
       "3/4\"",
       "1\""
-    ]
+    ],
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:fajita-de-rib-eye",
@@ -1985,7 +2159,8 @@
     "price": {
       "guadalajara": 300.67,
       "colima": 325.73
-    }
+    },
+    "image": "/product-placeholders/fajitas.png"
   },
   {
     "id": "res:filete",
@@ -1996,7 +2171,8 @@
     "price": {
       "guadalajara": 496.51,
       "colima": 537.89
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:hamburguesa-arrachera",
@@ -2007,7 +2183,8 @@
     "price": {
       "guadalajara": 155.52,
       "colima": 168.48
-    }
+    },
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "res:hamburguesa-espanola",
@@ -2018,7 +2195,8 @@
     "price": {
       "guadalajara": 137.52,
       "colima": 148.98
-    }
+    },
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "res:hamburguesa-texas",
@@ -2029,7 +2207,8 @@
     "price": {
       "guadalajara": 127.92,
       "colima": 138.58
-    }
+    },
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "res:lengua",
@@ -2040,7 +2219,8 @@
     "price": {
       "guadalajara": 394.32,
       "colima": 427.18
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:molida",
@@ -2051,7 +2231,8 @@
     "price": {
       "guadalajara": 180.29,
       "colima": 195.31
-    }
+    },
+    "image": "/product-placeholders/carnemolida.png"
   },
   {
     "id": "res:molleja",
@@ -2062,7 +2243,8 @@
     "price": {
       "guadalajara": 301.92,
       "colima": 327.08
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:new-york",
@@ -2079,7 +2261,8 @@
       "1/2\"",
       "3/4\"",
       "1\""
-    ]
+    ],
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:peinecillo",
@@ -2090,7 +2273,8 @@
     "price": {
       "guadalajara": 329.47,
       "colima": 356.93
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:picana",
@@ -2101,7 +2285,8 @@
     "price": {
       "guadalajara": 436.15,
       "colima": 472.5
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:porterhouse",
@@ -2118,7 +2303,8 @@
       "1/2\"",
       "3/4\"",
       "1\""
-    ]
+    ],
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:prime-rib",
@@ -2129,7 +2315,8 @@
     "price": {
       "guadalajara": 405.05,
       "colima": 438.8
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:rib-eye",
@@ -2146,7 +2333,8 @@
       "1/2\"",
       "3/4\"",
       "1\""
-    ]
+    ],
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:rib-eye-anejo",
@@ -2163,7 +2351,8 @@
       "1/2\"",
       "3/4\"",
       "1\""
-    ]
+    ],
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:rib-eye-prime",
@@ -2180,7 +2369,8 @@
       "1/2\"",
       "3/4\"",
       "1\""
-    ]
+    ],
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:sirloin",
@@ -2197,7 +2387,8 @@
       "1/2\"",
       "3/4\"",
       "1\""
-    ]
+    ],
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:t-bone",
@@ -2214,7 +2405,8 @@
       "1/2\"",
       "3/4\"",
       "1\""
-    ]
+    ],
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:tuetano",
@@ -2225,7 +2417,8 @@
     "price": {
       "guadalajara": 143.52,
       "colima": 155.48
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "res:vacio-nacional",
@@ -2236,7 +2429,8 @@
     "price": {
       "guadalajara": 323.52,
       "colima": 350.48
-    }
+    },
+    "image": "/product-placeholders/res.png"
   },
   {
     "id": "ternera:arrachera",
@@ -2247,7 +2441,8 @@
     "price": {
       "guadalajara": 316.08,
       "colima": 342.42
-    }
+    },
+    "image": "/product-placeholders/ternura.png"
   },
   {
     "id": "ternera:chuleta-lomo",
@@ -2258,7 +2453,8 @@
     "price": {
       "guadalajara": 182.02,
       "colima": 197.18
-    }
+    },
+    "image": "/product-placeholders/ternura.png"
   },
   {
     "id": "ternera:costilla",
@@ -2269,7 +2465,8 @@
     "price": {
       "guadalajara": 195.84,
       "colima": 212.16
-    }
+    },
+    "image": "/product-placeholders/ternura.png"
   },
   {
     "id": "ternera:escalopa",
@@ -2280,7 +2477,8 @@
     "price": {
       "guadalajara": 248.83,
       "colima": 269.57
-    }
+    },
+    "image": "/product-placeholders/ternura.png"
   },
   {
     "id": "ternera:filete",
@@ -2291,7 +2489,8 @@
     "price": {
       "guadalajara": 464.69,
       "colima": 503.41
-    }
+    },
+    "image": "/product-placeholders/ternura.png"
   },
   {
     "id": "ternera:hamburguesa",
@@ -2302,7 +2501,8 @@
     "price": {
       "guadalajara": 193.68,
       "colima": 209.82
-    }
+    },
+    "image": "/product-placeholders/hamburger.png"
   },
   {
     "id": "ternera:lomo",
@@ -2313,7 +2513,8 @@
     "price": {
       "guadalajara": 354.96,
       "colima": 384.54
-    }
+    },
+    "image": "/product-placeholders/ternura.png"
   },
   {
     "id": "ternera:osobuco",
@@ -2324,7 +2525,8 @@
     "price": {
       "guadalajara": 172.22,
       "colima": 186.58
-    }
+    },
+    "image": "/product-placeholders/ternura.png"
   },
   {
     "id": "ternera:rack-frances",
@@ -2335,6 +2537,7 @@
     "price": {
       "guadalajara": 748.8,
       "colima": 811.2
-    }
+    },
+    "image": "/product-placeholders/ternura.png"
   }
 ]

@@ -5,6 +5,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { formatPrice, prettyUnit } from "@/lib/menu/format";
 import { useCartStore } from "@/lib/cart/store";
 import CategoryBadge from "./CategoryBadge";
@@ -64,20 +65,27 @@ export default function ProductCard({
   
   return (
     <article className="card overflow-hidden hover:ring-2 hover:ring-yellow-600/50 hover:shadow-2xl transition-all duration-300 group flex flex-col h-full transform hover:-translate-y-2 bg-white">
-      {/* Image/Gradient Header with animated gradient */}
-      <div className="relative h-32 bg-gradient-to-br from-cream via-yellow-50 to-amber-50 flex items-center justify-center overflow-hidden border-b border-slate-200">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-100/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-out"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.1),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div className="relative z-10 text-6xl opacity-60 group-hover:scale-110 transition-transform duration-500">
-          {item.category === 'Res' && '🥩'}
-          {item.category === 'Cerdo' && '🥓'}
-          {(item.category === 'Pollo' || item.category === 'Pavo' || item.category === 'Pato') && '🍗'}
-          {(item.category === 'Búfalo' || item.category === 'Cordero' || item.category === 'Conejo' || item.category === 'Ciervo rojo' || item.category === 'Jabalí' || item.category === 'Avestruz' || item.category === 'Cabrito' || item.category === 'Ternera') && '🦌'}
-          {item.category === 'Queso' && '🧀'}
-          {item.category === 'Codorniz' && '🐦'}
-        </div>
+      {/* Product Image Header */}
+      <div className="relative h-48 bg-gradient-to-br from-cream via-yellow-50 to-amber-50 overflow-hidden border-b border-slate-200">
+        {/* Product Image */}
+        {item.image && (
+          <Image
+            src={item.image}
+            alt={`${item.name} - ${item.category}`}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover group-hover:scale-110 transition-transform duration-500"
+            priority={false}
+          />
+        )}
         
-        {/* Badges - now overlaid on image */}
+        {/* Gradient overlay for better badge visibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10"></div>
+        
+        {/* Animated shine effect on hover */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-out"></div>
+        
+        {/* Badges - overlaid on image */}
         <div className="absolute top-2 left-2 flex items-center gap-2 flex-wrap z-20">
           <CategoryBadge category={item.category} />
           {isNew && (
